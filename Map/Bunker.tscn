@@ -8,15 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://cpbfisbl8v8gk" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_Roughness.jpg" id="5_egkfj"]
 [ext_resource type="Texture2D" uid="uid://bw8glaqesx1d2" path="res://Map/MapFiles/shelter_nine_full_rock_wall_02_ao_2k-rock_wall_02_rough_2k.png" id="5_rox04"]
 [ext_resource type="Texture2D" uid="uid://c73ltxby8t3ua" path="res://Map/MapFiles/shelter_nine_full_rock_wall_02_nor_gl_2k.jpg" id="6_n5say"]
-[ext_resource type="Texture2D" uid="uid://2k65spd8piqk" path="res://Map/MapFiles/shelter_nine_full_green_metal_rust_diff_2k.jpg" id="7_u660q"]
 [ext_resource type="Texture2D" uid="uid://c6ugsstpbmq5" path="res://Map/MapFiles/shelter_nine_full_green_metal_rust_ao_2k-green_metal_rust_rough_2k.png" id="8_ne152"]
-[ext_resource type="Texture2D" uid="uid://7ner16iq3tx7" path="res://Map/MapFiles/shelter_nine_full_green_metal_rust_nor_gl_2k.jpg" id="9_brrwk"]
+[ext_resource type="Texture2D" uid="uid://dexxaaced085d" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Color.jpg" id="9_egkfj"]
 [ext_resource type="Texture2D" uid="uid://clhtq6rnht02d" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_diff_2k.jpg" id="10_28i2f"]
+[ext_resource type="Texture2D" uid="uid://iscjrh2qcrbn" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Displacement.jpg" id="11_2kpri"]
 [ext_resource type="Texture2D" uid="uid://d1madnj0304jv" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_ao_2k-metal_plate_02_rough_2k-metal_plate_02_metal_2k.png" id="11_6d1bb"]
+[ext_resource type="Texture2D" uid="uid://cnq4grlr34xy1" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Metalness.jpg" id="12_0tg27"]
 [ext_resource type="Texture2D" uid="uid://ou5ev3lny8op" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_nor_gl_2k.jpg" id="12_pkupc"]
 [ext_resource type="Texture2D" uid="uid://dhiojv8cx8mpu" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_Color.jpg" id="13_axfw3"]
+[ext_resource type="Texture2D" uid="uid://cukpf30bbtn4j" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_NormalDX.jpg" id="13_kd0fb"]
 [ext_resource type="Texture2D" uid="uid://ckcxejwugvvjb" path="res://Map/MapFiles/shelter_nine_full_painted_plaster_wall_diff_2k.jpg" id="13_vveqt"]
 [ext_resource type="Texture2D" uid="uid://p0ups8hjcqf7" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_AmbientOcclusion.jpg" id="14_54mbn"]
+[ext_resource type="Texture2D" uid="uid://bi2klh2tfcq7k" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Roughness.jpg" id="14_txgul"]
 [ext_resource type="Texture2D" uid="uid://uaabp7ucvmex" path="res://Map/MapFiles/shelter_nine_full_painted_plaster_wall_nor_gl_2k.jpg" id="15_d4oyn"]
 [ext_resource type="Texture2D" uid="uid://c7ame8q8gpcq" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_Displacement.jpg" id="15_nyl3g"]
 [ext_resource type="Texture2D" uid="uid://c8ta4vyeha14a" path="res://Map/MapFiles/shelter_nine_full_concrete_floor_worn_001_diff_2k.jpg" id="16_8fahx"]
@@ -542,16 +545,20 @@ data = PackedVector3Array(-0.425, -0.575, 3.85, 0.425, -0.575, -3.85, -0.425, -0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjmem"]
 resource_name = "MAT_Steel_Bare"
 cull_mode = 2
-albedo_texture = ExtResource("7_u660q")
-metallic_texture = ExtResource("8_ne152")
+albedo_texture = ExtResource("9_egkfj")
+metallic = 0.5
+metallic_texture = ExtResource("12_0tg27")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("8_ne152")
+roughness = 0.75
+roughness_texture = ExtResource("14_txgul")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_scale = 16.0
-normal_texture = ExtResource("9_brrwk")
+normal_texture = ExtResource("13_kd0fb")
 ao_enabled = true
 ao_texture = ExtResource("8_ne152")
+heightmap_enabled = true
+heightmap_texture = ExtResource("11_2kpri")
 metadata/extras = {
 "asset_id": "green_metal_rust",
 "normal_strength": 0.35,
@@ -18271,7 +18278,7 @@ mesh = SubResource("ArrayMesh_fd0fx")
 shape = SubResource("ConcavePolygonShape3D_cn3sw")
 
 [node name="L1_R03_Duct" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=2088404689]
-transform = Transform3D(1.1023595, 0, 0, 0, 1, 0, 0, 0, 1, 11.1, -1.1, -7.45)
+transform = Transform3D(1.1023595, 0, 0, 0, 1, 0, 0, 0, 1, 11.1, -1.3773712, -7.45)
 mesh = SubResource("ArrayMesh_yahuf")
 
 [node name="L1_R03_Floor" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1105641116]
