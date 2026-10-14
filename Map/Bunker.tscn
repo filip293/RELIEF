@@ -14013,7 +14013,11 @@ data = PackedVector3Array(-0.4, -3, 7, 0.4, -3, -7, -0.4, -3, -7, -0.4, -3, 7, 0
 resource_name = "MAT_Insulation"
 cull_mode = 2
 albedo_color = Color(0.8984324, 0.9063318, 0.8904402, 1)
-roughness = 0.85
+albedo_texture = ExtResource("13_vveqt")
+metallic = 1.0
+normal_enabled = true
+normal_scale = 16.0
+normal_texture = ExtResource("15_d4oyn")
 metadata/extras = {
 "textured": false,
 "uv_metres": 2.0
@@ -17420,7 +17424,7 @@ mesh = SubResource("ArrayMesh_5hgf5")
 shape = SubResource("ConcavePolygonShape3D_7u44q")
 
 [node name="L0_C01_ClosetE_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1835082235]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.429045, 1.15, -11.788446)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.401163, 1.15, -11.788446)
 mesh = SubResource("ArrayMesh_dublg")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_ClosetE_00_0" unique_id=2076084559]
@@ -17447,7 +17451,7 @@ mesh = SubResource("ArrayMesh_ydu2k")
 shape = SubResource("ConcavePolygonShape3D_dp6ub")
 
 [node name="L0_C01_ClosetW_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1859221519]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.784483, 1.15, -11.804794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.790846, 1.15, -11.804794)
 mesh = SubResource("ArrayMesh_ewi11")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_ClosetW_00_0" unique_id=406727566]
