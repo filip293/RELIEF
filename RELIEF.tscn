@@ -43,7 +43,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("2_7nk7g")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.55
+normal_scale = 16.0
 normal_texture = ExtResource("3_fr3po")
 ao_enabled = true
 ao_texture = ExtResource("2_7nk7g")
@@ -134,7 +134,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("5_0nsi8")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.8
+normal_scale = 16.0
 normal_texture = ExtResource("6_846tl")
 ao_enabled = true
 ao_texture = ExtResource("5_0nsi8")
@@ -540,7 +540,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("8_vx4gm")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.35
+normal_scale = 16.0
 normal_texture = ExtResource("9_gmc4r")
 ao_enabled = true
 ao_texture = ExtResource("8_vx4gm")
@@ -597,7 +597,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("11_6qn2g")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.65
+normal_scale = 16.0
 normal_texture = ExtResource("12_g3oyp")
 ao_enabled = true
 ao_texture = ExtResource("11_6qn2g")
@@ -1322,7 +1322,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("14_fhtxt")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.35
+normal_scale = 16.0
 normal_texture = ExtResource("15_qd0y5")
 ao_enabled = true
 ao_texture = ExtResource("14_fhtxt")
@@ -1443,12 +1443,14 @@ data = PackedVector3Array(-0.2, -1.15, 0.775, 0.2, -1.15, -0.775, -0.2, -1.15, -
 resource_name = "MAT_Concrete_Floor"
 cull_mode = 2
 albedo_texture = ExtResource("16_d3p1n")
+metallic = 0.03
+metallic_specular = 0.1
 metallic_texture = ExtResource("17_nxh5q")
 metallic_texture_channel = 2
 roughness_texture = ExtResource("17_nxh5q")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.5
+normal_scale = 16.0
 normal_texture = ExtResource("18_2w7uj")
 ao_enabled = true
 ao_texture = ExtResource("17_nxh5q")
@@ -1641,7 +1643,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("20_kj6am")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.7
+normal_scale = 16.0
 normal_texture = ExtResource("21_sbsnm")
 ao_enabled = true
 ao_texture = ExtResource("20_kj6am")
@@ -1950,7 +1952,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("23_07de0")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.4
+normal_scale = -16.0
 normal_texture = ExtResource("24_rooqb")
 ao_enabled = true
 ao_texture = ExtResource("23_07de0")
@@ -3459,7 +3461,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("29_xvv87")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.3
+normal_scale = -16.0
 normal_texture = ExtResource("30_hpjry")
 ao_enabled = true
 ao_texture = ExtResource("29_xvv87")
@@ -4255,7 +4257,7 @@ data = PackedVector3Array(-0.2, -1.6, 4, 0.2, -1.6, -4, -0.2, -1.6, -4, -0.2, -1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1kib"]
 resource_name = "MAT_Hazard"
 cull_mode = 2
-albedo_color = Color(0.90041584, 0.8182903, 0.42747074, 1)
+albedo_color = Color(0.9019608, 0.81960785, 0, 1)
 roughness = 0.72
 metadata/extras = {
 "textured": false,
@@ -13068,146 +13070,6 @@ shadow_mesh = SubResource("ArrayMesh_nwiga")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f5p56"]
 data = PackedVector3Array(-0.175, -0.225, 6.2, 0.175, -0.225, -6.2, -0.175, -0.225, -6.2, -0.175, -0.225, 6.2, 0.175, -0.225, 6.2, 0.175, -0.225, -6.2, -0.175, 0.225, 6.2, 0.175, 0.225, -6.2, 0.175, 0.225, 6.2, -0.175, 0.225, 6.2, -0.175, 0.225, -6.2, 0.175, 0.225, -6.2, -0.175, -0.225, 6.2, 0.175, 0.225, 6.2, 0.175, -0.225, 6.2, -0.175, -0.225, 6.2, -0.175, 0.225, 6.2, 0.175, 0.225, 6.2, 0.175, -0.225, 6.2, 0.175, 0.225, -6.2, 0.175, -0.225, -6.2, 0.175, -0.225, 6.2, 0.175, 0.225, 6.2, 0.175, 0.225, -6.2, 0.175, -0.225, -6.2, -0.175, 0.225, -6.2, -0.175, -0.225, -6.2, 0.175, -0.225, -6.2, 0.175, 0.225, -6.2, -0.175, 0.225, -6.2, -0.175, -0.225, -6.2, -0.175, 0.225, 6.2, -0.175, -0.225, 6.2, -0.175, -0.225, -6.2, -0.175, 0.225, -6.2, -0.175, 0.225, 6.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_tgaly"]
-_surfaces = [{
-"aabb": AABB(-0.022500038, -1.5170832, -1.7646427, 0.045000076, 3.0341663, 3.5292854),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAd/f//AAD/////3/0AAAAA///f/QAAAADhAgAAAAD//x39//8AAAAAAAAfAgAA//8AAB8CAAD//+ECAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_hcxa3"]
-resource_name = "ShelterNine_L2_R06_CatStairRail-col"
-_surfaces = [{
-"aabb": AABB(-0.022500038, -1.5170832, -1.7646427, 0.045000076, 3.0341663, 3.5292854),
-"attribute_data": PackedByteArray("AABl0F0A2s8AANrPXQBl0AAA//9dAHT/XQD//wAAdP8AAOyMXQBjVV0A7IwAAGNVgIFl0CmedP+9gdrP7J3//10AdYwAAOxUAAB1jF0A7FS9gdrP7J3//4CBZdApnnT/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(31.525, 16.134167, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAd/f//3hz/////3/3eHAAA///f/d4c//8d/f//3hwAAAAAHwLenP//4QIAAN6c//8AAB8C3pwAAOECAADenAAAHf3//97c//8AAB8C3tz//x39///e3AAAAAAfAt7c//8d/f//AAD//+ECAAAAAP/////f/QAA//8AAB8CAAD/////3/3eXAAA4QIAAN5cAAD//9/93lz//+ECAADeXAAA///f/f+/AAAAAB8C/78AAB39////vwAA4QIAAP+/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//z//f/8//3//P/9//z//fwAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_tgaly")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gwy8e"]
-data = PackedVector3Array(-0.022500038, 1.4829168, 1.7646428, 0.022500038, 1.5170832, 1.7353573, -0.022500038, 1.5170832, 1.7353573, -0.022500038, 1.4829168, 1.7646428, 0.022500038, 1.4829168, 1.7646428, 0.022500038, 1.5170832, 1.7353573, -0.022500038, -1.5170832, -1.7353573, 0.022500038, -1.4829168, -1.7646427, 0.022500038, -1.5170832, -1.7353573, -0.022500038, -1.5170832, -1.7353573, -0.022500038, -1.4829168, -1.7646427, 0.022500038, -1.4829168, -1.7646427, -0.022500038, 1.4829168, 1.7646428, 0.022500038, -1.5170832, -1.7353573, 0.022500038, 1.4829168, 1.7646428, -0.022500038, 1.4829168, 1.7646428, -0.022500038, -1.5170832, -1.7353573, 0.022500038, -1.5170832, -1.7353573, 0.022500038, 1.4829168, 1.7646428, 0.022500038, -1.4829168, -1.7646427, 0.022500038, 1.5170832, 1.7353573, 0.022500038, 1.4829168, 1.7646428, 0.022500038, -1.5170832, -1.7353573, 0.022500038, -1.4829168, -1.7646427, 0.022500038, 1.5170832, 1.7353573, -0.022500038, -1.4829168, -1.7646427, -0.022500038, 1.5170832, 1.7353573, 0.022500038, 1.5170832, 1.7353573, 0.022500038, -1.4829168, -1.7646427, -0.022500038, -1.4829168, -1.7646427, -0.022500038, 1.5170832, 1.7353573, -0.022500038, -1.5170832, -1.7353573, -0.022500038, 1.4829168, 1.7646428, -0.022500038, 1.5170832, 1.7353573, -0.022500038, -1.4829168, -1.7646427, -0.022500038, -1.5170832, -1.7353573)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_a8w11"]
-_surfaces = [{
-"aabb": AABB(-0.8, -0.04, -4.7, 1.6, 0.08, 9.4),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_wr2ua"]
-resource_name = "ShelterNine_L2_R06_Catwalk-col"
-_surfaces = [{
-"aabb": AABB(-0.8, -0.04, -4.7, 1.6, 0.08, 9.4),
-"attribute_data": PackedByteArray("AADni0gPAAAAAAAASA/niwAA54tIDwAASA/niwAAAAAAAH3aSA9M2UgPfdoAAEzZ6IF92rLbTNmy233a6IFM2UgPfdoAAEzZAAB92kgPTNmy233a6IFM2eiBfdqy20zZ"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(26.800001, 17.2, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/vwAAAAD//wCA////////AID//wAA//8AgAAA/////wCA//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_a8w11")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8cptw"]
-data = PackedVector3Array(-0.8, -0.04, 4.7, 0.8, -0.04, -4.7, -0.8, -0.04, -4.7, -0.8, -0.04, 4.7, 0.8, -0.04, 4.7, 0.8, -0.04, -4.7, -0.8, 0.04, 4.7, 0.8, 0.04, -4.7, 0.8, 0.04, 4.7, -0.8, 0.04, 4.7, -0.8, 0.04, -4.7, 0.8, 0.04, -4.7, -0.8, -0.04, 4.7, 0.8, 0.04, 4.7, 0.8, -0.04, 4.7, -0.8, -0.04, 4.7, -0.8, 0.04, 4.7, 0.8, 0.04, 4.7, 0.8, -0.04, 4.7, 0.8, 0.04, -4.7, 0.8, -0.04, -4.7, 0.8, -0.04, 4.7, 0.8, 0.04, 4.7, 0.8, 0.04, -4.7, 0.8, -0.04, -4.7, -0.8, 0.04, -4.7, -0.8, -0.04, -4.7, 0.8, -0.04, -4.7, 0.8, 0.04, -4.7, -0.8, 0.04, -4.7, -0.8, -0.04, -4.7, -0.8, 0.04, 4.7, -0.8, -0.04, 4.7, -0.8, -0.04, -4.7, -0.8, 0.04, -4.7, -0.8, 0.04, 4.7)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_qwjkh"]
-_surfaces = [{
-"aabb": AABB(-0.5, -0.04, -0.55, 1, 0.08, 1.1),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_y0eku"]
-resource_name = "ShelterNine_L2_R06_CatwalkBridge-col"
-_surfaces = [{
-"aabb": AABB(-0.5, -0.04, -0.55, 1, 0.08, 1.1),
-"attribute_data": PackedByteArray("AADXkOMIrnkAAK554wjXkAAA15DjCK554wjXkAAArnkAAP//4whP/uMI//8AAE/+xoH//42LT/6Ni///xoFP/uMI//8AAE/+AAD//+MIT/6Ni///xoFP/saB//+Ni0/+"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(28.8, 12.16, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/vwAAAAD//wCA////////AID//wAA//8AgAAA/////wCA//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_qwjkh")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3ea7"]
-data = PackedVector3Array(-0.5, -0.04, 0.55, 0.5, -0.04, -0.55, -0.5, -0.04, -0.55, -0.5, -0.04, 0.55, 0.5, -0.04, 0.55, 0.5, -0.04, -0.55, -0.5, 0.04, 0.55, 0.5, 0.04, -0.55, 0.5, 0.04, 0.55, -0.5, 0.04, 0.55, -0.5, 0.04, -0.55, 0.5, 0.04, -0.55, -0.5, -0.04, 0.55, 0.5, 0.04, 0.55, 0.5, -0.04, 0.55, -0.5, -0.04, 0.55, -0.5, 0.04, 0.55, 0.5, 0.04, 0.55, 0.5, -0.04, 0.55, 0.5, 0.04, -0.55, 0.5, -0.04, -0.55, 0.5, -0.04, 0.55, 0.5, 0.04, 0.55, 0.5, 0.04, -0.55, 0.5, -0.04, -0.55, -0.5, 0.04, -0.55, -0.5, -0.04, -0.55, 0.5, -0.04, -0.55, 0.5, 0.04, -0.55, -0.5, 0.04, -0.55, -0.5, -0.04, -0.55, -0.5, 0.04, 0.55, -0.5, -0.04, 0.55, -0.5, -0.04, -0.55, -0.5, 0.04, -0.55, -0.5, 0.04, 0.55)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_jewrv"]
-_surfaces = [{
-"aabb": AABB(-0.022500038, -0.022500038, -4.7000003, 0.045000076, 0.045000076, 9.400001),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD///////8AAAAA/////wAAAAD//wAAAAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_grqw5"]
-resource_name = "ShelterNine_L2_R06_CatwalkRail-col"
-_surfaces = [{
-"aabb": AABB(-0.022500038, -0.022500038, -4.7000003, 0.045000076, 0.045000076, 9.400001),
-"attribute_data": PackedByteArray("AAB+y3wA08oAANPKfAB+ywAAfst8ANPKfAB+ywAA08oAAOeLfAAAAHwA54sAAAAAKIJ+y8Ln08oogtPKwud+y3wA54sAAAAAAADni3wAAAAogtPKwud+yyiCfsvC59PK"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(23.685, 17.2, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//AAD///////8AAAAA/////wAA//8AAP//AAAAAAAAAAAAgP////8AAACA//8AAAAAAIAAAP//AAAAgAAAAAD///+///8AAAAA/7///wAA////vwAAAAAAAP+///8AAP//AAD/////AAAAAP///////wAA//8AAAAAAAD/////////PwAA//8AAP8/AAD//////z//////AAD/PwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP+/////f////3////9/////f/9/////f////3////9///////9/////f////3////9//z//f/8//3//P/9//z//fwAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_jewrv")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xtffb"]
-data = PackedVector3Array(-0.022500038, -0.022500038, 4.7000003, 0.022500038, 0.022500038, 4.7000003, -0.022500038, 0.022500038, 4.7000003, -0.022500038, -0.022500038, 4.7000003, 0.022500038, -0.022500038, 4.7000003, 0.022500038, 0.022500038, 4.7000003, -0.022500038, -0.022500038, -4.7000003, 0.022500038, 0.022500038, -4.7000003, 0.022500038, -0.022500038, -4.7000003, -0.022500038, -0.022500038, -4.7000003, -0.022500038, 0.022500038, -4.7000003, 0.022500038, 0.022500038, -4.7000003, -0.022500038, -0.022500038, 4.7000003, 0.022500038, -0.022500038, -4.7000003, 0.022500038, -0.022500038, 4.7000003, -0.022500038, -0.022500038, 4.7000003, -0.022500038, -0.022500038, -4.7000003, 0.022500038, -0.022500038, -4.7000003, 0.022500038, -0.022500038, 4.7000003, 0.022500038, 0.022500038, -4.7000003, 0.022500038, 0.022500038, 4.7000003, 0.022500038, -0.022500038, 4.7000003, 0.022500038, -0.022500038, -4.7000003, 0.022500038, 0.022500038, -4.7000003, 0.022500038, 0.022500038, 4.7000003, -0.022500038, 0.022500038, -4.7000003, -0.022500038, 0.022500038, 4.7000003, 0.022500038, 0.022500038, 4.7000003, 0.022500038, 0.022500038, -4.7000003, -0.022500038, 0.022500038, -4.7000003, -0.022500038, 0.022500038, 4.7000003, -0.022500038, -0.022500038, -4.7000003, -0.022500038, -0.022500038, 4.7000003, -0.022500038, 0.022500038, 4.7000003, -0.022500038, 0.022500038, -4.7000003, -0.022500038, -0.022500038, -4.7000003)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_8mh56"]
 _surfaces = [{
 "aabb": AABB(-15.8, -8, -3.7, 1.3999996, 2.8120003, 3.5),
@@ -17924,7 +17786,7 @@ mesh = SubResource("ArrayMesh_f5byv")
 shape = SubResource("ConcavePolygonShape3D_tyhvp")
 
 [node name="L0_R01_Beam_00" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0" unique_id=1782395359]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3.025, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1221027, 3, 3.025, -4)
 mesh = SubResource("ArrayMesh_hvkxd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0/L0_R01_Beam_00" unique_id=1042145896]
@@ -17933,7 +17795,7 @@ mesh = SubResource("ArrayMesh_hvkxd")
 shape = SubResource("ConcavePolygonShape3D_4oq6u")
 
 [node name="L0_R01_Beam_01" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0" unique_id=1586327838]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3.025, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1371026, 9, 3.025, -4)
 mesh = SubResource("ArrayMesh_8m3q5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0/L0_R01_Beam_01" unique_id=1467557286]
@@ -18018,7 +17880,7 @@ mesh = SubResource("ArrayMesh_p7svo")
 shape = SubResource("ConcavePolygonShape3D_mpx34")
 
 [node name="L0_R02_Beam_00" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0" unique_id=1950046071]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3.025, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1493156, 17, 3.025, -4)
 mesh = SubResource("ArrayMesh_0fyux")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0/L0_R02_Beam_00" unique_id=327146938]
@@ -18027,7 +17889,7 @@ mesh = SubResource("ArrayMesh_0fyux")
 shape = SubResource("ConcavePolygonShape3D_q8mve")
 
 [node name="L0_R02_Beam_01" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0" unique_id=768130008]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 3.025, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1259766, 21.5, 3.025, -4)
 mesh = SubResource("ArrayMesh_g3fqn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0/L0_R02_Beam_01" unique_id=951017850]
@@ -18045,7 +17907,7 @@ mesh = SubResource("ArrayMesh_trfuf")
 shape = SubResource("ConcavePolygonShape3D_4c5dr")
 
 [node name="L0_R02_Column" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0" unique_id=85070822]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1.425, -6.2)
+transform = Transform3D(1, 0, 0, 0, 1.3252285, 0, 0, 0, 1, 21, 1.425, -6.2)
 mesh = SubResource("ArrayMesh_hjor7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L0/L0_R02_Column" unique_id=1654882630]
@@ -19492,7 +19354,7 @@ mesh = SubResource("ArrayMesh_h6jxq")
 shape = SubResource("ConcavePolygonShape3D_5f0bl")
 
 [node name="L2_C02_NicheCeiling" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=1397447038]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, -5.8, -3.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, -5.7952313, -3.0930135)
 mesh = SubResource("ArrayMesh_afqjy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_C02_NicheCeiling" unique_id=1217045484]
@@ -20297,43 +20159,8 @@ mesh = SubResource("ArrayMesh_w8aeq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_Beam_02/StaticBody3D" unique_id=2137687241]
 shape = SubResource("ConcavePolygonShape3D_f5p56")
 
-[node name="L2_R06_CatStairRail" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=881594707]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.74, -5.55, -1.95)
-mesh = SubResource("ArrayMesh_hcxa3")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatStairRail" unique_id=400050669]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatStairRail/StaticBody3D" unique_id=613608151]
-shape = SubResource("ConcavePolygonShape3D_gwy8e")
-
-[node name="L2_R06_Catwalk" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=4054161]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6, -5.04, -4.9)
-mesh = SubResource("ArrayMesh_wr2ua")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_Catwalk" unique_id=1263028094]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_Catwalk/StaticBody3D" unique_id=911045700]
-shape = SubResource("ConcavePolygonShape3D_8cptw")
-
-[node name="L2_R06_CatwalkBridge" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=2115674065]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, -5.04, -0.75)
-mesh = SubResource("ArrayMesh_y0eku")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatwalkBridge" unique_id=172019067]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatwalkBridge/StaticBody3D" unique_id=973986757]
-shape = SubResource("ConcavePolygonShape3D_g3ea7")
-
-[node name="L2_R06_CatwalkRail" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=1077469579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.82, -4.05, -4.9)
-mesh = SubResource("ArrayMesh_grqw5")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatwalkRail" unique_id=3163368]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatwalkRail/StaticBody3D" unique_id=370272844]
-shape = SubResource("ConcavePolygonShape3D_xtffb")
-
 [node name="L2_R06_CatwalkStair" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=1350047829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1792593)
 mesh = SubResource("ArrayMesh_i04wb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2/L2_R06_CatwalkStair" unique_id=895736176]
@@ -20396,11 +20223,11 @@ mesh = SubResource("ArrayMesh_nk6q4")
 shape = SubResource("ConcavePolygonShape3D_ojlr4")
 
 [node name="L2_R06_DuctEast" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=1177700383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.725, -2.95, -1.5)
+transform = Transform3D(1.0452092, 0, 0, 0, 1, 0, 0, 0, 1, -14.410199, -2.95, -1.5)
 mesh = SubResource("ArrayMesh_uamcw")
 
 [node name="L2_R06_DuctNorth" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=355530080]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, -2.925, -10.05)
+transform = Transform3D(1.438462, 0, 0, 0, 1, 0, 0, 0, 1, -16.786758, -2.925, -10.050001)
 mesh = SubResource("ArrayMesh_74s77")
 
 [node name="L2_R06_Floor" type="MeshInstance3D" parent="ShelterNine2/Scene Collection/ShelterNine/L2" unique_id=1636917739]
