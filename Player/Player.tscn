@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://bkgvsbpxyeh4l"]
 
 [ext_resource type="Script" uid="uid://wtjhsbvbjmts" path="res://Scripts/Player.gd" id="1_3qydi"]
+[ext_resource type="AudioStream" uid="uid://81vrpkpfaihh" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_01.wav" id="2_6ysni"]
+[ext_resource type="AudioStream" uid="uid://bp78elelgl0pj" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_02.wav" id="3_vlldt"]
+[ext_resource type="AudioStream" uid="uid://bopdovlh712jo" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_03.wav" id="4_s1rgi"]
+[ext_resource type="AudioStream" uid="uid://c4abjo3eahaq0" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_04.wav" id="5_j23h2"]
+[ext_resource type="AudioStream" uid="uid://wna3yrj61umc" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_05.wav" id="6_0j2ni"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
@@ -10,6 +15,7 @@ height = 1.6323242
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1013928884]
 script = ExtResource("1_3qydi")
+footstep_sounds = Array[AudioStream]([ExtResource("2_6ysni"), ExtResource("3_vlldt"), ExtResource("4_s1rgi"), ExtResource("5_j23h2"), ExtResource("6_0j2ni")])
 
 [node name="Neck" type="Node3D" parent="Player" unique_id=958374183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
@@ -23,3 +29,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
 shape = SubResource("CapsuleShape3D_1p4ks")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=726685856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93470675, 0)
+volume_db = -20.0
