@@ -2979,41 +2979,6 @@ shadow_mesh = SubResource("ArrayMesh_tk8v4")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ud4h7"]
 data = PackedVector3Array(-0.14, -0.175, 3.6, 0.14, -0.175, -3.6, -0.14, -0.175, -3.6, -0.14, -0.175, 3.6, 0.14, -0.175, 3.6, 0.14, -0.175, -3.6, -0.14, 0.175, 3.6, 0.14, 0.175, -3.6, 0.14, 0.175, 3.6, -0.14, 0.175, 3.6, -0.14, 0.175, -3.6, 0.14, 0.175, -3.6, -0.14, -0.175, 3.6, 0.14, 0.175, 3.6, 0.14, -0.175, 3.6, -0.14, -0.175, 3.6, -0.14, 0.175, 3.6, 0.14, 0.175, 3.6, 0.14, -0.175, 3.6, 0.14, 0.175, -3.6, 0.14, -0.175, -3.6, 0.14, -0.175, 3.6, 0.14, 0.175, 3.6, 0.14, 0.175, -3.6, 0.14, -0.175, -3.6, -0.14, 0.175, -3.6, -0.14, -0.175, -3.6, 0.14, -0.175, -3.6, 0.14, 0.175, -3.6, -0.14, 0.175, -3.6, -0.14, -0.175, -3.6, -0.14, 0.175, 3.6, -0.14, -0.175, 3.6, -0.14, -0.175, -3.6, -0.14, 0.175, -3.6, -0.14, 0.175, 3.6)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_idbeg"]
-_surfaces = [{
-"aabb": AABB(-0.45, -0.425, -0.25, 0.9, 0.85, 0.5),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Door",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_dyoif"]
-resource_name = "ShelterNine_L0_R01_BlastHousing-col"
-_surfaces = [{
-"aabb": AABB(-0.45, -0.425, -0.25, 0.9, 0.85, 0.5),
-"attribute_data": PackedByteArray("3PH/////Ld/c8S3f/////9zx/////y3f/////9zxLd/c8VTV//+Jnf//VNXc8YmdyIBU1aKIiZ2iiFTVyICJnf//VNXc8Ymd3PFU1f//iZ2iiFTVyICJnciAVNWiiImd"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_qoreu"),
-"name": "MAT_Steel_Door",
-"primitive": 3,
-"uv_scale": Vector4(8.15, 1.95, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/vwAAAAD//wCA////////AID//wAA//8AgAAA/////wCA//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_idbeg")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ewyel"]
-data = PackedVector3Array(-0.45, -0.425, 0.25, 0.45, -0.425, -0.25, -0.45, -0.425, -0.25, -0.45, -0.425, 0.25, 0.45, -0.425, 0.25, 0.45, -0.425, -0.25, -0.45, 0.425, 0.25, 0.45, 0.425, -0.25, 0.45, 0.425, 0.25, -0.45, 0.425, 0.25, -0.45, 0.425, -0.25, 0.45, 0.425, -0.25, -0.45, -0.425, 0.25, 0.45, 0.425, 0.25, 0.45, -0.425, 0.25, -0.45, -0.425, 0.25, -0.45, 0.425, 0.25, 0.45, 0.425, 0.25, 0.45, -0.425, 0.25, 0.45, 0.425, -0.25, 0.45, -0.425, -0.25, 0.45, -0.425, 0.25, 0.45, 0.425, 0.25, 0.45, 0.425, -0.25, 0.45, -0.425, -0.25, -0.45, 0.425, -0.25, -0.45, -0.425, -0.25, 0.45, -0.425, -0.25, 0.45, 0.425, -0.25, -0.45, 0.425, -0.25, -0.45, -0.425, -0.25, -0.45, 0.425, 0.25, -0.45, -0.425, 0.25, -0.45, -0.425, -0.25, -0.45, 0.425, -0.25, -0.45, 0.425, 0.25)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_8w7wc"]
 _surfaces = [{
 "aabb": AABB(-6, -0.125, -4, 12, 0.25, 8),
@@ -3090,7 +3055,7 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("26_1gwpe")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.4
+normal_scale = -16.0
 normal_texture = ExtResource("27_vphb4")
 ao_enabled = true
 ao_texture = ExtResource("26_1gwpe")
@@ -17799,15 +17764,6 @@ mesh = SubResource("ArrayMesh_8m3q5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Beam_01/StaticBody3D" unique_id=1162263449]
 shape = SubResource("ConcavePolygonShape3D_ud4h7")
-
-[node name="L0_R01_BlastHousing" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1012893259]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7, 1.125, -0.3)
-mesh = SubResource("ArrayMesh_dyoif")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_R01_BlastHousing" unique_id=525583756]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_R01_BlastHousing/StaticBody3D" unique_id=1145362680]
-shape = SubResource("ConcavePolygonShape3D_ewyel")
 
 [node name="L0_R01_Ceiling" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=2126640692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3.325, -4)

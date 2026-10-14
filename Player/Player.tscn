@@ -1,16 +1,25 @@
 [gd_scene format=3 uid="uid://bkgvsbpxyeh4l"]
 
+[ext_resource type="Script" uid="uid://wtjhsbvbjmts" path="res://Scripts/Player.gd" id="1_3qydi"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
 height = 1.6323242
 
 [node name="Player" type="Node3D" unique_id=889148075]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1013928884]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1013928884]
+script = ExtResource("1_3qydi")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1532963966]
+[node name="Neck" type="Node3D" parent="Player" unique_id=958374183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Neck" unique_id=1222489446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17203185, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/Neck/Camera3D" unique_id=1813723862]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
 shape = SubResource("CapsuleShape3D_1p4ks")
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1222489446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42918128, 0)
