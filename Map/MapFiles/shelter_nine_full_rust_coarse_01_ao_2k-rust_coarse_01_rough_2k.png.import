@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://5ua3apvsrvck"
+path.s3tc="res://.godot/imported/shelter_nine_full_rust_coarse_01_ao_2k-rust_coarse_01_rough_2k.png-04c8c650a3f5391c9e5f54f8761d1606.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "1a2b5ee2fac79b7ac850124a85905ef6"
+}
+
+[deps]
+
+source_file="res://Map/MapFiles/shelter_nine_full_rust_coarse_01_ao_2k-rust_coarse_01_rough_2k.png"
+dest_files=["res://.godot/imported/shelter_nine_full_rust_coarse_01_ao_2k-rust_coarse_01_rough_2k.png-04c8c650a3f5391c9e5f54f8761d1606.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://Map/MapFiles/shelter_nine_full_rust_coarse_01_nor_gl_2k.jpg"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
