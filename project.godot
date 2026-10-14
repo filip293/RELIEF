@@ -28,6 +28,18 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/post_processing/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://ExtraTextures/": "teal",
+"res://Map/": "red",
+"res://MapAssets/": "red",
+"res://Player/": "green",
+"res://Scripts/": "orange",
+"res://Sounds/": "blue",
+"res://addons/": "gray"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
