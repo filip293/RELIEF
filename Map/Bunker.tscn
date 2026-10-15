@@ -18918,7 +18918,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0125, -6.95, -6.230842)
 mesh = SubResource("ArrayMesh_whodu")
 
 [node name="L2_C02_CableTray" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=1849260723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.85, -5.585, -4.525)
+transform = Transform3D(1.04, 0, 0, 0, 1.097, 0, 0, 0, 1.097, 18.851263, -5.585, -4.525)
 mesh = SubResource("ArrayMesh_gskyg")
 
 [node name="L2_C02_Ceiling" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=363846639]
@@ -18931,7 +18931,7 @@ mesh = SubResource("ArrayMesh_u3uqd")
 shape = SubResource("ConcavePolygonShape3D_dput1")
 
 [node name="L2_C02_Duct" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=989326120]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9, -5.42, -6.45)
+transform = Transform3D(1.024, 0, 0, 0, 0.91, 0, 0, 0, 0.91, 18.822422, -5.42, -6.45)
 mesh = SubResource("ArrayMesh_8jws1")
 
 [node name="L2_C02_Floor" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=292509117]
@@ -18989,7 +18989,7 @@ mesh = SubResource("ArrayMesh_8x5uu")
 shape = SubResource("ConcavePolygonShape3D_qj5qf")
 
 [node name="L2_C02_Pipe" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=2068817547]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9, -5.85, -4.55)
+transform = Transform3D(1.04, 0, 0, 0, 1.097, 0, 0, 0, 1.097, 18.898737, -5.85, -4.55)
 mesh = SubResource("ArrayMesh_2s6ut")
 
 [node name="L2_C02_WallN_Cold_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=1376518104]
