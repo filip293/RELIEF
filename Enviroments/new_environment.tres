@@ -1,0 +1,5 @@
+[gd_resource type="Environment" format=3 uid="uid://dc35jlfwyiyb4"]
+
+[resource]
+background_mode = 1
+ssil_enabled = true

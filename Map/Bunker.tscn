@@ -42,12 +42,15 @@
 [ext_resource type="Texture2D" uid="uid://cfa6x7q3ho5t7" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_nor_gl_2k.jpg" id="30_2mh31"]
 [ext_resource type="Texture2D" uid="uid://cdpvpuqj2urax" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_diff_2k.jpg" id="31_w55ow"]
 [ext_resource type="Texture2D" uid="uid://ccwwtku77xrvt" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_ao_2k-rock_face_04_rough_2k.png" id="32_fml5w"]
+[ext_resource type="AudioStream" uid="uid://yjrk0rwbjrqe" path="res://Sounds/Ambient/LoopingVent.wav" id="33_em2ti"]
 [ext_resource type="Texture2D" uid="uid://bwav7fhc8urrv" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_nor_gl_2k.jpg" id="33_r2bgk"]
 [ext_resource type="PackedScene" uid="uid://4uk4vecdbw1n" path="res://MapAssets/Entrance/nuclear_reactor_control_panel.glb" id="39_kd0fb"]
+[ext_resource type="AudioStream" uid="uid://bpa4gkbigllvk" path="res://Sounds/Ambient/BrokenComputerLoop.wav" id="41_qgp6i"]
 [ext_resource type="PackedScene" uid="uid://ceseqqp5ncc1x" path="res://MapAssets/Entrance/wall_computer.glb" id="45_txgul"]
 [ext_resource type="PackedScene" uid="uid://c0oo87po8b7jl" path="res://MapAssets/Entrance/oldschool_control_panel.glb" id="46_xypr8"]
 [ext_resource type="PackedScene" uid="uid://dytv0coxayhbc" path="res://MapAssets/Doors/lockdown_bunker_door_v1.glb" id="47_6jpu7"]
 [ext_resource type="PackedScene" uid="uid://rl0wfyegy8mf" path="res://MapAssets/Doors/UniversalDoor.tscn" id="48_6jpu7"]
+[ext_resource type="AudioStream" uid="uid://d0gpsgy5py3pl" path="res://Sounds/Ambient/ComputerLoop.wav" id="48_a1tkp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -3351,8 +3354,7 @@ data = PackedVector3Array(-0.5, -1, 4, 0.5, -1, -4, -0.5, -1, -4, -0.5, -1, 4, 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52hoy"]
 resource_name = "MAT_Glass"
-transparency = 4
-cull_mode = 2
+transparency = 1
 albedo_color = Color(0.84705883, 0.8901961, 0.8901961, 0.24705882)
 metadata/extras = {
 "textured": false,
@@ -16773,6 +16775,12 @@ data = PackedVector3Array(-0.2, -1.05, 0.9, 0.2, -1.05, -0.9, -0.2, -1.05, -0.9,
 [sub_resource type="BoxShape3D" id="BoxShape3D_aw668"]
 size = Vector3(2.0243502, 2, 2)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6jpu7"]
+points = PackedVector3Array(-0.7097, -2.4528222, 0.032596014, -0.7097, 2.448917, 0.032596014, -0.7097, -2.4528222, 5.1754036, 1.822865, -2.5345178, 1.8570108, 0.7434436, 2.5306125, 5.261117, -0.7097, 2.448917, 5.1754036, 0.7434436, -2.5345178, -0.053117275, 0.8263403, -2.5345178, 5.094657, 0.7434436, 2.5306125, -0.053117275, 1.1584313, 2.4473174, 5.094657, 1.822865, 2.5306125, 1.8570108, 1.6097903, -2.4288144, 1.2516346, 1.6097903, 2.424909, 1.2516346, 1.7475144, -2.1514587, 1.509937, 1.1584313, 2.3645182, 5.094657)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aw668"]
+points = PackedVector3Array(-0.7097, -2.4528222, 0.032596014, -0.7097, 2.448917, 0.032596014, -0.7097, -2.4528222, 5.1754036, 1.822865, -2.5345178, 1.8570108, 0.7434436, 2.5306125, 5.261117, -0.7097, 2.448917, 5.1754036, 0.7434436, -2.5345178, -0.053117275, 0.8263403, -2.5345178, 5.094657, 0.7434436, 2.5306125, -0.053117275, 1.1584313, 2.4473174, 5.094657, 1.822865, 2.5306125, 1.8570108, 1.6097903, -2.4288144, 1.2516346, 1.6097903, 2.424909, 1.2516346, 1.7475144, -2.1514587, 1.509937, 1.1584313, 2.3645182, 5.094657)
+
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
@@ -17341,6 +17349,17 @@ mesh = SubResource("ArrayMesh_hvkxd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Beam_00/StaticBody3D" unique_id=368905939]
 shape = SubResource("ConcavePolygonShape3D_4oq6u")
 
+[node name="Vent" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Beam_00" unique_id=1546788420]
+stream = ExtResource("33_em2ti")
+volume_db = -10.0
+autoplay = true
+
+[node name="Vent2" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Beam_00" unique_id=1545618004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.891184, 5.9702463, 0, 0)
+stream = ExtResource("33_em2ti")
+volume_db = -10.0
+autoplay = true
+
 [node name="L0_R01_Beam_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1718889787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1371026, 9, 3.025, -4)
 mesh = SubResource("ArrayMesh_8m3q5")
@@ -17723,6 +17742,26 @@ shape = SubResource("ConvexPolygonShape3D_im16q")
 
 [node name="CollisionShape3D17" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/ControlPanel/StaticBody3D" unique_id=93275512]
 shape = SubResource("ConvexPolygonShape3D_jmi7x")
+
+[node name="ControlPanel" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L0/ControlPanel" unique_id=1460950755]
+transform = Transform3D(0.24327809, 0.040535044, 0.04089853, 0.05494931, -0.21650632, -0.11227455, 0.017214917, 0.118245125, -0.21959452, -0.2809894, 0.1199709, 0.07932782)
+stream = ExtResource("41_qgp6i")
+volume_db = -20.0
+unit_size = 5.0
+autoplay = true
+emission_angle_enabled = true
+emission_angle_degrees = 72.5
+emission_angle_filter_attenuation_db = -80.0
+
+[node name="ControlPanel2" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L0/ControlPanel" unique_id=14813941]
+transform = Transform3D(-0.15544912, -0.15878019, -0.1145619, -0.057325225, 0.17677669, -0.16722386, 0.18721485, -0.077710055, -0.14632758, -0.92433965, 0.1199709, 0.22320795)
+stream = ExtResource("41_qgp6i")
+volume_db = -20.0
+unit_size = 5.0
+autoplay = true
+emission_angle_enabled = true
+emission_angle_degrees = 69.9
+emission_angle_filter_attenuation_db = -80.0
 
 [node name="L1" type="Node3D" parent="Scene Collection/ShelterNine" unique_id=903304713]
 
@@ -20803,6 +20842,14 @@ light_energy = 0.05
 light_specular = 0.0
 omni_range = 0.05
 
+[node name="Computer" type="AudioStreamPlayer3D" parent="WallComputer2" unique_id=371800123]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.121706605, 0)
+stream = ExtResource("48_a1tkp")
+volume_db = -10.0
+unit_size = 5.0
+autoplay = true
+max_distance = 7.0
+
 [node name="WallComputer3" parent="." unique_id=740093264 instance=ExtResource("45_txgul")]
 transform = Transform3D(0.25881898, 0, 0.96592575, 0, 1, 0, -0.96592575, 0, 0.25881898, 9.583481, 4.6073268e-08, -0.6435178)
 
@@ -20839,11 +20886,23 @@ omni_range = 0.05
 [node name="ControlPanelOld" parent="." unique_id=394135288 instance=ExtResource("46_xypr8")]
 transform = Transform3D(0.47882408, 0, -0.1439705, 0, 0.5, 0, 0.1439705, 0, 0.47882408, 0.77267563, 0.0116148805, -4.822618)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="ControlPanelOld" unique_id=1951047273]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ControlPanelOld/StaticBody3D" unique_id=1115983344]
+shape = SubResource("ConvexPolygonShape3D_6jpu7")
+
 [node name="ControlPanelOld2" parent="." unique_id=1364692214 instance=ExtResource("46_xypr8")]
 transform = Transform3D(0.17742696, 0, -0.4674608, 0, 0.5, 0, 0.4674608, 0, 0.17742696, 2.8402565, 0.0116148805, -7.118334)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ControlPanelOld2" unique_id=1191016015]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ControlPanelOld2/StaticBody3D" unique_id=1089198020]
+shape = SubResource("ConvexPolygonShape3D_aw668")
 
 [node name="MainDoor" parent="." unique_id=1854995618 instance=ExtResource("47_6jpu7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.0199533, -0.018391289, 0.072992206)
 
 [node name="UniversalDoor" parent="." unique_id=1807350102 instance=ExtResource("48_6jpu7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9751325, 1.4876548, -7.920118)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.002383, 1.4876548, -7.920118)

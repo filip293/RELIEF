@@ -6,30 +6,46 @@
 [ext_resource type="AudioStream" uid="uid://bopdovlh712jo" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_03.wav" id="4_s1rgi"]
 [ext_resource type="AudioStream" uid="uid://c4abjo3eahaq0" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_04.wav" id="5_j23h2"]
 [ext_resource type="AudioStream" uid="uid://wna3yrj61umc" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_05.wav" id="6_0j2ni"]
+[ext_resource type="Environment" uid="uid://dc35jlfwyiyb4" path="res://Enviroments/new_environment.tres" id="7_s1rgi"]
+[ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
 height = 1.6323242
 
-[node name="Player" type="Node3D" unique_id=889148075]
-
-[node name="Player" type="CharacterBody3D" parent="." unique_id=1013928884]
+[node name="Player" type="CharacterBody3D" unique_id=1013928884]
 script = ExtResource("1_3qydi")
 footstep_sounds = Array[AudioStream]([ExtResource("2_6ysni"), ExtResource("3_vlldt"), ExtResource("4_s1rgi"), ExtResource("5_j23h2"), ExtResource("6_0j2ni")])
 
-[node name="Neck" type="Node3D" parent="Player" unique_id=958374183]
+[node name="Neck" type="Node3D" parent="." unique_id=958374183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Player/Neck" unique_id=1222489446]
+[node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1222489446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17203185, 0)
+environment = ExtResource("7_s1rgi")
 
-[node name="RayCast3D" type="RayCast3D" parent="Player/Neck/Camera3D" unique_id=1813723862]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+[node name="SpotLight3D" type="SpotLight3D" parent="Neck/Camera3D" unique_id=323942173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3548829, -0.2752627)
+light_energy = 0.1
+shadow_enabled = true
+spot_range = 11.243604
+spot_angle = 66.13477
+spot_angle_attenuation = 2.4622912
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1532963966]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Neck/Camera3D" unique_id=1599027579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3548829, -0.2752627)
+shadow_enabled = true
+spot_range = 7.2424808
+spot_angle = 23.43023
+
+[node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D" unique_id=1813723862]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.22631076)
+script = ExtResource("7_vlldt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
 shape = SubResource("CapsuleShape3D_1p4ks")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=726685856]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=726685856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93470675, 0)
 volume_db = -20.0
