@@ -166,41 +166,6 @@ metadata/extras = {
 }
 metadata/_gltf_primary_texture_coord = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_etkuf"]
-_surfaces = [{
-"aabb": AABB(-9, -5, -10, 18, 10, 20),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Rock",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gbowv"]
-resource_name = "ShelterNine_EXT_HillE-col"
-_surfaces = [{
-"aabb": AABB(-9, -5, -10, 18, 10, 20),
-"attribute_data": PackedByteArray("MuPatv//AAAy4wAA///atjLj2rb//wAA///atjLjAAAy4yPJ//+2bf//I8ky47ZtmXkjyZmZtm2ZmSPJmXm2bf//I8ky47ZtMuMjyf//tm2ZmSPJmXm2bZl5I8mZmbZt"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_ucbas"),
-"name": "MAT_Rock",
-"primitive": 3,
-"uv_scale": Vector4(80, 14, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/vwAAAAD//wCA////////AID//wAA//8AgAAA/////wCA//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_etkuf")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e07wc"]
-data = PackedVector3Array(-9, -5, 10, 9, -5, -10, -9, -5, -10, -9, -5, 10, 9, -5, 10, 9, -5, -10, -9, 5, 10, 9, 5, -10, 9, 5, 10, -9, 5, 10, -9, 5, -10, 9, 5, -10, -9, -5, 10, 9, 5, 10, 9, -5, 10, -9, -5, 10, -9, 5, 10, 9, 5, 10, 9, -5, 10, 9, 5, -10, 9, -5, -10, 9, -5, 10, 9, 5, 10, 9, 5, -10, 9, -5, -10, -9, 5, -10, -9, -5, -10, 9, -5, -10, 9, 5, -10, -9, 5, -10, -9, -5, -10, -9, 5, 10, -9, -5, 10, -9, -5, -10, -9, 5, -10, -9, 5, 10)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_6r4ua"]
 _surfaces = [{
 "aabb": AABB(-0.8, -0.85, -1.5, 1.6, 1.7, 3),
@@ -16811,15 +16776,6 @@ mesh = SubResource("ArrayMesh_to0ix")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/Exterior/EXT_Headwall/StaticBody3D" unique_id=1081532655]
 shape = SubResource("ConcavePolygonShape3D_4tp7p")
 
-[node name="EXT_HillE" type="MeshInstance3D" parent="Scene Collection/ShelterNine/Exterior" unique_id=1688974388]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, -1, -6)
-mesh = SubResource("ArrayMesh_gbowv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/Exterior/EXT_HillE" unique_id=1333552725]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/Exterior/EXT_HillE/StaticBody3D" unique_id=541542012]
-shape = SubResource("ConcavePolygonShape3D_e07wc")
-
 [node name="EXT_IntakeE" type="MeshInstance3D" parent="Scene Collection/ShelterNine/Exterior" unique_id=1787057197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2, 0.85, -1.5)
 mesh = SubResource("ArrayMesh_f7or4")
@@ -20689,7 +20645,7 @@ mesh = SubResource("ArrayMesh_3v1up")
 shape = SubResource("ConcavePolygonShape3D_fyuqk")
 
 [node name="L2_S02_WallE_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=2072632218]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2, -4.95, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2, -4.9734826, -4)
 mesh = SubResource("ArrayMesh_02oip")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L2/L2_S02_WallE_00_0" unique_id=1399632224]
@@ -20734,7 +20690,7 @@ mesh = SubResource("ArrayMesh_0xl0o")
 shape = SubResource("ConcavePolygonShape3D_gdi3r")
 
 [node name="L2_S02_WallW_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=1403534439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.81075, -4.95, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.81075, -4.960198, -4)
 mesh = SubResource("ArrayMesh_h5ofb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L2/L2_S02_WallW_00_0" unique_id=1473469807]
