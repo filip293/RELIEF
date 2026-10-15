@@ -18,6 +18,12 @@ const BOB_X := 0.02         # side sway amount
 @onready var camera: Camera3D = $Neck/Camera3D
 @onready var footstep_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
+@onready var flashlight_wide: SpotLight3D = $Neck/Camera3D/SpotLight3D
+@onready var flashlight_center: SpotLight3D = $Neck/Camera3D/SpotLight3D2
+@onready var flashlight_click: AudioStreamPlayer = $Neck/Camera3D/FlashlightClick
+
+var flashlight_on := false
+
 var target_yaw := 0.0
 var target_pitch := 0.0
 var bob_time := 0.0
@@ -28,6 +34,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	target_yaw = rotation.y
 	target_pitch = neck.rotation.x
+	flashlight_wide.visible = flashlight_on
+	flashlight_center.visible = flashlight_on
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -35,6 +43,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		target_yaw -= event.relative.x * MOUSE_SENS
 		target_pitch = clampf(target_pitch - event.relative.y * MOUSE_SENS, deg_to_rad(-85), deg_to_rad(85))
+	if event.is_action_pressed("flashlight") and not event.is_echo():
+		flashlight_on = not flashlight_on
+		flashlight_wide.visible = flashlight_on
+		flashlight_center.visible = flashlight_on
+		flashlight_click.pitch_scale = randf_range(0.97, 1.03)
+		flashlight_click.play()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

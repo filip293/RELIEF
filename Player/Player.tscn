@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://wna3yrj61umc" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_05.wav" id="6_0j2ni"]
 [ext_resource type="Environment" uid="uid://dc35jlfwyiyb4" path="res://Enviroments/new_environment.tres" id="7_s1rgi"]
 [ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
+[ext_resource type="Texture2D" uid="uid://dgjgdyjuiulu1" path="res://UIAssets/Distressed White Hand Icon.png" id="9_j23h2"]
+[ext_resource type="AudioStream" uid="uid://f5rf4ppvatq1" path="res://Sounds/Flashlight/lesiakower-torch-turned-on-flashlight-click-457506.mp3" id="10_0j2ni"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
@@ -42,6 +44,27 @@ spot_angle = 23.43023
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.22631076)
 target_position = Vector3(0, -1.5, 0)
 script = ExtResource("7_vlldt")
+
+[node name="InteractionUI" type="CanvasLayer" parent="Neck/Camera3D" unique_id=150897145]
+
+[node name="CenterContainer" type="CenterContainer" parent="Neck/Camera3D/InteractionUI" unique_id=843669358]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HandIcon" type="TextureRect" parent="Neck/Camera3D/InteractionUI/CenterContainer" unique_id=1743005169]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_j23h2")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="FlashlightClick" type="AudioStreamPlayer" parent="Neck/Camera3D" unique_id=94381037]
+stream = ExtResource("10_0j2ni")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
