@@ -18336,7 +18336,7 @@ mesh = SubResource("ArrayMesh_4cn08")
 shape = SubResource("ConcavePolygonShape3D_d6632")
 
 [node name="L1_R05_Beam_00" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1655171446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 0.775, -4.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1656564, 47.5, 0.775, -4.6)
 mesh = SubResource("ArrayMesh_x5qyi")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Beam_00" unique_id=842157500]
@@ -18345,7 +18345,7 @@ mesh = SubResource("ArrayMesh_x5qyi")
 shape = SubResource("ConcavePolygonShape3D_xkjih")
 
 [node name="L1_R05_Beam_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1255551283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0.775, -4.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1639185, 52, 0.775, -4.6)
 mesh = SubResource("ArrayMesh_r3wnh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Beam_01" unique_id=540522717]
@@ -18354,7 +18354,7 @@ mesh = SubResource("ArrayMesh_r3wnh")
 shape = SubResource("ConcavePolygonShape3D_wf5xs")
 
 [node name="L1_R05_Beam_02" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1985493789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 0.775, -4.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2545617, 56.5, 0.775, -4.6)
 mesh = SubResource("ArrayMesh_egwu8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Beam_02" unique_id=1220410246]
@@ -18363,7 +18363,7 @@ mesh = SubResource("ArrayMesh_egwu8")
 shape = SubResource("ConcavePolygonShape3D_x3w8v")
 
 [node name="L1_R05_Column_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1647042518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, -1.725, -4.2)
+transform = Transform3D(1, 0, 0, 0, 1.1420884, 0, 0, 0, 1, 49, -1.4715532, -4.2)
 mesh = SubResource("ArrayMesh_mcxai")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Column_0" unique_id=245438304]
@@ -18372,7 +18372,7 @@ mesh = SubResource("ArrayMesh_mcxai")
 shape = SubResource("ConcavePolygonShape3D_1ils7")
 
 [node name="L1_R05_Column_1" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=550038954]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, -1.725, -4.2)
+transform = Transform3D(1, 0, 0, 0, 1.1304691, 0, 0, 0, 1, 55, -1.5233521, -4.2)
 mesh = SubResource("ArrayMesh_kuklj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Column_1" unique_id=937734166]
@@ -18381,7 +18381,7 @@ mesh = SubResource("ArrayMesh_kuklj")
 shape = SubResource("ConcavePolygonShape3D_8sr2l")
 
 [node name="L1_R05_Column_2" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1763002471]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, -1.725, -6.4)
+transform = Transform3D(1, 0, 0, 0, 1.1757993, 0, 0, 0, 1, 49, -1.6099977, -6.4)
 mesh = SubResource("ArrayMesh_h78b6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Column_2" unique_id=635536078]
@@ -18390,7 +18390,7 @@ mesh = SubResource("ArrayMesh_h78b6")
 shape = SubResource("ConcavePolygonShape3D_gg4s5")
 
 [node name="L1_R05_Column_3" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=517505326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, -1.725, -6.4)
+transform = Transform3D(1, 0, 0, 0, 1.1570191, 0, 0, 0, 1, 55, -1.4478855, -6.4)
 mesh = SubResource("ArrayMesh_7y1yw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Column_3" unique_id=1309836839]
@@ -18463,7 +18463,7 @@ transform = Transform3D(1.1809962, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0.45, -8.25)
 mesh = SubResource("ArrayMesh_uk2so")
 
 [node name="L1_R05_PipeS" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1569901351]
-transform = Transform3D(1.148095, 0, 0, 0, 1, 0, 0, 0, 1, 51.35, 0.35, -1.4)
+transform = Transform3D(1.2737082, 0, 0, 0, 1, 0, 0, 0, 1, 51.35, 0.35, -1.4)
 mesh = SubResource("ArrayMesh_e4mwf")
 
 [node name="L1_R05_Roof" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1088494305]
