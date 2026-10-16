@@ -16270,7 +16270,7 @@ omni_attenuation = 0.8
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Floor" unique_id=2070219852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8535783, 0)
-amount = 6000
+amount = 60000
 lifetime = 8.0
 visibility_aabb = AABB(-33.88, -9.67, -15.89, 120.09, 12.05, 35.81)
 process_material = SubResource("ParticleProcessMaterial_pksji")
