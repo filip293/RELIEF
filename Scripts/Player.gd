@@ -46,7 +46,6 @@ var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
 @onready var head: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
 @onready var footstep_audio: AudioStreamPlayer3D = $Footsteps
-@onready var flashlight: AudioStreamPlayer3D = $Flashlight
 
 # Internal States
 var _bob_timer: float = 0.0
