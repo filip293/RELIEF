@@ -2,3 +2,4 @@
 
 [resource]
 background_mode = 1
+sdfgi_use_occlusion = true

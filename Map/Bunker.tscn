@@ -15977,11 +15977,11 @@ transform = Transform3D(1.3021584, 0, 0, 0, 1, 0, 0, 0, 1, 17.930761, 2.42, -8.7
 mesh = SubResource("ArrayMesh_lo4i8")
 
 [node name="L0_C01_TrayHanger_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=198286471]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_jca06")
 
 [node name="L0_C01_TrayHanger_1" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=882723715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_3qjwo")
 
 [node name="L0_C01_TrayHanger_2" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1837296102]
@@ -15989,23 +15989,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04, 2.71, -8.994795)
 mesh = SubResource("ArrayMesh_xgsqx")
 
 [node name="L0_C01_TrayHanger_3" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1852363579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_t7r2y")
 
 [node name="L0_C01_TrayHanger_4" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=2059787637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_dy6bq")
 
 [node name="L0_C01_TrayHanger_5" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1510622404]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_jkj63")
 
 [node name="L0_C01_TrayHanger_6" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1388351171]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_3c0vh")
 
 [node name="L0_C01_TrayHanger_7" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=838440394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.04, 2.71, -9.027515)
 mesh = SubResource("ArrayMesh_nibu4")
 
 [node name="L0_C01_WallE_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=748085132]
