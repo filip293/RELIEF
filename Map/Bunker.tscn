@@ -4,14 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://cjoqsspehs8kg" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_Color.jpg" id="1_nyl3g"]
 [ext_resource type="Texture2D" uid="uid://dqgwgo5qs43i5" path="res://Map/MapFiles/shelter_nine_full_concrete_layers_02_ao_2k-concrete_layers_02_rough_2k.png" id="2_seiha"]
 [ext_resource type="Texture2D" uid="uid://b1r4ch0sc4mfn" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_Displacement.jpg" id="3_pa6d8"]
-[ext_resource type="Texture2D" uid="uid://d15ptuvhauuq4" path="res://Map/MapFiles/shelter_nine_full_rock_wall_02_diff_2k.jpg" id="4_6skux"]
 [ext_resource type="Texture2D" uid="uid://dmfke4354ye24" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_NormalGL.jpg" id="4_jbl8q"]
 [ext_resource type="Texture2D" uid="uid://cpbfisbl8v8gk" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_Roughness.jpg" id="5_egkfj"]
-[ext_resource type="Texture2D" uid="uid://bw8glaqesx1d2" path="res://Map/MapFiles/shelter_nine_full_rock_wall_02_ao_2k-rock_wall_02_rough_2k.png" id="5_rox04"]
-[ext_resource type="Texture2D" uid="uid://c73ltxby8t3ua" path="res://Map/MapFiles/shelter_nine_full_rock_wall_02_nor_gl_2k.jpg" id="6_n5say"]
+[ext_resource type="Texture2D" uid="uid://b1ihdsn5qwfx3" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Color.jpg" id="7_6y00s"]
+[ext_resource type="Texture2D" uid="uid://b5rco6kvcjnf1" path="res://ExtraTextures/Rock/Rock035_1K-JPG_AmbientOcclusion.jpg" id="8_em2ti"]
 [ext_resource type="Texture2D" uid="uid://c6ugsstpbmq5" path="res://Map/MapFiles/shelter_nine_full_green_metal_rust_ao_2k-green_metal_rust_rough_2k.png" id="8_ne152"]
 [ext_resource type="Texture2D" uid="uid://dexxaaced085d" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Color.jpg" id="9_egkfj"]
+[ext_resource type="Texture2D" uid="uid://d1n6g2brx2dn5" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Displacement.jpg" id="9_em2ti"]
+[ext_resource type="Texture2D" uid="uid://dtctmchx284ov" path="res://ExtraTextures/Rock/Rock035_1K-JPG_NormalDX.jpg" id="9_qgp6i"]
 [ext_resource type="Texture2D" uid="uid://clhtq6rnht02d" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_diff_2k.jpg" id="10_28i2f"]
+[ext_resource type="Texture2D" uid="uid://g043pockl86r" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Roughness.jpg" id="10_a1tkp"]
 [ext_resource type="Texture2D" uid="uid://iscjrh2qcrbn" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Displacement.jpg" id="11_2kpri"]
 [ext_resource type="Texture2D" uid="uid://d1madnj0304jv" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_ao_2k-metal_plate_02_rough_2k-metal_plate_02_metal_2k.png" id="11_6d1bb"]
 [ext_resource type="Texture2D" uid="uid://cnq4grlr34xy1" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Metalness.jpg" id="12_0tg27"]
@@ -40,10 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://bxvm0w0sc2hk5" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_diff_2k.jpg" id="28_k3uuf"]
 [ext_resource type="Texture2D" uid="uid://xnq4aewsvc26" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_ao_2k-interior_tiles_rough_2k.png" id="29_obikd"]
 [ext_resource type="Texture2D" uid="uid://cfa6x7q3ho5t7" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_nor_gl_2k.jpg" id="30_2mh31"]
-[ext_resource type="Texture2D" uid="uid://cdpvpuqj2urax" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_diff_2k.jpg" id="31_w55ow"]
 [ext_resource type="Texture2D" uid="uid://ccwwtku77xrvt" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_ao_2k-rock_face_04_rough_2k.png" id="32_fml5w"]
 [ext_resource type="AudioStream" uid="uid://yjrk0rwbjrqe" path="res://Sounds/Ambient/LoopingVent.wav" id="33_em2ti"]
-[ext_resource type="Texture2D" uid="uid://bwav7fhc8urrv" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_nor_gl_2k.jpg" id="33_r2bgk"]
 [ext_resource type="PackedScene" uid="uid://4uk4vecdbw1n" path="res://MapAssets/Entrance/nuclear_reactor_control_panel.glb" id="39_kd0fb"]
 [ext_resource type="AudioStream" uid="uid://bpa4gkbigllvk" path="res://Sounds/Ambient/BrokenComputerLoop.wav" id="41_qgp6i"]
 [ext_resource type="PackedScene" uid="uid://ceseqqp5ncc1x" path="res://MapAssets/Entrance/wall_computer.glb" id="45_txgul"]
@@ -148,16 +148,17 @@ data = PackedVector3Array(-6, -0.6, 0.15, 6, -0.6, -0.15, -6, -0.6, -0.15, -6, -
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucbas"]
 resource_name = "MAT_Rock"
 cull_mode = 2
-albedo_texture = ExtResource("4_6skux")
-metallic_texture = ExtResource("5_rox04")
+albedo_texture = ExtResource("7_6y00s")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("5_rox04")
+roughness_texture = ExtResource("10_a1tkp")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_scale = 16.0
-normal_texture = ExtResource("6_n5say")
+normal_texture = ExtResource("9_qgp6i")
 ao_enabled = true
-ao_texture = ExtResource("5_rox04")
+ao_texture = ExtResource("8_em2ti")
+heightmap_enabled = true
+heightmap_texture = ExtResource("9_em2ti")
 metadata/extras = {
 "asset_id": "rock_wall_02",
 "normal_strength": 0.8,
@@ -520,10 +521,11 @@ data = PackedVector3Array(-0.425, -0.575, 3.85, 0.425, -0.575, -3.85, -0.425, -0
 resource_name = "MAT_Steel_Bare"
 cull_mode = 2
 albedo_texture = ExtResource("9_egkfj")
-metallic = 0.5
+metallic = 0.79
+metallic_specular = 0.0
 metallic_texture = ExtResource("12_0tg27")
 metallic_texture_channel = 2
-roughness = 0.75
+roughness = 0.68
 roughness_texture = ExtResource("14_txgul")
 roughness_texture_channel = 1
 normal_enabled = true
@@ -12997,16 +12999,18 @@ data = PackedVector3Array(-0.4, -1.5, 3, 0.4, -1.5, -3, -0.4, -1.5, -3, -0.4, -1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_taxu8"]
 resource_name = "MAT_Rock_Vault"
 cull_mode = 2
-albedo_texture = ExtResource("31_w55ow")
+albedo_texture = ExtResource("7_6y00s")
 metallic_texture = ExtResource("32_fml5w")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("32_fml5w")
+roughness_texture = ExtResource("10_a1tkp")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 0.85
-normal_texture = ExtResource("33_r2bgk")
+normal_scale = 16.0
+normal_texture = ExtResource("9_qgp6i")
 ao_enabled = true
-ao_texture = ExtResource("32_fml5w")
+ao_texture = ExtResource("8_em2ti")
+heightmap_enabled = true
+heightmap_texture = ExtResource("9_em2ti")
 metadata/extras = {
 "asset_id": "rock_face_04",
 "normal_strength": 0.85,
@@ -19596,27 +19600,35 @@ shape = SubResource("BoxShape3D_aw668")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WallComputer" unique_id=1612812685]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer" unique_id=1203112318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer" unique_id=1221111916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer" unique_id=251036106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="WallComputer2" parent="." unique_id=1550791788 instance=ExtResource("45_txgul")]
 transform = Transform3D(-0.2588191, 0, 0.96592575, 0, 1, 0, -0.96592575, 0, -0.2588191, 10.616542, 4.6073264e-08, -0.6724667)
@@ -19629,27 +19641,35 @@ shape = SubResource("BoxShape3D_aw668")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WallComputer2" unique_id=209165406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer2" unique_id=968470488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer2" unique_id=1423668753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer2" unique_id=688864657]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="Computer" type="AudioStreamPlayer3D" parent="WallComputer2" unique_id=371800123]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.121706605, 0)
@@ -19670,27 +19690,35 @@ shape = SubResource("BoxShape3D_aw668")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WallComputer3" unique_id=1488879320]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer3" unique_id=2020859452]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer3" unique_id=44527334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer3" unique_id=925514587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_energy = 0.05
+light_color = Color(1, 1, 0.39607844, 1)
+light_energy = 0.01
 light_specular = 0.0
-omni_range = 0.05
+omni_range = 0.9
+omni_attenuation = 0.208
 
 [node name="ControlPanelOld" parent="." unique_id=394135288 instance=ExtResource("46_xypr8")]
 transform = Transform3D(0.47882408, 0, -0.1439705, 0, 0.5, 0, 0.1439705, 0, 0.47882408, 0.77267563, 0.0116148805, -4.822618)
