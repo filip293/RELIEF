@@ -12,7 +12,7 @@ extends Node3D
 @export var flicker_on_step_chance: float = 0.15
 
 @onready var light: SpotLight3D = $SpotLight3D
-@onready var click_audio: AudioStreamPlayer = $AudioStreamPlayer
+@onready var click_audio: AudioStreamPlayer3D = $AudioStreamPlayer
 @onready var camera: Camera3D = get_parent() as Camera3D
 
 var _is_on: bool = false
@@ -29,7 +29,7 @@ func _ready() -> void:
 	light.spot_attenuation = 1.3
 	light.shadow_enabled = true
 	light.shadow_blur = 1.8
-	light.volumetric_fog_energy = 4.5 # Cuts through the bunker dust
+	light.light_volumetric_fog_energy = 4.5 # Cuts through the bunker dust
 	light.visible = _is_on
 	
 	# Listen to player footsteps for filament shock
