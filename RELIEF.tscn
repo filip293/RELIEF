@@ -4,6 +4,41 @@
 [ext_resource type="Script" uid="uid://rfss2f8rcq4h" path="res://Scripts/UGIE.gd" id="1_vqcc7"]
 [ext_resource type="PackedScene" uid="uid://d1ssvf7df23lj" path="res://Map/Bunker.tscn" id="2_vqcc7"]
 
+[sub_resource type="Environment" id="Environment_sq8w8"]
+background_mode = 1
+background_color = Color(0.03137255, 0.043137256, 0.047058824, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.07058824, 0.08627451, 0.078431375, 1)
+ambient_light_energy = 0.15
+tonemap_mode = 2
+tonemap_exposure = 1.1
+tonemap_white = 6.0
+ssr_max_steps = 48
+ssr_fade_out = 0.6
+ssr_depth_tolerance = 0.21
+ssao_enabled = true
+ssao_radius = 1.2
+ssao_intensity = 2.5
+ssao_detail = 0.2
+ssao_sharpness = 0.9
+ssil_radius = 3.0
+ssil_intensity = 1.2
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.2
+glow_strength = 0.9
+glow_bloom = 0.25
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.12
+volumetric_fog_albedo = Color(0.13333334, 0.16078432, 0.14901961, 1)
+volumetric_fog_anisotropy = 0.8
+volumetric_fog_length = 20.0
+volumetric_fog_ambient_inject = 0.1
+adjustment_enabled = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jwean"]
+dof_blur_far_distance = 2.3
+
 [node name="RELIEF" type="Node3D" unique_id=12177005]
 script = ExtResource("1_vqcc7")
 hud_update_interval = 1.0
@@ -13,3 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 [node name="Player" parent="." unique_id=889148075 instance=ExtResource("1_bklh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.936439, 1.0265477, 0.51596355)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=397694592]
+environment = SubResource("Environment_sq8w8")
+camera_attributes = SubResource("CameraAttributesPractical_jwean")

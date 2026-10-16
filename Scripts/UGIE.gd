@@ -41,8 +41,13 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	# 2. Configure initial Lockstep synchronization
-	apply_lockstep_settings()
-	
+	#apply_lockstep_settings() #TURNED OFF FOR DEVELOPMENT PURPOSES
+	if OS.get_name() == "macOS": #prevencija na pozar lol xD
+		var screen_refresh = DisplayServer.screen_get_refresh_rate()
+		var target_ticks: int = screen_refresh / 2
+		Engine.physics_ticks_per_second = target_ticks
+		Engine.max_fps = target_ticks
+			
 	# 3. Print initial platform audit to the console
 	print_full_diagnostics_report()
 	
@@ -52,6 +57,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
 	# Continuous lockstep if dynamic frame-rate matching is enabled
 	if lockstep_enabled and not sync_to_screen_refresh_rate:
 		_sync_physics_to_dynamic_fps()

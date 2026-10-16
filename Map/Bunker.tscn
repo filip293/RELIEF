@@ -904,6 +904,9 @@ shadow_mesh = SubResource("ArrayMesh_vgrau")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_asylo"]
 data = PackedVector3Array(-24, -0.1, 1.5, 24, -0.1, -1.5, -24, -0.1, -1.5, -24, -0.1, 1.5, 24, -0.1, 1.5, 24, -0.1, -1.5, -24, 0.1, 1.5, 24, 0.1, -1.5, 24, 0.1, 1.5, -24, 0.1, 1.5, -24, 0.1, -1.5, 24, 0.1, -1.5, -24, -0.1, 1.5, 24, 0.1, 1.5, 24, -0.1, 1.5, -24, -0.1, 1.5, -24, 0.1, 1.5, 24, 0.1, 1.5, 24, -0.1, 1.5, 24, 0.1, -1.5, 24, -0.1, -1.5, 24, -0.1, 1.5, 24, 0.1, 1.5, 24, 0.1, -1.5, 24, -0.1, -1.5, -24, 0.1, -1.5, -24, -0.1, -1.5, 24, -0.1, -1.5, 24, 0.1, -1.5, -24, 0.1, -1.5, -24, -0.1, -1.5, -24, 0.1, 1.5, -24, -0.1, 1.5, -24, -0.1, -1.5, -24, 0.1, -1.5, -24, 0.1, 1.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pksji"]
+size = Vector3(48.878998, 2.8652344, 4.5614014)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_dsdc1"]
 _surfaces = [{
 "aabb": AABB(-23.2, -0.06062174, -0.069999695, 46.4, 0.12124348, 0.13999939),
@@ -2354,6 +2357,7 @@ cull_mode = 2
 albedo_texture = ExtResource("25_hfs8b")
 metallic_texture = ExtResource("26_1gwpe")
 metallic_texture_channel = 2
+roughness = 0.65
 roughness_texture = ExtResource("26_1gwpe")
 roughness_texture_channel = 1
 normal_enabled = true
@@ -2403,6 +2407,31 @@ shadow_mesh = SubResource("ArrayMesh_oea1d")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aiddr"]
 data = PackedVector3Array(-6, -0.1, 4, 6, -0.1, -4, -6, -0.1, -4, -6, -0.1, 4, 6, -0.1, 4, 6, -0.1, -4, -6, 0.1, 4, 6, 0.1, -4, 6, 0.1, 4, -6, 0.1, 4, -6, 0.1, -4, 6, 0.1, -4, -6, -0.1, 4, 6, 0.1, 4, 6, -0.1, 4, -6, -0.1, 4, -6, 0.1, 4, 6, 0.1, 4, 6, -0.1, 4, 6, 0.1, -4, 6, -0.1, -4, 6, -0.1, 4, 6, 0.1, 4, 6, 0.1, -4, 6, -0.1, -4, -6, 0.1, -4, -6, -0.1, -4, 6, -0.1, -4, 6, 0.1, -4, -6, 0.1, -4, -6, -0.1, -4, -6, 0.1, 4, -6, -0.1, 4, -6, -0.1, -4, -6, 0.1, -4, -6, 0.1, 4)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pksji"]
+emission_shape_offset = Vector3(9.93, 0, 0)
+emission_shape_scale = Vector3(1, 1, 2.55)
+emission_shape = 3
+emission_box_extents = Vector3(44.2, 5.69, 8)
+direction = Vector3(0, -0.2, 0)
+initial_velocity_min = 0.049999997
+initial_velocity_max = 0.14999999
+gravity = Vector3(0, -0.02, 0)
+turbulence_enabled = true
+turbulence_noise_strength = 0.3
+turbulence_noise_scale = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0y56w"]
+transparency = 1
+albedo_color = Color(0.83137256, 0.8117647, 0.7058824, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_jwean"]
+material = SubResource("StandardMaterial3D_0y56w")
+size = Vector2(0.01, 0.01)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jtubr"]
 _surfaces = [{
@@ -15885,6 +15914,16 @@ mesh = SubResource("ArrayMesh_6dvys")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_C01_Floor/StaticBody3D" unique_id=825308499]
 shape = SubResource("ConcavePolygonShape3D_asylo")
 
+[node name="Area3D" type="Area3D" parent="Scene Collection/ShelterNine/L0/L0_C01_Floor" unique_id=425259917]
+reverb_bus_enabled = true
+reverb_bus_name = &"Bunker_Reverb"
+reverb_bus_amount = 1.0
+reverb_bus_uniformity = 0.2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_C01_Floor/Area3D" unique_id=868849334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34635925, 1.5205078, -1.2196655)
+shape = SubResource("BoxShape3D_pksji")
+
 [node name="L0_C01_Pipe" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1103516495]
 transform = Transform3D(1.250442, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2.35, -10.35)
 mesh = SubResource("ArrayMesh_6175q")
@@ -16181,12 +16220,14 @@ shape = SubResource("ConcavePolygonShape3D_4oq6u")
 stream = ExtResource("33_em2ti")
 volume_db = -10.0
 autoplay = true
+bus = &"World_SFX"
 
 [node name="Vent2" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Beam_00" unique_id=1545618004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.891184, 5.9702463, 0, 0)
 stream = ExtResource("33_em2ti")
 volume_db = -10.0
 autoplay = true
+bus = &"World_SFX"
 
 [node name="L0_R01_Beam_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1718889787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1371026, 9, 3.025, -4)
@@ -16218,6 +16259,22 @@ mesh = SubResource("ArrayMesh_w0frr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Floor/StaticBody3D" unique_id=386212007]
 shape = SubResource("ConcavePolygonShape3D_aiddr")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Floor" unique_id=1507478028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73685586, 0)
+light_color = Color(0.16862746, 0.2, 0.16862746, 1)
+light_energy = 0.4
+light_specular = 0.0
+omni_range = 15.0
+omni_attenuation = 0.8
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Floor" unique_id=2070219852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8535783, 0)
+amount = 6000
+lifetime = 8.0
+visibility_aabb = AABB(-33.88, -9.67, -15.89, 120.09, 12.05, 35.81)
+process_material = SubResource("ParticleProcessMaterial_pksji")
+draw_pass_1 = SubResource("QuadMesh_jwean")
 
 [node name="L0_R01_WallE_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=720275451]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.6, -4)
@@ -16579,6 +16636,7 @@ stream = ExtResource("41_qgp6i")
 volume_db = -20.0
 unit_size = 5.0
 autoplay = true
+bus = &"World_SFX"
 emission_angle_enabled = true
 emission_angle_degrees = 72.5
 emission_angle_filter_attenuation_db = -80.0
@@ -16589,6 +16647,7 @@ stream = ExtResource("41_qgp6i")
 volume_db = -20.0
 unit_size = 5.0
 autoplay = true
+bus = &"World_SFX"
 emission_angle_enabled = true
 emission_angle_degrees = 69.9
 emission_angle_filter_attenuation_db = -80.0
@@ -19595,6 +19654,7 @@ volume_db = -10.0
 unit_size = 5.0
 autoplay = true
 max_distance = 7.0
+bus = &"World_SFX"
 
 [node name="WallComputer3" parent="." unique_id=740093264 instance=ExtResource("45_txgul")]
 transform = Transform3D(0.25881898, 0, 0.96592575, 0, 1, 0, -0.96592575, 0, 0.25881898, 9.583481, 4.6073268e-08, -0.6435178)

@@ -1,12 +1,7 @@
 [gd_scene format=3 uid="uid://bkgvsbpxyeh4l"]
 
 [ext_resource type="Script" uid="uid://wtjhsbvbjmts" path="res://Scripts/Player.gd" id="1_3qydi"]
-[ext_resource type="AudioStream" uid="uid://81vrpkpfaihh" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_01.wav" id="2_6ysni"]
-[ext_resource type="AudioStream" uid="uid://bp78elelgl0pj" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_02.wav" id="3_vlldt"]
-[ext_resource type="AudioStream" uid="uid://bopdovlh712jo" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_03.wav" id="4_s1rgi"]
-[ext_resource type="AudioStream" uid="uid://c4abjo3eahaq0" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_04.wav" id="5_j23h2"]
-[ext_resource type="AudioStream" uid="uid://wna3yrj61umc" path="res://Sounds/Footsteps_Concrete/PavementTiles_Mono_05.wav" id="6_0j2ni"]
-[ext_resource type="Environment" uid="uid://dc35jlfwyiyb4" path="res://Enviroments/new_environment.tres" id="7_s1rgi"]
+[ext_resource type="AudioStream" uid="uid://d3ubncqqh5qef" path="res://Player/footstep.wav" id="5_8g4oa"]
 [ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
 [ext_resource type="Texture2D" uid="uid://dgjgdyjuiulu1" path="res://UIAssets/Distressed White Hand Icon.png" id="9_j23h2"]
 [ext_resource type="AudioStream" uid="uid://f5rf4ppvatq1" path="res://Sounds/Flashlight/lesiakower-torch-turned-on-flashlight-click-457506.mp3" id="10_0j2ni"]
@@ -17,14 +12,12 @@ height = 1.6323242
 
 [node name="Player" type="CharacterBody3D" unique_id=1013928884]
 script = ExtResource("1_3qydi")
-footstep_sounds = Array[AudioStream]([ExtResource("2_6ysni"), ExtResource("3_vlldt"), ExtResource("4_s1rgi"), ExtResource("5_j23h2"), ExtResource("6_0j2ni")])
 
 [node name="Neck" type="Node3D" parent="." unique_id=958374183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1222489446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17203185, 0)
-environment = ExtResource("7_s1rgi")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Neck/Camera3D" unique_id=323942173]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3548829, -0.2752627)
@@ -70,6 +63,21 @@ stream = ExtResource("10_0j2ni")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
 shape = SubResource("CapsuleShape3D_1p4ks")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=726685856]
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=726685856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93470675, 0)
-volume_db = -20.0
+stream = ExtResource("5_8g4oa")
+volume_db = -40.0
+panning_strength = 2.0
+bus = &"Player_SFX"
+
+[node name="Flashlight" type="AudioStreamPlayer3D" parent="." unique_id=1972960595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93470675, 0)
+stream = ExtResource("10_0j2ni")
+volume_db = -10.947
+panning_strength = 2.0
+bus = &"Player_SFX"
+
+[node name="SurfaceCheck" type="RayCast3D" parent="." unique_id=2056279021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7763653, 0)
+
+[connection signal="step_taken" from="." to="." method="_on_player_step_taken"]

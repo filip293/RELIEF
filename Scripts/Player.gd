@@ -1,102 +1,206 @@
+class_name ReliefPlayerController
 extends CharacterBody3D
 
-const SPEED := 2.1
-const ACCEL := 9.0          # lower = heavier start
-const DECEL := 13.0         # lower = longer stop
-const MOUSE_SENS := 0.0025
-const LOOK_SMOOTH := 33.0   # lower = floatier camera
-const STRIDE := 0.25        # lower = slower steps
-const BOB_Y := 0.04         # up/down amount
-const BOB_X := 0.02         # side sway amount
+signal step_taken(is_running: bool)
+signal device_changed(new_device: DeviceType)
 
-@export_category("Footsteps")
-@export var footstep_sounds: Array[AudioStream] = []
-@export var footstep_pitch_min := 0.9
-@export var footstep_pitch_max := 1.1
+enum DeviceType {
+	KEYBOARD_MOUSE,
+	GAMEPAD
+}
 
-@onready var neck: Node3D = $Neck
+# --- ACTIVE INPUT STATE ---
+var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
+	set(value):
+		if current_device != value:
+			current_device = value
+			emit_signal("device_changed", current_device)
+
+# --- SPEED & MOMENTUM ---
+@export_group("Speeds & Physics")
+@export var walk_speed: float = 2.4
+@export var sprint_speed: float = 4.8
+@export var crouch_speed: float = 1.3
+@export var acceleration: float = 8.0
+@export var friction: float = 10.0
+
+# --- SENSITIVITY & INPUT TUNING ---
+@export_group("Look Sensitivities")
+@export var mouse_sensitivity: float = 0.002
+## Gamepad look speed in radians per second
+@export var gamepad_sensitivity_x: float = 2.6
+@export var gamepad_sensitivity_y: float = 2.0
+## Stick deadzone to prevent stick drift from hijacking the device focus
+@export var gamepad_deadzone: float = 0.18
+## Exponent for analog stick precision (1.0 = linear, 2.0 = exponential ramp)
+@export var gamepad_curve: float = 1.6
+
+# --- HEAD & CAMERA WEIGHT ---
+@export_group("Head & Camera Dynamics")
+@export var bob_frequency: float = 2.0
+@export var bob_amplitude: float = 0.045
+@export var sway_amplitude: float = 0.03
+@export var roll_angle: float = 0.025 # Radians to tilt during strafing
+
+# --- NODES ---
+@onready var head: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
-@onready var footstep_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var footstep_audio: AudioStreamPlayer3D = $Footsteps
+@onready var flashlight: AudioStreamPlayer3D = $Flashlight
 
-@onready var flashlight_wide: SpotLight3D = $Neck/Camera3D/SpotLight3D
-@onready var flashlight_center: SpotLight3D = $Neck/Camera3D/SpotLight3D2
-@onready var flashlight_click: AudioStreamPlayer = $Neck/Camera3D/FlashlightClick
+# Internal States
+var _bob_timer: float = 0.0
+var _step_phase: float = 0.0
+var _camera_initial_pos: Vector3
+var _target_roll: float = 0.0
+var _gamepad_look_vector: Vector2 = Vector2.ZERO
 
-var flashlight_on := false
-
-var target_yaw := 0.0
-var target_pitch := 0.0
-var bob_time := 0.0
-var bob_blend := 0.0
-var is_left_step := false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	target_yaw = rotation.y
-	target_pitch = neck.rotation.x
-	flashlight_wide.visible = flashlight_on
-	flashlight_center.visible = flashlight_on
+	_camera_initial_pos = camera.position
+
+
+# ==============================================================================
+# INPUT DEVICE ARBITRATION (LAST ACTIVE TAKES PRIORITY)
+# ==============================================================================
+
+func _input(event: InputEvent) -> void:
+	# 1. Detect Mouse & Keyboard Activity
+	if event is InputEventMouseMotion:
+		# Threshold prevents optical sensor micro-tremors from hijacking controller
+		if event.relative.length_squared() > 1.5:
+			current_device = DeviceType.KEYBOARD_MOUSE
+			_apply_mouse_look(event.relative)
+			
+	elif event is InputEventKey or event is InputEventMouseButton:
+		if event.is_pressed():
+			current_device = DeviceType.KEYBOARD_MOUSE
+
+	# 2. Detect Gamepad Activity
+	elif event is InputEventJoypadButton:
+		if event.is_pressed():
+			current_device = DeviceType.GAMEPAD
+			
+	elif event is InputEventJoypadMotion:
+		if abs(event.axis_value) > gamepad_deadzone:
+			current_device = DeviceType.GAMEPAD
+
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		target_yaw -= event.relative.x * MOUSE_SENS
-		target_pitch = clampf(target_pitch - event.relative.y * MOUSE_SENS, deg_to_rad(-85), deg_to_rad(85))
-	if event.is_action_pressed("flashlight") and not event.is_echo():
-		flashlight_on = not flashlight_on
-		flashlight_wide.visible = flashlight_on
-		flashlight_center.visible = flashlight_on
-		flashlight_click.pitch_scale = randf_range(0.97, 1.03)
-		flashlight_click.play()
+	# Clicking back into the window recaptures mouse
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			current_device = DeviceType.KEYBOARD_MOUSE
+
+
+# ==============================================================================
+# CAMERA & LOOK HANDLING
+# ==============================================================================
+
+func _apply_mouse_look(relative_motion: Vector2) -> void:
+	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+		return
+	rotate_y(-relative_motion.x * mouse_sensitivity)
+	head.rotate_x(-relative_motion.y * mouse_sensitivity)
+	head.rotation.x = clamp(head.rotation.x, deg_to_rad(-82), deg_to_rad(82))
+
+
+func _process_gamepad_look(delta: float) -> void:
+	# Query right stick input via actions or raw axes
+	var raw_x: float = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	var raw_y: float = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+	
+	# Apply radial deadzone
+	var stick_input: Vector2 = Vector2(raw_x, raw_y)
+	var stick_len: float = stick_input.length()
+	
+	if stick_len > gamepad_deadzone:
+		# Rescale magnitude to eliminate deadzone jump
+		var normalized_len: float = clampf((stick_len - gamepad_deadzone) / (1.0 - gamepad_deadzone), 0.0, 1.0)
+		var curved_len: float = pow(normalized_len, gamepad_curve)
+		var look_dir: Vector2 = stick_input.normalized() * curved_len
+		
+		# Rotate body and head
+		rotate_y(-look_dir.x * gamepad_sensitivity_x * delta)
+		head.rotate_x(-look_dir.y * gamepad_sensitivity_y * delta)
+		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-82), deg_to_rad(82))
+
+
+# ==============================================================================
+# PHYSICS & LOCOMOTION
+# ==============================================================================
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
-	var horizontal := Vector3(velocity.x, 0, velocity.z)
-	var rate := ACCEL if direction != Vector3.ZERO else DECEL
-	horizontal = horizontal.move_toward(direction * SPEED, rate * delta)
-	velocity.x = horizontal.x
-	velocity.z = horizontal.z
-	move_and_slide()
-
-func _process(delta: float) -> void:
-	# Smoothed mouse look
-	var t := 1.0 - exp(-LOOK_SMOOTH * delta)
-	rotation.y = lerp_angle(rotation.y, target_yaw, t)
-	neck.rotation.x = lerp(neck.rotation.x, target_pitch, t)
-
-	# Head bob & Phase-synced Footstep logic
-	var speed := Vector2(velocity.x, velocity.z).length()
-	var moving := is_on_floor() and speed > 0.2
-	bob_blend = move_toward(bob_blend, 1.0 if moving else 0.0, delta * 4.0)
-
-	if moving:
-		# Step logic synced to trigger twice per full head bob cycle (2.0 instead of 4.0)
-		var prev_step := floori((bob_time - 0.125) * 2.0)
-		bob_time += delta * speed * STRIDE
-		var curr_step := floori((bob_time - 0.125) * 2.0)
-		
-		if curr_step > prev_step:
-			_play_footstep()
+	# Poll analog stick look continuous motion
+	if current_device == DeviceType.GAMEPAD:
+		_process_gamepad_look(delta)
+	
+	# 1. State / Action Checks
+	var is_sprinting: bool = Input.is_action_pressed("sprint") and is_on_floor()
+	var target_speed: float = sprint_speed if is_sprinting else walk_speed
+	
+	# 2. Movement Direction (Supports WASD and Left Joystick smoothly)
+	var input_dir: Vector2 = Input.get_vector(
+		"move_left", "move_right", "move_forward", "move_backward", gamepad_deadzone
+	)
+	var move_direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	# 3. Acceleration / Friction Inertia
+	var horizontal_vel: Vector3 = Vector3(velocity.x, 0, velocity.z)
+	if move_direction.length_squared() > 0.01:
+		horizontal_vel = horizontal_vel.lerp(move_direction * target_speed, acceleration * delta)
 	else:
-		bob_time += delta * speed * STRIDE
-
-	var phase := bob_time * TAU
-	camera.position.y = sin(phase * 2.0) * BOB_Y * bob_blend
-	camera.position.x = sin(phase) * BOB_X * bob_blend
-
-func _play_footstep() -> void:
-	if footstep_player and not footstep_sounds.is_empty():
-		is_left_step = not is_left_step
+		horizontal_vel = horizontal_vel.lerp(Vector3.ZERO, friction * delta)
 		
-		# Shift the single player's local X position left or right to alternate spatial panning
-		footstep_player.position.x = -0.3 if is_left_step else 0.3
+	velocity.x = horizontal_vel.x
+	velocity.z = horizontal_vel.z
+	
+	# Gravity
+	if not is_on_floor():
+		velocity.y -= 9.8 * delta
+	else:
+		velocity.y = 0.0
 		
-		footstep_player.stream = footstep_sounds[randi() % footstep_sounds.size()]
-		footstep_player.pitch_scale = randf_range(footstep_pitch_min, footstep_pitch_max)
-		footstep_player.play()
+	move_and_slide()
+	
+	# 4. Human Body Sway & Step Detection
+	_apply_head_bob(delta, horizontal_vel, is_sprinting)
+	_apply_camera_roll(delta, input_dir.x)
+
+
+func _apply_head_bob(delta: float, h_velocity: Vector3, is_sprinting: bool) -> void:
+	var speed: float = h_velocity.length()
+	
+	if speed > 0.2 and is_on_floor():
+		var freq_mult: float = 1.35 if is_sprinting else 1.0
+		_bob_timer += delta * speed * (bob_frequency * freq_mult)
+		
+		# Figure-8 step cycle
+		var vertical_dip: float = sin(_bob_timer * 2.0) * bob_amplitude
+		var horizontal_sway: float = cos(_bob_timer) * sway_amplitude
+		
+		camera.position.y = lerp(camera.position.y, _camera_initial_pos.y + vertical_dip, 0.2)
+		camera.position.x = lerp(camera.position.x, _camera_initial_pos.x + horizontal_sway, 0.2)
+		
+		# Trigger step at the bottom of the foot swing
+		var current_phase: float = sin(_bob_timer * 2.0)
+		if _step_phase > 0.0 and current_phase <= 0.0:
+			emit_signal("step_taken", is_sprinting)
+		_step_phase = current_phase
+	else:
+		_bob_timer = 0.0
+		camera.position = camera.position.lerp(_camera_initial_pos, 8.0 * delta)
+
+
+func _apply_camera_roll(delta: float, strafe_input: float) -> void:
+	_target_roll = -strafe_input * roll_angle
+	camera.rotation.z = lerp(camera.rotation.z, _target_roll, 6.0 * delta)
+
+func _on_player_step_taken(is_running: bool) -> void:
+	footstep_audio.pitch_scale = randf_range(0.88, 1.12)
+	var base_volume: float = 0.0 if is_running else -5.0
+	footstep_audio.volume_db = base_volume + randf_range(-1.5, 1.5)
+	
+	footstep_audio.play()
