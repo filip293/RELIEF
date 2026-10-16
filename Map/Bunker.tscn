@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://cfa6x7q3ho5t7" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_nor_gl_2k.jpg" id="30_2mh31"]
 [ext_resource type="Texture2D" uid="uid://ccwwtku77xrvt" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_ao_2k-rock_face_04_rough_2k.png" id="32_fml5w"]
 [ext_resource type="AudioStream" uid="uid://yjrk0rwbjrqe" path="res://Sounds/Ambient/LoopingVent.wav" id="33_em2ti"]
+[ext_resource type="PackedScene" uid="uid://bibca0ayc2xwc" path="res://MapAssets/Lights/BunkerLight.tscn" id="36_qgp6i"]
 [ext_resource type="PackedScene" uid="uid://4uk4vecdbw1n" path="res://MapAssets/Entrance/nuclear_reactor_control_panel.glb" id="39_kd0fb"]
 [ext_resource type="AudioStream" uid="uid://bpa4gkbigllvk" path="res://Sounds/Ambient/BrokenComputerLoop.wav" id="41_qgp6i"]
 [ext_resource type="PackedScene" uid="uid://ceseqqp5ncc1x" path="res://MapAssets/Entrance/wall_computer.glb" id="45_txgul"]
@@ -15901,7 +15902,7 @@ metadata/extras = {
 }
 
 [node name="L0_C01_CableTray" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=995094393]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2.55, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2.55, -8.994795)
 mesh = SubResource("ArrayMesh_fft8p")
 
 [node name="L0_C01_Ceiling" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1487613160]
@@ -15984,7 +15985,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04, 2.71, -9.35)
 mesh = SubResource("ArrayMesh_3qjwo")
 
 [node name="L0_C01_TrayHanger_2" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1837296102]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04, 2.71, -9.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04, 2.71, -8.994795)
 mesh = SubResource("ArrayMesh_xgsqx")
 
 [node name="L0_C01_TrayHanger_3" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1852363579]
@@ -19743,3 +19744,21 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.0199533, -0.018391289, 0.07
 
 [node name="UniversalDoor" parent="." unique_id=1843771098 instance=ExtResource("48_6jpu7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.002383, 1.4876548, -7.920118)
+
+[node name="BunkerLight" parent="." unique_id=1441686908 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2629175, 3.1897702, -1.9550213)
+
+[node name="BunkerLight4" parent="." unique_id=1792607167 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.372681, 3.1897702, -1.9550213)
+
+[node name="BunkerLight5" parent="." unique_id=1030483305 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7055562, 3.1897702, -1.9550213)
+
+[node name="BunkerLight6" parent="." unique_id=395523074 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8931975, 3.1897702, -5.7499914)
+
+[node name="BunkerLight2" parent="." unique_id=817976461 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2629175, 3.1897702, -6.240845)
+
+[node name="BunkerLight3" parent="." unique_id=949058533 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.421034, 3.1897702, -6.240845)
