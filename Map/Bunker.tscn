@@ -2421,9 +2421,18 @@ turbulence_enabled = true
 turbulence_noise_strength = 0.3
 turbulence_noise_scale = 3.0
 
+[sub_resource type="Gradient" id="Gradient_qgp6i"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ysni"]
+gradient = SubResource("Gradient_qgp6i")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0y56w"]
 transparency = 1
-albedo_color = Color(0.83137256, 0.8117647, 0.7058824, 1)
+albedo_color = Color(0.83137256, 0.8117647, 0.7058824, 0.50980395)
+albedo_texture = SubResource("GradientTexture2D_6ysni")
 billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
@@ -2431,7 +2440,7 @@ particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_jwean"]
 material = SubResource("StandardMaterial3D_0y56w")
-size = Vector2(0.01, 0.01)
+size = Vector2(0.006, 0.006)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jtubr"]
 _surfaces = [{

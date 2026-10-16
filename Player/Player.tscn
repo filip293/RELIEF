@@ -57,6 +57,8 @@ panning_strength = 2.0
 bus = &"Player_SFX"
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Neck/Camera3D/FlashlightRig" unique_id=824343903]
+spot_range = 13.0
+spot_angle_attenuation = 3.0314326
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
