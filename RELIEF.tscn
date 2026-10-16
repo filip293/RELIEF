@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://oxbml5ptrsqr"]
 
 [ext_resource type="PackedScene" uid="uid://bkgvsbpxyeh4l" path="res://Player/Player.tscn" id="1_bklh2"]
+[ext_resource type="Script" uid="uid://rfss2f8rcq4h" path="res://Scripts/UGIE.gd" id="1_vqcc7"]
 [ext_resource type="PackedScene" uid="uid://d1ssvf7df23lj" path="res://Map/Bunker.tscn" id="2_vqcc7"]
 
 [node name="RELIEF" type="Node3D" unique_id=12177005]
+script = ExtResource("1_vqcc7")
+hud_update_interval = 1.0
 
 [node name="Bunker" parent="." unique_id=1229566191 instance=ExtResource("2_vqcc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
