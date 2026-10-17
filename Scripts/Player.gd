@@ -45,6 +45,7 @@ var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
 # --- NODES ---
 @onready var head: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
+@onready var stamina: ReliefStamina = $/root/RELIEF/ReliefStamina
 
 # Internal States
 var _bob_timer: float = 0.0
@@ -135,14 +136,17 @@ func _physics_process(delta: float) -> void:
 	if current_device == DeviceType.GAMEPAD:
 		_process_gamepad_look(delta)
 	
-	# 1. State / Action Checks
-	var is_sprinting: bool = Input.is_action_pressed("sprint") and is_on_floor()
-	var target_speed: float = sprint_speed if is_sprinting else walk_speed
-	
-	# 2. Movement Direction (Supports WASD and Left Joystick smoothly)
 	var input_dir: Vector2 = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_backward", gamepad_deadzone
 	)
+	# 1. Determine Movement State with Stamina Enforcement
+	var wants_to_sprint: bool = Input.is_action_pressed("sprint") and is_on_floor() and input_dir.length_squared() > 0.01
+	var can_sprint: bool = stamina.can_sprint() if stamina else true
+	
+	var is_sprinting: bool = wants_to_sprint and can_sprint
+	var target_speed: float = sprint_speed if is_sprinting else walk_speed
+	
+	# 2. Movement Direction (Supports WASD and Left Joystick smoothly)
 	var move_direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	# 3. Acceleration / Friction Inertia

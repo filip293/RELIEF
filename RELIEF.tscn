@@ -2,9 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bkgvsbpxyeh4l" path="res://Player/Player.tscn" id="1_bklh2"]
 [ext_resource type="Script" uid="uid://rfss2f8rcq4h" path="res://Scripts/UGIE.gd" id="1_vqcc7"]
+[ext_resource type="Script" uid="uid://dbt6o2eu1gk30" path="res://Player/ReliefStamina.gd" id="2_elny8"]
 [ext_resource type="PackedScene" uid="uid://d1ssvf7df23lj" path="res://Map/Bunker.tscn" id="2_vqcc7"]
 [ext_resource type="Script" uid="uid://dcnlel7767ud6" path="res://addons/post_processing/node/post_process.gd" id="4_r8nko"]
 [ext_resource type="Script" uid="uid://bvqhrfw0ecawf" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="5_0hbek"]
+[ext_resource type="Script" uid="uid://cw8ni4hq1ufg0" path="res://Scripts/ReliefBreathMeter.gd" id="6_0hbek"]
 
 [sub_resource type="Environment" id="Environment_sq8w8"]
 background_mode = 1
@@ -44,9 +46,15 @@ dof_blur_far_distance = 2.3
 script = ExtResource("5_0hbek")
 metadata/_custom_type_script = "uid://bvqhrfw0ecawf"
 
+[sub_resource type="SystemFont" id="SystemFont_jwean"]
+font_names = PackedStringArray("Monospace")
+
 [node name="RELIEF" type="Node3D" unique_id=12177005]
 script = ExtResource("1_vqcc7")
 hud_update_interval = 1.0
+
+[node name="ReliefStamina" type="Node" parent="." unique_id=400036730]
+script = ExtResource("2_elny8")
 
 [node name="Bunker" parent="." unique_id=1229566191 instance=ExtResource("2_vqcc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
@@ -62,3 +70,27 @@ camera_attributes = SubResource("CameraAttributesPractical_jwean")
 script = ExtResource("4_r8nko")
 configuration = SubResource("Resource_sq8w8")
 metadata/_custom_type_script = "uid://dcnlel7767ud6"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1852869903]
+
+[node name="BreathIndicator" type="Control" parent="UI" unique_id=625641047]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -26.0
+offset_right = 18.0
+offset_bottom = -26.0
+grow_vertical = 0
+scale = Vector2(1.4, 1.4)
+script = ExtResource("6_0hbek")
+critical_color = Color(1, 0.6, 0.13333334, 1)
+
+[node name="Label" type="Label" parent="UI/BreathIndicator" unique_id=1028162959]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("SystemFont_jwean")
+
+[connection signal="stamina_changed" from="ReliefStamina" to="UI/BreathIndicator" method="_on_stamina_changed"]
