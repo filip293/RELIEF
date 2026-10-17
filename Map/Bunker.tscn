@@ -8,37 +8,37 @@
 [ext_resource type="Texture2D" uid="uid://cpbfisbl8v8gk" path="res://ExtraTextures/Plaster/Plaster005_1K-JPG_Roughness.jpg" id="5_egkfj"]
 [ext_resource type="Texture2D" uid="uid://b1ihdsn5qwfx3" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Color.jpg" id="7_6y00s"]
 [ext_resource type="Texture2D" uid="uid://b5rco6kvcjnf1" path="res://ExtraTextures/Rock/Rock035_1K-JPG_AmbientOcclusion.jpg" id="8_em2ti"]
-[ext_resource type="Texture2D" uid="uid://c6ugsstpbmq5" path="res://Map/MapFiles/shelter_nine_full_green_metal_rust_ao_2k-green_metal_rust_rough_2k.png" id="8_ne152"]
-[ext_resource type="Texture2D" uid="uid://dexxaaced085d" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Color.jpg" id="9_egkfj"]
 [ext_resource type="Texture2D" uid="uid://d1n6g2brx2dn5" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Displacement.jpg" id="9_em2ti"]
 [ext_resource type="Texture2D" uid="uid://dtctmchx284ov" path="res://ExtraTextures/Rock/Rock035_1K-JPG_NormalDX.jpg" id="9_qgp6i"]
 [ext_resource type="Texture2D" uid="uid://clhtq6rnht02d" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_diff_2k.jpg" id="10_28i2f"]
 [ext_resource type="Texture2D" uid="uid://g043pockl86r" path="res://ExtraTextures/Rock/Rock035_1K-JPG_Roughness.jpg" id="10_a1tkp"]
 [ext_resource type="Texture2D" uid="uid://iscjrh2qcrbn" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Displacement.jpg" id="11_2kpri"]
 [ext_resource type="Texture2D" uid="uid://d1madnj0304jv" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_ao_2k-metal_plate_02_rough_2k-metal_plate_02_metal_2k.png" id="11_6d1bb"]
-[ext_resource type="Texture2D" uid="uid://cnq4grlr34xy1" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Metalness.jpg" id="12_0tg27"]
+[ext_resource type="Texture2D" uid="uid://v33bb705wj6v" path="res://ExtraTextures/Metal/MetalPlates010_1K-JPG_Color.jpg" id="12_a1tkp"]
 [ext_resource type="Texture2D" uid="uid://ou5ev3lny8op" path="res://Map/MapFiles/shelter_nine_full_metal_plate_02_nor_gl_2k.jpg" id="12_pkupc"]
-[ext_resource type="Texture2D" uid="uid://dhiojv8cx8mpu" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_Color.jpg" id="13_axfw3"]
-[ext_resource type="Texture2D" uid="uid://cukpf30bbtn4j" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_NormalDX.jpg" id="13_kd0fb"]
+[ext_resource type="Texture2D" uid="uid://dagsfnb2o3uo8" path="res://ExtraTextures/Metal/MetalPlates010_1K-JPG_AmbientOcclusion.jpg" id="13_simdw"]
 [ext_resource type="Texture2D" uid="uid://ckcxejwugvvjb" path="res://Map/MapFiles/shelter_nine_full_painted_plaster_wall_diff_2k.jpg" id="13_vveqt"]
-[ext_resource type="Texture2D" uid="uid://p0ups8hjcqf7" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_AmbientOcclusion.jpg" id="14_54mbn"]
-[ext_resource type="Texture2D" uid="uid://bi2klh2tfcq7k" path="res://ExtraTextures/RustyMetal/Metal053C_1K-JPG_Roughness.jpg" id="14_txgul"]
 [ext_resource type="Texture2D" uid="uid://uaabp7ucvmex" path="res://Map/MapFiles/shelter_nine_full_painted_plaster_wall_nor_gl_2k.jpg" id="15_d4oyn"]
 [ext_resource type="Texture2D" uid="uid://c7ame8q8gpcq" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_Displacement.jpg" id="15_nyl3g"]
-[ext_resource type="Texture2D" uid="uid://c8ta4vyeha14a" path="res://Map/MapFiles/shelter_nine_full_concrete_floor_worn_001_diff_2k.jpg" id="16_8fahx"]
-[ext_resource type="Texture2D" uid="uid://do8yhpas4k08l" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_NormalDX.jpg" id="16_pa6d8"]
-[ext_resource type="Texture2D" uid="uid://crvw7tpwonxpl" path="res://ExtraTextures/PeelingPlaster/PaintedPlaster016_1K-JPG_Roughness.jpg" id="17_jbl8q"]
+[ext_resource type="Texture2D" uid="uid://cx8i7ufw0e34w" path="res://ExtraTextures/Metal/MetalPlates010_1K-JPG_Metalness.jpg" id="15_o7hox"]
+[ext_resource type="Texture2D" uid="uid://bw62ecx1javh3" path="res://ExtraTextures/Metal/MetalPlates010_1K-JPG_NormalGL.jpg" id="16_gx37t"]
 [ext_resource type="Texture2D" uid="uid://cttfor05emg3r" path="res://Map/MapFiles/shelter_nine_full_concrete_floor_worn_001_ao_2k-concrete_floor_worn_001_rough_2k.png" id="17_k5q7v"]
-[ext_resource type="Texture2D" uid="uid://bx7qjf0kf38dy" path="res://Map/MapFiles/shelter_nine_full_concrete_floor_worn_001_nor_gl_2k.jpg" id="18_wxdfw"]
+[ext_resource type="Texture2D" uid="uid://crmhyciyemxs2" path="res://ExtraTextures/Metal/MetalPlates010_1K-JPG_Roughness.jpg" id="17_l3vuc"]
+[ext_resource type="Texture2D" uid="uid://cyxyeypet3by1" path="res://ExtraTextures/WhiteWall/Concrete039_1K-JPG_Color.jpg" id="18_gx37t"]
 [ext_resource type="Texture2D" uid="uid://d20kl7h8ut6qw" path="res://Map/MapFiles/shelter_nine_full_rust_coarse_01_diff_2k.jpg" id="19_63kcp"]
+[ext_resource type="Texture2D" uid="uid://dc171ql42pxj" path="res://ExtraTextures/WhiteWall/Concrete039_1K-JPG_AmbientOcclusion.jpg" id="19_l3vuc"]
 [ext_resource type="Texture2D" uid="uid://5ua3apvsrvck" path="res://Map/MapFiles/shelter_nine_full_rust_coarse_01_ao_2k-rust_coarse_01_rough_2k.png" id="20_r5vnb"]
 [ext_resource type="Texture2D" uid="uid://bxtao4jq8tcvs" path="res://Map/MapFiles/shelter_nine_full_rust_coarse_01_nor_gl_2k.jpg" id="21_j65g8"]
-[ext_resource type="Texture2D" uid="uid://bd8uqa2dpr0mf" path="res://Map/MapFiles/shelter_nine_full_painted_concrete_diff_2k.jpg" id="22_020ee"]
-[ext_resource type="Texture2D" uid="uid://ckshdxp2mhmld" path="res://Map/MapFiles/shelter_nine_full_painted_concrete_ao_2k-painted_concrete_rough_2k.png" id="23_ckdtb"]
-[ext_resource type="Texture2D" uid="uid://bjtlrgnh0p7my" path="res://Map/MapFiles/shelter_nine_full_painted_concrete_nor_gl_2k.jpg" id="24_wwl6j"]
+[ext_resource type="Texture2D" uid="uid://cl361yomaqdcm" path="res://ExtraTextures/WhiteWall/Concrete039_1K-JPG_Displacement.jpg" id="21_lceq2"]
+[ext_resource type="Texture2D" uid="uid://blgciy3t4r18f" path="res://ExtraTextures/WhiteWall/Concrete039_1K-JPG_NormalGL.jpg" id="22_it4fh"]
+[ext_resource type="Texture2D" uid="uid://bwslq4g0s05ih" path="res://ExtraTextures/WhiteWall/Concrete039_1K-JPG_Roughness.jpg" id="23_i6am3"]
+[ext_resource type="Texture2D" uid="uid://xvvblvvapl7r" path="res://ExtraTextures/Floor/Concrete035_1K-JPG_Color.jpg" id="24_a1tkp"]
 [ext_resource type="Texture2D" uid="uid://dnvkqmy2o3kgp" path="res://Map/MapFiles/shelter_nine_full_worn_tile_floor_diff_2k.jpg" id="25_hfs8b"]
 [ext_resource type="Texture2D" uid="uid://c6qiu2y26fccs" path="res://Map/MapFiles/shelter_nine_full_worn_tile_floor_ao_2k-worn_tile_floor_rough_2k.png" id="26_1gwpe"]
+[ext_resource type="Texture2D" uid="uid://bi47ixniff7rw" path="res://ExtraTextures/Floor/Concrete035_1K-JPG_Displacement.jpg" id="26_simdw"]
+[ext_resource type="Texture2D" uid="uid://qenro3a7aqn1" path="res://ExtraTextures/Floor/Concrete035_1K-JPG_NormalGL.jpg" id="27_o7hox"]
 [ext_resource type="Texture2D" uid="uid://bii7uhw4n58w0" path="res://Map/MapFiles/shelter_nine_full_worn_tile_floor_nor_gl_2k.jpg" id="27_vphb4"]
+[ext_resource type="Texture2D" uid="uid://bnttm4evetbj1" path="res://ExtraTextures/Floor/Concrete035_1K-JPG_Roughness.jpg" id="28_gx37t"]
 [ext_resource type="Texture2D" uid="uid://bxvm0w0sc2hk5" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_diff_2k.jpg" id="28_k3uuf"]
 [ext_resource type="Texture2D" uid="uid://xnq4aewsvc26" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_ao_2k-interior_tiles_rough_2k.png" id="29_obikd"]
 [ext_resource type="Texture2D" uid="uid://cfa6x7q3ho5t7" path="res://Map/MapFiles/shelter_nine_full_interior_tiles_nor_gl_2k.jpg" id="30_2mh31"]
@@ -522,20 +522,15 @@ data = PackedVector3Array(-0.425, -0.575, 3.85, 0.425, -0.575, -3.85, -0.425, -0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjmem"]
 resource_name = "MAT_Steel_Bare"
 cull_mode = 2
-albedo_texture = ExtResource("9_egkfj")
-metallic = 0.79
-metallic_specular = 0.0
-metallic_texture = ExtResource("12_0tg27")
-metallic_texture_channel = 2
-roughness = 0.68
-roughness_texture = ExtResource("14_txgul")
-roughness_texture_channel = 1
+albedo_texture = ExtResource("12_a1tkp")
+metallic = 0.9
+metallic_specular = 1.0
+metallic_texture = ExtResource("15_o7hox")
+roughness_texture = ExtResource("17_l3vuc")
 normal_enabled = true
-normal_scale = 16.0
-normal_texture = ExtResource("13_kd0fb")
+normal_texture = ExtResource("16_gx37t")
 ao_enabled = true
-ao_texture = ExtResource("8_ne152")
-heightmap_enabled = true
+ao_texture = ExtResource("13_simdw")
 heightmap_texture = ExtResource("11_2kpri")
 metadata/extras = {
 "asset_id": "green_metal_rust",
@@ -615,20 +610,21 @@ shadow_mesh = SubResource("ArrayMesh_nhm8e")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ctol"]
 resource_name = "MAT_Paint_Cream"
 cull_mode = 2
-albedo_texture = ExtResource("13_axfw3")
-metallic_texture = ExtResource("14_54mbn")
-metallic_texture_channel = 2
+albedo_color = Color(0.7411765, 0.83137256, 1, 1)
+albedo_texture = ExtResource("18_gx37t")
 roughness = 0.73
-roughness_texture = ExtResource("17_jbl8q")
+roughness_texture = ExtResource("23_i6am3")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("16_pa6d8")
-bent_normal_enabled = true
+normal_texture = ExtResource("22_it4fh")
 bent_normal_texture = ExtResource("15_nyl3g")
 ao_enabled = true
-ao_texture = ExtResource("14_54mbn")
+ao_light_affect = 0.05
+ao_texture = ExtResource("19_l3vuc")
 heightmap_enabled = true
-heightmap_texture = ExtResource("15_nyl3g")
+heightmap_scale = 3.0
+heightmap_texture = ExtResource("21_lceq2")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
 metadata/extras = {
 "asset_id": "painted_plaster_wall",
 "normal_strength": 0.35,
@@ -745,18 +741,17 @@ data = PackedVector3Array(-0.2, -1.15, 0.775, 0.2, -1.15, -0.775, -0.2, -1.15, -
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5pxq"]
 resource_name = "MAT_Concrete_Floor"
 cull_mode = 2
-albedo_texture = ExtResource("16_8fahx")
-metallic = 0.03
-metallic_specular = 0.1
-metallic_texture = ExtResource("17_k5q7v")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("17_k5q7v")
+albedo_texture = ExtResource("24_a1tkp")
+roughness_texture = ExtResource("28_gx37t")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 16.0
-normal_texture = ExtResource("18_wxdfw")
-ao_enabled = true
+normal_texture = ExtResource("27_o7hox")
 ao_texture = ExtResource("17_k5q7v")
+heightmap_enabled = true
+heightmap_scale = 3.0
+heightmap_texture = ExtResource("26_simdw")
+uv1_scale = Vector3(0.82, 0.82, 0.82)
+uv1_offset = Vector3(0.01, -0.58, 0)
 metadata/extras = {
 "asset_id": "concrete_floor_worn_001",
 "normal_strength": 0.5,
@@ -908,6 +903,28 @@ data = PackedVector3Array(-24, -0.1, 1.5, 24, -0.1, -1.5, -24, -0.1, -1.5, -24, 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pksji"]
 size = Vector3(48.878998, 2.8652344, 4.5614014)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1tkp"]
+resource_name = "MAT_Steel_Bare"
+cull_mode = 2
+albedo_texture = ExtResource("12_a1tkp")
+metallic = 0.9
+metallic_specular = 1.0
+metallic_texture = ExtResource("15_o7hox")
+roughness_texture = ExtResource("17_l3vuc")
+normal_enabled = true
+normal_texture = ExtResource("16_gx37t")
+ao_enabled = true
+ao_texture = ExtResource("13_simdw")
+heightmap_texture = ExtResource("11_2kpri")
+uv1_scale = Vector3(1, 2.7, 1)
+metadata/extras = {
+"asset_id": "green_metal_rust",
+"normal_strength": 0.35,
+"textured": true,
+"uv_metres": 1.0
+}
+metadata/_gltf_primary_texture_coord = 0
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_dsdc1"]
 _surfaces = [{
 "aabb": AABB(-23.2, -0.06062174, -0.069999695, 46.4, 0.12124348, 0.13999939),
@@ -930,7 +947,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 60,
 "index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAAAAQAAQADAAUABgAHAAgABwAGAAkACQAGAAoABwAJAAsADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
+"material": SubResource("StandardMaterial3D_a1tkp"),
 "name": "MAT_Steel_Bare",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -949,10 +966,10 @@ metallic_texture_channel = 2
 roughness_texture = ExtResource("20_r5vnb")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 16.0
 normal_texture = ExtResource("21_j65g8")
 ao_enabled = true
 ao_texture = ExtResource("20_r5vnb")
+uv1_scale = Vector3(1, 3.65, 1)
 metadata/extras = {
 "asset_id": "rust_coarse_01",
 "normal_strength": 0.7,
@@ -1252,16 +1269,21 @@ shadow_mesh = SubResource("ArrayMesh_oy7gh")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pg5v"]
 resource_name = "MAT_Paint_Dado"
 cull_mode = 2
-albedo_texture = ExtResource("22_020ee")
-metallic_texture = ExtResource("23_ckdtb")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("23_ckdtb")
+albedo_color = Color(0.8553688, 0.97759706, 0.70380455, 1)
+albedo_texture = ExtResource("18_gx37t")
+roughness = 0.73
+roughness_texture = ExtResource("23_i6am3")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 16.0
-normal_texture = ExtResource("24_wwl6j")
+normal_texture = ExtResource("22_it4fh")
 ao_enabled = true
-ao_texture = ExtResource("23_ckdtb")
+ao_light_affect = 0.05
+ao_texture = ExtResource("19_l3vuc")
+heightmap_enabled = true
+heightmap_scale = 3.0
+heightmap_texture = ExtResource("21_lceq2")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_offset = Vector3(-1, 0, 0)
 metadata/extras = {
 "asset_id": "painted_concrete",
 "normal_strength": 0.4,
