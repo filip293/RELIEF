@@ -53,6 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1222489446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17203185, 0)
+fov = 65.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D" unique_id=1813723862]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.22631076)
@@ -101,7 +102,8 @@ shape = SubResource("CapsuleShape3D_1p4ks")
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=726685856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93470675, 0)
 stream = ExtResource("5_8g4oa")
-volume_db = -40.0
+volume_db = -71.673
+unit_size = 3.0
 panning_strength = 2.0
 bus = &"Player_SFX"
 

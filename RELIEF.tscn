@@ -3,13 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bkgvsbpxyeh4l" path="res://Player/Player.tscn" id="1_bklh2"]
 [ext_resource type="Script" uid="uid://rfss2f8rcq4h" path="res://Scripts/UGIE.gd" id="1_vqcc7"]
 [ext_resource type="PackedScene" uid="uid://d1ssvf7df23lj" path="res://Map/Bunker.tscn" id="2_vqcc7"]
+[ext_resource type="Script" uid="uid://dcnlel7767ud6" path="res://addons/post_processing/node/post_process.gd" id="4_r8nko"]
+[ext_resource type="Script" uid="uid://bvqhrfw0ecawf" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="5_0hbek"]
 
 [sub_resource type="Environment" id="Environment_sq8w8"]
 background_mode = 1
 background_color = Color(0.03137255, 0.043137256, 0.047058824, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.07058824, 0.08627451, 0.078431375, 1)
-ambient_light_energy = 0.46
+ambient_light_energy = 0.83
 tonemap_mode = 2
 tonemap_exposure = 1.1
 tonemap_white = 6.0
@@ -38,6 +40,10 @@ adjustment_enabled = true
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jwean"]
 dof_blur_far_distance = 2.3
 
+[sub_resource type="Resource" id="Resource_sq8w8"]
+script = ExtResource("5_0hbek")
+metadata/_custom_type_script = "uid://bvqhrfw0ecawf"
+
 [node name="RELIEF" type="Node3D" unique_id=12177005]
 script = ExtResource("1_vqcc7")
 hud_update_interval = 1.0
@@ -51,3 +57,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.936439, 1.0265477, 0.515963
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=397694592]
 environment = SubResource("Environment_sq8w8")
 camera_attributes = SubResource("CameraAttributesPractical_jwean")
+
+[node name="PostProcess" type="CanvasLayer" parent="." unique_id=153309789]
+script = ExtResource("4_r8nko")
+configuration = SubResource("Resource_sq8w8")
+metadata/_custom_type_script = "uid://dcnlel7767ud6"

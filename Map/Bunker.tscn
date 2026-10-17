@@ -622,8 +622,8 @@ roughness = 0.73
 roughness_texture = ExtResource("17_jbl8q")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_scale = 1.36
 normal_texture = ExtResource("16_pa6d8")
+bent_normal_enabled = true
 bent_normal_texture = ExtResource("15_nyl3g")
 ao_enabled = true
 ao_texture = ExtResource("14_54mbn")
@@ -19527,4 +19527,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2629175, 3.1897702, -6.2408
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.421034, 3.1897702, -6.240845)
 
 [node name="HallwayLight" parent="." unique_id=636439628 instance=ExtResource("53_a1tkp")]
-transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 5.9886312, 2.2931256, -8.396302)
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 5.9886312, 2.323, -8.396302)
+
+[node name="HallwayLight2" parent="." unique_id=350257903 instance=ExtResource("53_a1tkp")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, -5.01526, 2.323, -8.396302)
+
+[node name="HallwayLight3" parent="." unique_id=1495073497 instance=ExtResource("53_a1tkp")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 19.01244, 2.323, -8.396302)
+
+[node name="HallwayLight4" parent="." unique_id=635755794 instance=ExtResource("53_a1tkp")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 38.907467, 2.323, -8.396302)

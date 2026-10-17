@@ -43,11 +43,11 @@ func _ready() -> void:
 	# 2. Configure initial Lockstep synchronization
 	#apply_lockstep_settings() #TURNED OFF FOR DEVELOPMENT PURPOSES
 	
-	#if OS.get_name() == "macOS":        #malce po optimised e, ne se igra na 30
-		#var screen_refresh = DisplayServer.screen_get_refresh_rate()
-		#var target_ticks: int = screen_refresh / 2
-		#Engine.physics_ticks_per_second = target_ticks
-		#Engine.max_fps = target_ticks
+	if OS.get_processor_name() == "Apple M5": #Za na Serdar da ne mu umira macbookot
+		var screen_refresh = DisplayServer.screen_get_refresh_rate()
+		var target_ticks: int = screen_refresh / 2
+		Engine.physics_ticks_per_second = target_ticks
+		Engine.max_fps = target_ticks
 			
 	# 3. Print initial platform audit to the console
 	print_full_diagnostics_report()

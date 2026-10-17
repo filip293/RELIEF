@@ -98,5 +98,6 @@ flashlight={
 rendering_device/driver.windows="d3d12"
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+textures/default_filters/anisotropic_filtering_level=3
 anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true

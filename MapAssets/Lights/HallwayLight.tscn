@@ -118,7 +118,7 @@ mesh = SubResource("ArrayMesh_uphdy")
 [node name="SpotLight3D" type="SpotLight3D" parent="industrial_wall_lamp_industrial_wall_lamp_glass_0" unique_id=392233005]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.06263608, 0)
 light_color = Color(0.93333334, 0.8666667, 0.50980395, 1)
-light_energy = 0.2
+light_energy = 0.033
 light_volumetric_fog_energy = 12.0
 light_specular = 0.2
 shadow_enabled = true
@@ -127,14 +127,3 @@ shadow_blur = 3.0
 spot_range = 8.110109
 spot_attenuation = 0.5
 spot_angle = 50.0
-
-[node name="BunkerLight" type="Node3D" parent="." unique_id=2011081581]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="Sketchfab_model" type="Node3D" parent="BunkerLight" unique_id=258473861]
-transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
-
-[node name="9f8836a722874bd4abb051187f3bbdf8_fbx" type="Node3D" parent="BunkerLight/Sketchfab_model" unique_id=594781585]
-transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
-
-[node name="RootNode" type="Node3D" parent="BunkerLight/Sketchfab_model/9f8836a722874bd4abb051187f3bbdf8_fbx" unique_id=968894847]

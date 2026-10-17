@@ -199,7 +199,7 @@ func _apply_camera_roll(delta: float, strafe_input: float) -> void:
 
 func _on_player_step_taken(is_running: bool) -> void:
 	footstep_audio.pitch_scale = randf_range(0.88, 1.12)
-	var base_volume: float = 0.0 if is_running else -5.0
+	var base_volume: float = -8.0 if is_running else -10.0
 	footstep_audio.volume_db = base_volume + randf_range(-1.5, 1.5)
 	
 	footstep_audio.play()
