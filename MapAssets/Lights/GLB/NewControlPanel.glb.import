@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4uk4vecdbw1n"
-path="res://.godot/imported/nuclear_reactor_control_panel.glb-1b5301ad6d0097e5dcc0633afe2d356c.scn"
+uid="uid://cik3b8tqvmnr2"
+path="res://.godot/imported/NewControlPanel.glb-8cfca9daf9bd8c28c8853eaa32837933.scn"
 
 [deps]
 
-source_file="res://MapAssets/Entrance/nuclear_reactor_control_panel.glb"
-dest_files=["res://.godot/imported/nuclear_reactor_control_panel.glb-1b5301ad6d0097e5dcc0633afe2d356c.scn"]
+source_file="res://MapAssets/Lights/GLB/NewControlPanel.glb"
+dest_files=["res://.godot/imported/NewControlPanel.glb-8cfca9daf9bd8c28c8853eaa32837933.scn"]
 
 [params]
 

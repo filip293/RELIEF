@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wn5c2aj5e7no"
-path.s3tc="res://.godot/imported/nuclear_reactor_control_panel_17.png-9580e5996f282192cb03151059b41316.s3tc.ctex"
+uid="uid://dijnttirsvr7m"
+path.s3tc="res://.godot/imported/NewControlPanel_Image_10.png-bde38903d8ae1e5a24ab6c443f4ca67b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ea78d0401267e46f1c735bf591d9d06e"
+"md5": "ae39ec5bb07db6b11bb2ff7a77ad44df"
 }
 
 [deps]
 
-source_file="res://MapAssets/Entrance/nuclear_reactor_control_panel_17.png"
-dest_files=["res://.godot/imported/nuclear_reactor_control_panel_17.png-9580e5996f282192cb03151059b41316.s3tc.ctex"]
+source_file="res://MapAssets/Lights/GLB/NewControlPanel_Image_10.png"
+dest_files=["res://.godot/imported/NewControlPanel_Image_10.png-bde38903d8ae1e5a24ab6c443f4ca67b.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=8
-roughness/src_normal="res://MapAssets/Entrance/nuclear_reactor_control_panel_18.png"
+roughness/src_normal="res://MapAssets/Lights/GLB/NewControlPanel_Image_11.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

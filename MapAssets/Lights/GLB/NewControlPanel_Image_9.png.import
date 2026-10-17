@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8sk07xw26grs"
-path.s3tc="res://.godot/imported/nuclear_reactor_control_panel_15.png-713d1bbaf159340827be371d940caee4.s3tc.ctex"
+uid="uid://b753yw5acgatq"
+path.s3tc="res://.godot/imported/NewControlPanel_Image_9.png-56a1990db3b9413311e88e101a53877e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "404c02682e21a29acb30b40873d3b2d0"
+"md5": "0048f33ee16522c97a9615a7d8f1a536"
 }
 
 [deps]
 
-source_file="res://MapAssets/Entrance/nuclear_reactor_control_panel_15.png"
-dest_files=["res://.godot/imported/nuclear_reactor_control_panel_15.png-713d1bbaf159340827be371d940caee4.s3tc.ctex"]
+source_file="res://MapAssets/Lights/GLB/NewControlPanel_Image_9.png"
+dest_files=["res://.godot/imported/NewControlPanel_Image_9.png-56a1990db3b9413311e88e101a53877e.s3tc.ctex"]
 
 [params]
 
