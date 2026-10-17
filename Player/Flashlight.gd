@@ -54,6 +54,7 @@ func toggle_flashlight() -> void:
 	if click_audio:
 		click_audio.pitch_scale = randf_range(0.95, 1.05)
 		click_audio.play()
+		ReliefHaptics.play_switch_click()
 
 func _on_step_taken(is_running: bool) -> void:
 	if not _is_on:

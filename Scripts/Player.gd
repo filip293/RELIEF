@@ -21,6 +21,7 @@ var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
 @export var walk_speed: float = 2.4
 @export var sprint_speed: float = 4.0
 @export var crouch_speed: float = 1.3
+@export var breath_held_speed: float = 1.4 # <-- Tense, slow creep
 @export var acceleration: float = 8.0
 @export var friction: float = 10.0
 
@@ -45,7 +46,7 @@ var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
 # --- NODES ---
 @onready var head: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
-@onready var stamina: ReliefStamina = $/root/RELIEF/ReliefStamina
+@onready var stamina: ReliefStamina = get_node_or_null("/root/RELIEF/ReliefStamina")
 
 # Internal States
 var _bob_timer: float = 0.0
@@ -140,11 +141,22 @@ func _physics_process(delta: float) -> void:
 		"move_left", "move_right", "move_forward", "move_backward", gamepad_deadzone
 	)
 	# 1. Determine Movement State with Stamina Enforcement
-	var wants_to_sprint: bool = Input.is_action_pressed("sprint") and is_on_floor() and input_dir.length_squared() > 0.01
-	var can_sprint: bool = stamina.can_sprint() if stamina else true
+	var is_moving: bool = input_dir.length_squared() > 0.01
 	
+	# Check breath holding (locks out sprint)
+	var is_holding_breath: bool = Input.is_action_pressed("hold_breath") and (stamina.can_hold_breath() if stamina else true)
+	
+	# Sprint is only possible if NOT holding breath and stamina permits
+	var wants_to_sprint: bool = Input.is_action_pressed("sprint") and is_on_floor() and is_moving and not is_holding_breath
+	var can_sprint: bool = stamina.can_sprint() if stamina else true
 	var is_sprinting: bool = wants_to_sprint and can_sprint
-	var target_speed: float = sprint_speed if is_sprinting else walk_speed
+
+	# Determine Target Speed
+	var target_speed: float = walk_speed
+	if is_sprinting:
+		target_speed = sprint_speed
+	elif is_holding_breath:
+		target_speed = breath_held_speed # <-- Slow down to a cautious creep
 	
 	# 2. Movement Direction (Supports WASD and Left Joystick smoothly)
 	var move_direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -190,6 +202,7 @@ func _apply_head_bob(delta: float, h_velocity: Vector3, is_sprinting: bool) -> v
 		var current_phase: float = sin(_bob_timer * 2.0)
 		if _step_phase > 0.0 and current_phase <= 0.0:
 			emit_signal("step_taken", is_sprinting)
+			ReliefHaptics.play_footstep(is_sprinting)
 		_step_phase = current_phase
 	else:
 		_bob_timer = 0.0

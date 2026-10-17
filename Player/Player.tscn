@@ -125,4 +125,8 @@ visibility_aabb = AABB(-16.21, -9.67, -15.89, 31.06, 12.05, 32.46)
 process_material = SubResource("ParticleProcessMaterial_6ysni")
 draw_pass_1 = SubResource("QuadMesh_s1rgi")
 
+[node name="Breathing" type="AudioStreamPlayer3D" parent="." unique_id=1425603710]
+max_distance = 8.0
+bus = &"Player_SFX"
+
 [connection signal="step_taken" from="." to="." method="_on_player_step_taken"]

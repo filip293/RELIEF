@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 
 func _on_stamina_changed(_current: float, _max: float, percent: float) -> void:
 	fill_percent = percent
-	_is_critical = percent <= 0.18
+	_is_critical = percent <= 0.25
 	
 	# Smoothly reveal UI when sprinting/holding breath, fade when full
 	if dynamic_opacity:
