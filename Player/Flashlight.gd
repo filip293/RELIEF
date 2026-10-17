@@ -25,7 +25,7 @@ func _ready() -> void:
 	
 	# Configure 1974 Tungsten Bulb Profile
 	light.light_color = tungsten_color
-	light.spot_angle = 34.0
+	light.spot_angle = 50.0
 	light.spot_attenuation = 1.3
 	light.shadow_enabled = true
 	light.shadow_blur = 1.8
