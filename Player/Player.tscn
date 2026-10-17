@@ -11,6 +11,40 @@
 radius = 0.328125
 height = 1.6323242
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6ysni"]
+emission_shape_offset = Vector3(0.115, 0, 0)
+emission_shape_scale = Vector3(1, 1, 2.55)
+emission_shape = 3
+emission_box_extents = Vector3(8.93, 3.075, 3.245)
+direction = Vector3(0, -0.2, 0)
+initial_velocity_min = 0.049999997
+initial_velocity_max = 0.14999999
+gravity = Vector3(0, -0.02, 0)
+turbulence_enabled = true
+turbulence_noise_strength = 0.3
+turbulence_noise_scale = 3.0
+
+[sub_resource type="Gradient" id="Gradient_qgp6i"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vlldt"]
+gradient = SubResource("Gradient_qgp6i")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0y56w"]
+transparency = 1
+albedo_color = Color(0.7733004, 0.74993074, 0.62547505, 0.40784314)
+albedo_texture = SubResource("GradientTexture2D_vlldt")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_s1rgi"]
+material = SubResource("StandardMaterial3D_0y56w")
+size = Vector2(0.006, 0.006)
+
 [node name="Player" type="CharacterBody3D" unique_id=1013928884]
 script = ExtResource("1_3qydi")
 
@@ -73,5 +107,13 @@ bus = &"Player_SFX"
 
 [node name="SurfaceCheck" type="RayCast3D" parent="." unique_id=2056279021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7763653, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1706453942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8535783, 0)
+amount = 30000
+lifetime = 8.0
+visibility_aabb = AABB(-16.21, -9.67, -15.89, 31.06, 12.05, 32.46)
+process_material = SubResource("ParticleProcessMaterial_6ysni")
+draw_pass_1 = SubResource("QuadMesh_s1rgi")
 
 [connection signal="step_taken" from="." to="." method="_on_player_step_taken"]

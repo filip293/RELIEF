@@ -2408,40 +2408,6 @@ shadow_mesh = SubResource("ArrayMesh_oea1d")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aiddr"]
 data = PackedVector3Array(-6, -0.1, 4, 6, -0.1, -4, -6, -0.1, -4, -6, -0.1, 4, 6, -0.1, 4, 6, -0.1, -4, -6, 0.1, 4, 6, 0.1, -4, 6, 0.1, 4, -6, 0.1, 4, -6, 0.1, -4, 6, 0.1, -4, -6, -0.1, 4, 6, 0.1, 4, 6, -0.1, 4, -6, -0.1, 4, -6, 0.1, 4, 6, 0.1, 4, 6, -0.1, 4, 6, 0.1, -4, 6, -0.1, -4, 6, -0.1, 4, 6, 0.1, 4, 6, 0.1, -4, 6, -0.1, -4, -6, 0.1, -4, -6, -0.1, -4, 6, -0.1, -4, 6, 0.1, -4, -6, 0.1, -4, -6, -0.1, -4, -6, 0.1, 4, -6, -0.1, 4, -6, -0.1, -4, -6, 0.1, -4, -6, 0.1, 4)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pksji"]
-emission_shape_offset = Vector3(9.93, 0, 0)
-emission_shape_scale = Vector3(1, 1, 2.55)
-emission_shape = 3
-emission_box_extents = Vector3(44.2, 5.69, 8)
-direction = Vector3(0, -0.2, 0)
-initial_velocity_min = 0.049999997
-initial_velocity_max = 0.14999999
-gravity = Vector3(0, -0.02, 0)
-turbulence_enabled = true
-turbulence_noise_strength = 0.3
-turbulence_noise_scale = 3.0
-
-[sub_resource type="Gradient" id="Gradient_qgp6i"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ysni"]
-gradient = SubResource("Gradient_qgp6i")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0y56w"]
-transparency = 1
-albedo_color = Color(0.83137256, 0.8117647, 0.7058824, 0.50980395)
-albedo_texture = SubResource("GradientTexture2D_6ysni")
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="QuadMesh" id="QuadMesh_jwean"]
-material = SubResource("StandardMaterial3D_0y56w")
-size = Vector2(0.006, 0.006)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_jtubr"]
 _surfaces = [{
 "aabb": AABB(-0.5, -0.6, -4, 1, 1.2, 8),
@@ -16228,14 +16194,6 @@ light_specular = 0.0
 omni_range = 15.0
 omni_attenuation = 0.8
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Scene Collection/ShelterNine/L0/L0_R01_Floor" unique_id=2070219852]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8535783, 0)
-amount = 60000
-lifetime = 8.0
-visibility_aabb = AABB(-33.88, -9.67, -15.89, 120.09, 12.05, 35.81)
-process_material = SubResource("ParticleProcessMaterial_pksji")
-draw_pass_1 = SubResource("QuadMesh_jwean")
-
 [node name="L0_R01_WallE_00_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=720275451]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.6, -4)
 mesh = SubResource("ArrayMesh_denf6")
@@ -19490,38 +19448,6 @@ transform = Transform3D(0.38649046, -1.4901161e-08, 7.1054274e-15, 0, -4.6073264
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallComputer/StaticBody3D" unique_id=1870652066]
 shape = SubResource("BoxShape3D_aw668")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="WallComputer" unique_id=1612812685]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer" unique_id=1203112318]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer" unique_id=1221111916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer" unique_id=251036106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
 [node name="WallComputer2" parent="." unique_id=1550791788 instance=ExtResource("45_txgul")]
 transform = Transform3D(-0.2588191, 0, 0.96592575, 0, 1, 0, -0.96592575, 0, -0.2588191, 10.616542, 4.6073264e-08, -0.6724667)
 
@@ -19530,38 +19456,6 @@ transform = Transform3D(0.38649046, -1.4901161e-08, 7.1054274e-15, 0, -4.6073264
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallComputer2/StaticBody3D" unique_id=636604724]
 shape = SubResource("BoxShape3D_aw668")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="WallComputer2" unique_id=209165406]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer2" unique_id=968470488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer2" unique_id=1423668753]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer2" unique_id=688864657]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
 
 [node name="Computer" type="AudioStreamPlayer3D" parent="WallComputer2" unique_id=371800123]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.121706605, 0)
@@ -19580,38 +19474,6 @@ transform = Transform3D(0.38649046, -1.4901161e-08, 7.1054274e-15, 0, -4.6073264
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallComputer3/StaticBody3D" unique_id=948952647]
 shape = SubResource("BoxShape3D_aw668")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="WallComputer3" unique_id=1488879320]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35288715, 0.90060824, 0.16038513)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="WallComputer3" unique_id=2020859452]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32871437, 0.94827664, 0.16205025)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="WallComputer3" unique_id=44527334]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29711723, 0.98646533, 0.16180801)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="WallComputer3" unique_id=925514587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26560307, 1.0245898, 0.16150475)
-light_color = Color(1, 1, 0.39607844, 1)
-light_energy = 0.01
-light_specular = 0.0
-omni_range = 0.9
-omni_attenuation = 0.208
 
 [node name="ControlPanelOld" parent="." unique_id=394135288 instance=ExtResource("46_xypr8")]
 transform = Transform3D(0.47882408, 0, -0.1439705, 0, 0.5, 0, 0.1439705, 0, 0.47882408, 0.77267563, 0.0116148805, -4.822618)

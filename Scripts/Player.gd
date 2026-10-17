@@ -19,7 +19,7 @@ var current_device: DeviceType = DeviceType.KEYBOARD_MOUSE:
 # --- SPEED & MOMENTUM ---
 @export_group("Speeds & Physics")
 @export var walk_speed: float = 2.4
-@export var sprint_speed: float = 4.8
+@export var sprint_speed: float = 4.0
 @export var crouch_speed: float = 1.3
 @export var acceleration: float = 8.0
 @export var friction: float = 10.0
