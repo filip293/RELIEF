@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://rl0wfyegy8mf" path="res://MapAssets/Doors/UniversalDoor.tscn" id="48_6jpu7"]
 [ext_resource type="AudioStream" uid="uid://d0gpsgy5py3pl" path="res://Sounds/Ambient/ComputerLoop.wav" id="48_a1tkp"]
 [ext_resource type="PackedScene" uid="uid://1qpb07bld3bo" path="res://MapAssets/Lights/HallwayLight.tscn" id="53_a1tkp"]
+[ext_resource type="PackedScene" uid="uid://c1seqjtjbhuql" path="res://MapAssets/Doors/bunker_door.tscn" id="54_simdw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -19559,3 +19560,6 @@ transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, 
 
 [node name="HallwayLight4" parent="." unique_id=635755794 instance=ExtResource("53_a1tkp")]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 38.907467, 2.323, -8.396302)
+
+[node name="BunkerDoor" parent="." unique_id=186592628 instance=ExtResource("54_simdw")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.0948133, 1.2412536e-07, -4.6543245)

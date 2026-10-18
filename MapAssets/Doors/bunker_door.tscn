@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1seqjtjbhuql"]
+
+[ext_resource type="PackedScene" uid="uid://bwmiro4y4dkxd" path="res://MapAssets/Doors/metal_door.glb" id="1_ukgsh"]
+[ext_resource type="Script" uid="uid://yun1msu4ksft" path="res://metal_door.gd" id="2_bnj3o"]
+[ext_resource type="AudioStream" uid="uid://deqpomyl6amy1" path="res://Sounds/Door/MetalDoorOpen.mp3" id="3_0v5tg"]
+[ext_resource type="AudioStream" uid="uid://k07htjqnhbf1" path="res://Sounds/Door/MetalDoorClose.mp3" id="4_od8tf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0v5tg"]
+points = PackedVector3Array(-0.11167908, 1.9261112, 200.05142, -1.1129608, 2.845975, 199.03314, -104.49087, 1.9261112, 200.05142, -0.11167908, -1.928855, 200.05142, -0.11167908, 1.9261112, -2.3609585e-16, -6.599617, 3.8842573, 193.56972, -103.499794, 2.845975, 199.03314, -1.1129608, 2.845975, 0.99869055, -10.482162, 5.0176973, 95.9722, -104.49087, -1.928855, 200.05142, -104.49087, 1.9261112, -2.3609585e-16, -1.1129608, -2.8487182, 199.03314, -0.11167908, -1.928855, -2.3609585e-16, -92.19955, 10.870989, 99.51657, -63.519787, 5.11497, 179.54889, -98.013145, 3.8842573, 193.56972, -93.10888, 10.627806, 99.457825, -93.10888, 10.653181, 71.57282, -103.499794, 2.845975, 0.99869055, -6.599617, 3.8842573, 6.4621153, -10.482162, 5.0176973, 75.99839, -92.19955, 10.898478, 71.51408, -103.499794, -2.8487182, 199.03314, -104.49087, -1.928855, -2.3609585e-16, -6.599617, -3.8870006, 193.56972, -10.482162, -5.0183268, 95.9722, -1.1129608, -2.8487182, 0.99869055, -83.56599, 5.11497, 179.54889, -98.013145, 3.8842573, 6.4621153, -98.013145, -3.8870006, 193.56972, -103.499794, -2.8487182, 0.99869055, -93.10888, -10.461379, 71.57282, -93.10888, -10.436004, 99.457825, -92.19955, -10.679186, 99.51657, -63.519787, -5.117714, 179.54889, -92.19955, -10.704561, 71.51408, -10.482162, -5.0183268, 75.99839, -6.599617, -3.8870006, 6.4621153, -83.56599, -5.117714, 179.54889, -98.013145, -3.8870006, 6.4621153)
+
+[node name="BunkerDoor" unique_id=186592628 node_paths=PackedStringArray("door_node") instance=ExtResource("1_ukgsh")]
+script = ExtResource("2_bnj3o")
+door_node = NodePath("Sketchfab_model")
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=2064945801]
+transform = Transform3D(0.010506434, 0, 0, 0, -4.5925083e-10, -0.010506434, 0, 0.010506434, -4.5925083e-10, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/model_FBX/RootNode/Dobledoor_model1/Dobledoor_model1_Dobledoor_model1_1001_BaseColor_Mat_Inst_0" parent_id_path=PackedInt32Array(1477620686) index="0" unique_id=978754816]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/model_FBX/RootNode/Dobledoor_model1/Dobledoor_model1_Dobledoor_model1_1001_BaseColor_Mat_Inst_0/StaticBody3D" index="0" unique_id=1530368711]
+shape = SubResource("ConvexPolygonShape3D_0v5tg")
+
+[node name="Open" type="AudioStreamPlayer3D" parent="." index="1" unique_id=1955011056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4914224, 1.1047432, 0)
+stream = ExtResource("3_0v5tg")
+volume_db = -8.0
+max_distance = 12.0
+
+[node name="Close" type="AudioStreamPlayer3D" parent="." index="2" unique_id=2050585967]
+stream = ExtResource("4_od8tf")
+max_distance = 12.0
