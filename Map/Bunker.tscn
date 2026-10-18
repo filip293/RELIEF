@@ -15670,6 +15670,7 @@ size = Vector3(192.00009, 16.000029, 144)
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
+visible = false
 occluder = ExtResource("1_2kpri")
 
 [node name="Scene Collection" type="Node3D" parent="." unique_id=497789578]
@@ -16553,14 +16554,17 @@ shape = SubResource("BoxShape3D_1p4ks")
 [node name="Doors" type="Node3D" parent="Scene Collection/ShelterNine/L0" unique_id=1704428141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.002383, 1.4876548, -7.920118)
 
-[node name="UniversalDoor2" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1807350102 instance=ExtResource("48_6jpu7")]
-transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, 13.008008, -0.12148714, -0.5155072)
-
 [node name="UniversalDoor4" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1093799251 instance=ExtResource("48_6jpu7")]
 transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, -11.020082, -0.16429985, -0.5155072)
 
 [node name="UniversalDoor3" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1087040991 instance=ExtResource("48_6jpu7")]
 transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, 32.917973, -0.18212688, -0.43935823)
+
+[node name="BunkerDoor" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=186592628 instance=ExtResource("54_simdw")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.447787, -1.4876547, -0.25788546)
+
+[node name="BunkerDoor2" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1624439537 instance=ExtResource("54_simdw")]
+transform = Transform3D(-1.1588448, 0, 8.742278e-08, 0, 1, 0, -1.0130943e-07, 0, -1, 21.964935, -1.4876547, -3.2231765)
 
 [node name="L1" type="Node3D" parent="Scene Collection/ShelterNine" unique_id=903304713]
 
@@ -17344,17 +17348,17 @@ mesh = SubResource("ArrayMesh_fuyvn")
 shape = SubResource("ConcavePolygonShape3D_lxxyd")
 
 [node name="L1_S01_WallE_01_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1564399573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -2.95, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2830164, -0.5, -2.95, -0.3)
 mesh = SubResource("ArrayMesh_iq6bv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_S01_WallE_01_0" unique_id=1043207974]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L1/L1_S01_WallE_01_0/StaticBody3D" unique_id=692139630]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1366708, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2270682, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_fcbit")
 
 [node name="L1_S01_WallE_02_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=764997638]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9414372, -0.5, -2.95, -4.984976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9925123, -0.5, -2.95, -4.984976)
 mesh = SubResource("ArrayMesh_2wc8r")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_S01_WallE_02_0" unique_id=1001452089]
@@ -17553,8 +17557,17 @@ debug_color = Color(0.9555412, 1.732707e-06, 0.54522187, 0.41960785)
 
 [node name="Doors" type="Node3D" parent="Scene Collection/ShelterNine/L1" unique_id=568601725]
 
-[node name="UniversalDoor2" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1756255883 instance=ExtResource("48_6jpu7")]
-transform = Transform3D(-0.05688117, 0, -1.0043077, 0, 0.9, 0, 0.89840096, 0, -0.06358653, -0.78149533, -2.6773672, -1.3588645)
+[node name="BunkerDoor2" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1309734815 instance=ExtResource("54_simdw")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 22.230862, -3.999388, -5.0318456)
+
+[node name="BunkerDoor3" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=412086641 instance=ExtResource("54_simdw")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 35.934772, -3.999388, -9.104967)
+
+[node name="BunkerDoor4" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1490319750 instance=ExtResource("54_simdw")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 37.81873, -3.999388, -0.5433365)
+
+[node name="BunkerDoor5" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=26232873 instance=ExtResource("54_simdw")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -0.6899406, -3.999388, -0.70780164)
 
 [node name="L2" type="Node3D" parent="Scene Collection/ShelterNine" unique_id=494415786]
 
@@ -19561,5 +19574,85 @@ transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, 
 [node name="HallwayLight4" parent="." unique_id=635755794 instance=ExtResource("53_a1tkp")]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 38.907467, 2.323, -8.396302)
 
-[node name="BunkerDoor" parent="." unique_id=186592628 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.0948133, 1.2412536e-07, -4.6543245)
+[node name="Entrence" type="Label3D" parent="." unique_id=656921104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5544, 1.6498826, 5.1153474)
+text = "Entrence"
+
+[node name="Control Room" type="Label3D" parent="." unique_id=698047188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1899548, 1.6498826, -4.2166348)
+text = "Control Room
+"
+
+[node name="Admin office" type="Label3D" parent="." unique_id=1641042089]
+transform = Transform3D(-1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1, 18.328812, 1.6498826, -2.8155193)
+text = "Admin office (Voss)
+"
+
+[node name="Placeholder Locked staff area" type="Label3D" parent="." unique_id=1129943758]
+transform = Transform3D(1, 0, -5.7620454e-08, 0, 1, 0, 5.7620454e-08, 0, 1, 28.216328, 1.6498826, -10.940238)
+text = "Locked Staff area
+
+"
+
+[node name="Mess Hall" type="Label3D" parent="." unique_id=1106527157]
+transform = Transform3D(1, 0, -5.7620454e-08, 0, 1, 0, 5.7620454e-08, 0, 1, 31.418743, -2.9914908, -6.2759)
+text = "Mess hall
+
+"
+
+[node name="First Aid (Another Placeholder Locked)" type="Label3D" parent="Mess Hall" unique_id=848440435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.58628, 0, -2.61333)
+text = "Need to add First -Aid placeholder door where Nair hides
+"
+
+[node name="Generator Room" type="Label3D" parent="." unique_id=1513744760]
+transform = Transform3D(1, 0, -5.7620454e-08, 0, 1, 0, 5.7620454e-08, 0, 1, 47.21655, -2.9810252, -6.277874)
+text = "Generator Room
+
+
+"
+
+[node name="Dormitory" type="Label3D" parent="." unique_id=1183377797]
+transform = Transform3D(1, 0, -5.7620454e-08, 0, 1, 0, 5.7620454e-08, 0, 1, 17.034458, -2.9914908, -7.2637997)
+text = "Dormitory
+
+"
+
+[node name="Dry Store (Voss Locked)" type="Label3D" parent="Dormitory" unique_id=1530188612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.63659, 0, -1.6231966)
+text = "Dry Store Voss locked
+
+"
+
+[node name="Mine + Vault" type="Label3D" parent="." unique_id=517808519]
+transform = Transform3D(-0.0039080107, 0, -0.9999924, 0, 1, 0, 0.9999924, 0, -0.0039080107, 50.20792, -6.56931, -5.0015535)
+text = "Mine Vault
+
+
+
+"
+
+[node name="Cold Store" type="Label3D" parent="." unique_id=1806783990]
+transform = Transform3D(0.9955918, 0, -0.093792714, 0, 1, 0, 0.093792714, 0, 0.9955918, 27.328016, -6.56931, -10.265745)
+text = "Cold store
+
+
+
+"
+
+[node name="Air + Water Treatment (Locked" type="Label3D" parent="." unique_id=2050667340]
+transform = Transform3D(-0.9955918, 0, 0.09379263, 0, 1, 0, -0.09379263, 0, -0.9955918, 8.867927, -6.56931, -4.4472117)
+text = "Air and Water Treatment
+
+
+
+"
+
+[node name="Ventilation Plant" type="Label3D" parent="." unique_id=335676581]
+transform = Transform3D(-0.9955918, 0, 0.09379263, 0, 1, 0, -0.09379263, 0, -0.9955918, -14.228323, -6.56931, -1.9623933)
+text = "Ventilation Plant
+
+
+
+
+"
