@@ -15670,7 +15670,6 @@ size = Vector3(192.00009, 16.000029, 144)
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
-visible = false
 occluder = ExtResource("1_2kpri")
 
 [node name="Scene Collection" type="Node3D" parent="." unique_id=497789578]
@@ -16373,7 +16372,7 @@ mesh = SubResource("ArrayMesh_og7eq")
 shape = SubResource("ConcavePolygonShape3D_bqein")
 
 [node name="L0_S01_Floor_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1444883258]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, -0.1, -7.275)
+transform = Transform3D(1.045, 0, 0, 0, 1, 0, 0, 0, 1.035, -3.5, -0.1, -7.275)
 mesh = SubResource("ArrayMesh_dgu6u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S01_Floor_01" unique_id=810420107]
@@ -16436,7 +16435,7 @@ mesh = SubResource("ArrayMesh_y6vvl")
 shape = SubResource("ConcavePolygonShape3D_v7isn")
 
 [node name="L0_S02_Floor_00" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=996504828]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -0.1, -0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.05, 40, -0.1, -0.9)
 mesh = SubResource("ArrayMesh_t6211")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S02_Floor_00" unique_id=2025003129]
@@ -16445,7 +16444,7 @@ mesh = SubResource("ArrayMesh_t6211")
 shape = SubResource("ConcavePolygonShape3D_2byoo")
 
 [node name="L0_S02_Floor_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=569213317]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.989628, -0.1, -7.275)
+transform = Transform3D(1.03, 0, 0, 0, 1, 0, 0, 0, 1.05, 39.989628, -0.1, -7.275)
 mesh = SubResource("ArrayMesh_y27bw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S02_Floor_01" unique_id=871752929]
@@ -16454,7 +16453,7 @@ mesh = SubResource("ArrayMesh_y27bw")
 shape = SubResource("ConcavePolygonShape3D_8v4aj")
 
 [node name="L0_S02_Floor_02" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=170809088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, -0.1, -4.175)
+transform = Transform3D(1.03, 0, 0, 0, 1, 0, 0, 0, 1, 38.988018, -0.1, -4.175)
 mesh = SubResource("ArrayMesh_iw1cp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S02_Floor_02" unique_id=347612817]
@@ -16463,7 +16462,7 @@ mesh = SubResource("ArrayMesh_iw1cp")
 shape = SubResource("ConcavePolygonShape3D_fmmj0")
 
 [node name="L0_S02_Floor_03" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1364028586]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -0.1, -4.175)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 1, 41.548466, -0.1, -4.175)
 mesh = SubResource("ArrayMesh_6q07n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S02_Floor_03" unique_id=131044844]
@@ -19709,3 +19708,39 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.0
 
 [node name="BunkerLight23" parent="." unique_id=1995268817 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.262367, 2.7999997, -9.6442175)
+
+[node name="BunkerLight24" parent="." unique_id=246060704 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -6.1979046)
+
+[node name="BunkerLight25" parent="." unique_id=260326616 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -6.1979046)
+
+[node name="BunkerLight26" parent="." unique_id=917290762 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -3.5206454)
+
+[node name="BunkerLight27" parent="." unique_id=1898577386 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -3.5206454)
+
+[node name="BunkerLight28" parent="." unique_id=828234047 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -1.3281028)
+
+[node name="BunkerLight29" parent="." unique_id=1704502282 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -1.3281028)
+
+[node name="BunkerLight30" parent="." unique_id=28522230 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -6.1979046)
+
+[node name="BunkerLight31" parent="." unique_id=2077670896 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -6.1979046)
+
+[node name="BunkerLight32" parent="." unique_id=2073744195 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -3.5206454)
+
+[node name="BunkerLight33" parent="." unique_id=660045908 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -3.5206454)
+
+[node name="BunkerLight34" parent="." unique_id=651473256 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -1.3281028)
+
+[node name="BunkerLight35" parent="." unique_id=2070607989 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -1.3281028)
