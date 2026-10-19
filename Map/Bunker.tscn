@@ -16445,7 +16445,7 @@ mesh = SubResource("ArrayMesh_t6211")
 shape = SubResource("ConcavePolygonShape3D_2byoo")
 
 [node name="L0_S02_Floor_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=569213317]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -0.1, -7.275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.989628, -0.1, -7.275)
 mesh = SubResource("ArrayMesh_y27bw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_S02_Floor_01" unique_id=871752929]
@@ -17446,7 +17446,7 @@ mesh = SubResource("ArrayMesh_eb27o")
 shape = SubResource("ConcavePolygonShape3D_4xdb1")
 
 [node name="L1_S02_WallE_02_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1396656827]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2, -2.95, -4.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.045, 42.2, -2.95, -4.8)
 mesh = SubResource("ArrayMesh_m20qc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L1/L1_S02_WallE_02_0" unique_id=1965831245]
@@ -19658,3 +19658,54 @@ text = "Ventilation Plant
 
 
 "
+
+[node name="BunkerLight7" parent="." unique_id=320624103 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.148308, 2.7999997, -9.6442175)
+
+[node name="BunkerLight8" parent="." unique_id=1896025414 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.1154118, 2.7999997, -9.6442175)
+
+[node name="BunkerLight9" parent="." unique_id=744668781 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2243007, 2.7999997, -9.6442175)
+
+[node name="BunkerLight10" parent="." unique_id=526183220 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.2571964, 2.7999997, -9.6442175)
+
+[node name="BunkerLight11" parent="." unique_id=1809147459 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.977786, 2.7999997, -9.6442175)
+
+[node name="BunkerLight12" parent="." unique_id=589340145 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.010682, 2.7999997, -9.6442175)
+
+[node name="BunkerLight13" parent="." unique_id=1394288810 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.350395, 2.7999997, -9.6442175)
+
+[node name="BunkerLight14" parent="." unique_id=46220853 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.383289, 2.7999997, -9.6442175)
+
+[node name="BunkerLight15" parent="." unique_id=927119524 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.226372, 2.7999997, -9.6442175)
+
+[node name="BunkerLight16" parent="." unique_id=387586877 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.25927, 2.7999997, -9.6442175)
+
+[node name="BunkerLight17" parent="." unique_id=313096595 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23.598982, 2.7999997, -9.6442175)
+
+[node name="BunkerLight18" parent="." unique_id=1213475930 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26.631876, 2.7999997, -9.6442175)
+
+[node name="BunkerLight19" parent="." unique_id=505752921 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28.637726, 2.7999997, -9.6442175)
+
+[node name="BunkerLight20" parent="." unique_id=1209119122 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.670624, 2.7999997, -9.6442175)
+
+[node name="BunkerLight21" parent="." unique_id=1613316104 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.010338, 2.7999997, -9.6442175)
+
+[node name="BunkerLight22" parent="." unique_id=124290551 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.04323, 2.7999997, -9.6442175)
+
+[node name="BunkerLight23" parent="." unique_id=1995268817 instance=ExtResource("36_qgp6i")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.262367, 2.7999997, -9.6442175)
