@@ -346,7 +346,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 transform = Transform3D(0.5645735, 0, -0.8253827, 0, 1, 0, 0.8253827, 0, 0.5645735, 0.6215743, 0.65782595, 0.05135347)
 
 [node name="DoorWithoutSpinThing" parent="DoorHinge" unique_id=1214365503 instance=ExtResource("3_fecvw")]
-transform = Transform3D(0.010000002, 0, 0, 0, 0.01, 0, 0, 0, 0.010000002, -0.6264589, -0.65782595, -0.04421267)
+transform = Transform3D(0.01, 0, 1.3969839e-09, 0, 0.01, 0, -1.3969839e-09, 0, 0.01, -0.63369167, -0.6683041, -0.049160033)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="DoorHinge/DoorWithoutSpinThing" unique_id=1743087298]
 transform = Transform3D(3.4062843, 2.8228674, 2.3299453, -2.822867, -1.2339144e-07, 4.1269155, 2.3299453, -4.1269135, 1.5937158, 66.62466, 16.966236, 13.185242)

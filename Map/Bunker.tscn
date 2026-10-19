@@ -16051,7 +16051,7 @@ mesh = SubResource("ArrayMesh_21qgr")
 shape = SubResource("ConcavePolygonShape3D_vuvcj")
 
 [node name="L0_C01_WallS_06_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=185747168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 0.5, -8.2)
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 29, 0.5, -8.2)
 mesh = SubResource("ArrayMesh_v7ped")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_06_0" unique_id=2080877331]
@@ -16060,7 +16060,7 @@ mesh = SubResource("ArrayMesh_v7ped")
 shape = SubResource("ConcavePolygonShape3D_ifcy2")
 
 [node name="L0_C01_WallS_07_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=704428995]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 0.5, -8.2)
+transform = Transform3D(1.02, 0, 0, 0, 1, 0, 0, 0, 1, 40.72358, 0.5, -8.2)
 mesh = SubResource("ArrayMesh_ow6ir")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_07_0" unique_id=327677374]
@@ -16105,7 +16105,7 @@ mesh = SubResource("ArrayMesh_etrhn")
 shape = SubResource("ConcavePolygonShape3D_i2rok")
 
 [node name="L0_C01_WallS_10_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1827163595]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 1.1, -8.2)
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 29, 1.1, -8.2)
 mesh = SubResource("ArrayMesh_654h1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_10_0" unique_id=982605140]
@@ -16114,7 +16114,7 @@ mesh = SubResource("ArrayMesh_654h1")
 shape = SubResource("ConcavePolygonShape3D_1qul2")
 
 [node name="L0_C01_WallS_10_1" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=1045995689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 1.65, -8.2)
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.65, -8.2)
 mesh = SubResource("ArrayMesh_2mpwy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_10_1" unique_id=1450628186]
@@ -16123,7 +16123,7 @@ mesh = SubResource("ArrayMesh_2mpwy")
 shape = SubResource("ConcavePolygonShape3D_touwu")
 
 [node name="L0_C01_WallS_11_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=648633221]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 1.1, -8.2)
+transform = Transform3D(1.02, 0, 0, 0, 1, 0, 0, 0, 1, 40.72358, 1.1, -8.2)
 mesh = SubResource("ArrayMesh_5tp6n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_11_0" unique_id=506548523]
@@ -16132,7 +16132,7 @@ mesh = SubResource("ArrayMesh_5tp6n")
 shape = SubResource("ConcavePolygonShape3D_xhj1c")
 
 [node name="L0_C01_WallS_11_1" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L0" unique_id=2142764765]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 1.65, -8.2)
+transform = Transform3D(1.02, 0, 0, 0, 1, 0, 0, 0, 1, 40.72358, 1.65, -8.2)
 mesh = SubResource("ArrayMesh_vnsom")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/L0_C01_WallS_11_1" unique_id=1764608472]
@@ -16558,13 +16558,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.002383, 1.4876548, -7.92011
 transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, -11.020082, -0.16429985, -0.5155072)
 
 [node name="UniversalDoor3" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1087040991 instance=ExtResource("48_6jpu7")]
-transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, 32.917973, -0.18212688, -0.43935823)
+transform = Transform3D(-0.9, 0, -8.742278e-08, 0, 0.9, 0, 7.86805e-08, 0, -1, 32.968567, -0.18212688, -0.5156083)
 
 [node name="BunkerDoor" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=186592628 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.447787, -1.4876547, -0.25788546)
-
-[node name="BunkerDoor2" parent="Scene Collection/ShelterNine/L0/Doors" unique_id=1624439537 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1.1588448, 0, 8.742278e-08, 0, 1, 0, -1.0130943e-07, 0, -1, 21.964935, -1.4876547, -3.2231765)
+transform = Transform3D(-0.9, 0, 1.509958e-07, 0, 1, 0, -1.3589622e-07, 0, -1, 12.50652, -1.4876547, -0.25788546)
+open_angle = 78.0
 
 [node name="L1" type="Node3D" parent="Scene Collection/ShelterNine" unique_id=903304713]
 
@@ -17558,16 +17556,20 @@ debug_color = Color(0.9555412, 1.732707e-06, 0.54522187, 0.41960785)
 [node name="Doors" type="Node3D" parent="Scene Collection/ShelterNine/L1" unique_id=568601725]
 
 [node name="BunkerDoor2" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1309734815 instance=ExtResource("54_simdw")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 22.230862, -3.999388, -5.0318456)
+transform = Transform3D(6.794811e-08, 0, 1, 0, 1, 0, -0.9, 0, 7.54979e-08, 22.230862, -3.999388, -4.9988813)
+open_angle = 78.0
 
 [node name="BunkerDoor3" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=412086641 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 35.934772, -3.999388, -9.104967)
+transform = Transform3D(-0.9, 0, 1.509958e-07, 0, 1, 0, -1.3589622e-07, 0, -1, 36.022747, -3.999388, -9.104967)
+open_angle = 78.0
 
 [node name="BunkerDoor4" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1490319750 instance=ExtResource("54_simdw")]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 37.81873, -3.999388, -0.5433365)
+transform = Transform3D(-3.934025e-08, 0, -1, 0, 1, 0, 0.9, 0, -4.371139e-08, 37.81873, -3.999388, -0.5927509)
+open_angle = 76.0
 
 [node name="BunkerDoor5" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=26232873 instance=ExtResource("54_simdw")]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -0.6899406, -3.999388, -0.70780164)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.6899406, -3.999388, -0.70166725)
+open_angle = 78.0
 
 [node name="L2" type="Node3D" parent="Scene Collection/ShelterNine" unique_id=494415786]
 
