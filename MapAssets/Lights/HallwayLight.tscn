@@ -119,7 +119,6 @@ light_color = Color(0.54640853, 7.3399394e-07, 3.85046e-07, 1)
 light_energy = 0.033
 light_volumetric_fog_energy = 12.0
 light_specular = 0.2
-shadow_enabled = true
 shadow_bias = 0.05
 shadow_blur = 3.0
 spot_range = 8.110109

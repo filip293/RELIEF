@@ -19660,87 +19660,116 @@ text = "Ventilation Plant
 
 [node name="BunkerLight7" parent="." unique_id=320624103 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.148308, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight8" parent="." unique_id=1896025414 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.1154118, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight9" parent="." unique_id=744668781 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2243007, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight10" parent="." unique_id=526183220 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.2571964, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight11" parent="." unique_id=1809147459 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.977786, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight12" parent="." unique_id=589340145 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.010682, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight13" parent="." unique_id=1394288810 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.350395, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight14" parent="." unique_id=46220853 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.383289, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight15" parent="." unique_id=927119524 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.226372, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight16" parent="." unique_id=387586877 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.25927, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight17" parent="." unique_id=313096595 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23.598982, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight18" parent="." unique_id=1213475930 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26.631876, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight19" parent="." unique_id=505752921 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28.637726, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight20" parent="." unique_id=1209119122 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.670624, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight21" parent="." unique_id=1613316104 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.010338, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight22" parent="." unique_id=124290551 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.04323, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight23" parent="." unique_id=1995268817 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.262367, 2.7999997, -9.6442175)
+visible = false
 
 [node name="BunkerLight24" parent="." unique_id=246060704 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -6.1979046)
+visible = false
 
 [node name="BunkerLight25" parent="." unique_id=260326616 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -6.1979046)
+visible = false
 
 [node name="BunkerLight26" parent="." unique_id=917290762 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -3.5206454)
+visible = false
 
 [node name="BunkerLight27" parent="." unique_id=1898577386 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -3.5206454)
+visible = false
 
 [node name="BunkerLight28" parent="." unique_id=828234047 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5834017, 3.1999998, -1.3281028)
+visible = false
 
 [node name="BunkerLight29" parent="." unique_id=1704502282 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2488456, 3.1999998, -1.3281028)
+visible = false
 
 [node name="BunkerLight30" parent="." unique_id=28522230 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -6.1979046)
+visible = false
 
 [node name="BunkerLight31" parent="." unique_id=2077670896 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -6.1979046)
+visible = false
 
 [node name="BunkerLight32" parent="." unique_id=2073744195 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -3.5206454)
+visible = false
 
 [node name="BunkerLight33" parent="." unique_id=660045908 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -3.5206454)
+visible = false
 
 [node name="BunkerLight34" parent="." unique_id=651473256 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.875347, 3.1999998, -1.3281028)
+visible = false
 
 [node name="BunkerLight35" parent="." unique_id=2070607989 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2099, 3.1999998, -1.3281028)
+visible = false
