@@ -5,9 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://d3ubncqqh5qef" path="res://Sounds/Footsteps/concrete.wav" id="5_8g4oa"]
 [ext_resource type="Script" uid="uid://dwea480bphk72" path="res://Player/ReliefFootstepAudio.gd" id="7_s1rgi"]
 [ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
-[ext_resource type="AudioStream" uid="uid://2qqbjvo10ueg" path="res://Sounds/Footsteps/tile.wav" id="8_s1rgi"]
-[ext_resource type="AudioStream" uid="uid://b67wpmm10kw07" path="res://Sounds/Footsteps/lino.wav" id="9_0j2ni"]
+[ext_resource type="AudioStream" uid="uid://b56s431hsohw" path="res://Sounds/Footsteps/Tile_Mono_02 (mp3cut.net).wav" id="8_j23h2"]
 [ext_resource type="Texture2D" uid="uid://dgjgdyjuiulu1" path="res://UIAssets/Distressed White Hand Icon.png" id="9_j23h2"]
+[ext_resource type="AudioStream" uid="uid://b67wpmm10kw07" path="res://Sounds/Footsteps/lino.wav" id="9_v0k0e"]
 [ext_resource type="AudioStream" uid="uid://f5rf4ppvatq1" path="res://Sounds/Flashlight/lesiakower-torch-turned-on-flashlight-click-457506.mp3" id="10_0j2ni"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
@@ -111,8 +111,8 @@ panning_strength = 2.0
 bus = &"Player_SFX"
 script = ExtResource("7_s1rgi")
 concrete_sounds = Array[AudioStream]([ExtResource("5_8g4oa")])
-tile_sounds = Array[AudioStream]([ExtResource("8_s1rgi")])
-linoleum_sounds = Array[AudioStream]([ExtResource("9_0j2ni")])
+tile_sounds = Array[AudioStream]([ExtResource("8_j23h2")])
+linoleum_sounds = Array[AudioStream]([ExtResource("9_v0k0e")])
 
 [node name="SurfaceCheck" type="RayCast3D" parent="." unique_id=2056279021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7763653, 0)
