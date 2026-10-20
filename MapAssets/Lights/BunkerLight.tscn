@@ -105,6 +105,67 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5hd2v")
 
+[sub_resource type="Animation" id="Animation_m7say"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0/SpotLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_rijff"]
+resource_name = "TurnOff"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1, 1.3333334, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.0, 0.8, 0.2, 0.2, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0/SpotLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.19999999, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_toyy3"]
+_data = {
+&"RESET": SubResource("Animation_m7say"),
+&"TurnOff": SubResource("Animation_rijff")
+}
+
 [node name="BunkerLight" type="Node3D" unique_id=1441686908]
 
 [node name="industrial_wall_lamp_industrial_wall_lamp_0" type="MeshInstance3D" parent="." unique_id=895499213]
@@ -125,3 +186,6 @@ shadow_blur = 3.0
 spot_range = 8.110109
 spot_attenuation = 0.5
 spot_angle = 50.0
+
+[node name="LightsOut" type="AnimationPlayer" parent="." unique_id=1538468152]
+libraries/ = SubResource("AnimationLibrary_toyy3")

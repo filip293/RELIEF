@@ -59,12 +59,10 @@ transparency = 2
 alpha_scissor_threshold = 0.9
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_color = Color(0.54509807, 0, 0, 1)
 metallic_texture = ExtResource("4_181ci")
 roughness_texture = ExtResource("4_181ci")
-emission_enabled = true
 emission = Color(0.54509807, 0, 0, 1)
-emission_energy_multiplier = 3.0
+emission_energy_multiplier = 0.0
 ao_enabled = true
 ao_texture = ExtResource("4_181ci")
 metadata/_gltf_primary_texture_coord = 0
@@ -103,6 +101,115 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5hd2v")
 
+[sub_resource type="Animation" id="Animation_3pgtj"]
+resource_name = "LightsOn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0/SpotLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.8217887, 0.82178867, 0.82178867, 1), Color(0.54509807, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_energy_multiplier")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_iplg8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0/SpotLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_energy_multiplier")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("industrial_wall_lamp_industrial_wall_lamp_glass_0:mesh:surface_0/material:emission_enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kda5e"]
+_data = {
+&"LightsOn": SubResource("Animation_3pgtj"),
+&"RESET": SubResource("Animation_iplg8")
+}
+
 [node name="HallwayLight" type="Node3D" unique_id=1441686908]
 
 [node name="industrial_wall_lamp_industrial_wall_lamp_0" type="MeshInstance3D" parent="." unique_id=895499213]
@@ -116,7 +223,7 @@ mesh = SubResource("ArrayMesh_uphdy")
 [node name="SpotLight3D" type="SpotLight3D" parent="industrial_wall_lamp_industrial_wall_lamp_glass_0" unique_id=392233005]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.06263608, 0)
 light_color = Color(0.54640853, 7.3399394e-07, 3.85046e-07, 1)
-light_energy = 0.033
+light_energy = 0.0
 light_volumetric_fog_energy = 12.0
 light_specular = 0.2
 shadow_bias = 0.05
@@ -124,3 +231,6 @@ shadow_blur = 3.0
 spot_range = 8.110109
 spot_attenuation = 0.5
 spot_angle = 50.0
+
+[node name="LightsOn" type="AnimationPlayer" parent="." unique_id=1141531573]
+libraries/ = SubResource("AnimationLibrary_kda5e")
