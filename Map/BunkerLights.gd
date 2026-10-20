@@ -5,7 +5,7 @@ extends Node3D
 @onready var no_power_lights_parent: Node = get_node_or_null(emergency_lights_node_path)
 
 func _ready() -> void:
-	await get_tree().create_timer(20.0).timeout
+	await get_tree().create_timer(50.0).timeout
 	trigger_blackout_sequence()
 
 func trigger_blackout_sequence() -> void:
