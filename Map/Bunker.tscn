@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://1qpb07bld3bo" path="res://MapAssets/Lights/HallwayLight.tscn" id="53_a1tkp"]
 [ext_resource type="Script" uid="uid://bg7l275fjgqwn" path="res://Map/BunkerLights.gd" id="53_o7hox"]
 [ext_resource type="PackedScene" uid="uid://c1seqjtjbhuql" path="res://MapAssets/Doors/bunker_door.tscn" id="54_simdw"]
+[ext_resource type="PackedScene" uid="uid://da7yfcdht8osf" path="res://MapAssets/Generator/generator.glb" id="58_lceq2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -17139,17 +17140,6 @@ mesh = SubResource("ArrayMesh_armvm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00/StaticBody3D" unique_id=390738492]
 shape = SubResource("ConcavePolygonShape3D_o6u4c")
 
-[node name="GeneratorRunning" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00" unique_id=808250747]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6840665, 0)
-stream = ExtResource("43_l3vuc")
-unit_size = 5.0
-autoplay = true
-max_distance = 20.0
-
-[node name="GeneratorDead" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00" unique_id=993367212]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6840665, 0)
-stream = ExtResource("44_lceq2")
-
 [node name="L1_R05_Floor_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1055675978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, -4.1, -8.725)
 mesh = SubResource("ArrayMesh_emiu0")
@@ -19932,3 +19922,17 @@ transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, 
 
 [node name="HallwayLight4" parent="NoPowerLights" unique_id=635755794 instance=ExtResource("53_a1tkp")]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 38.907467, 2.323, -8.396302)
+
+[node name="PowerGenerator" parent="." unique_id=1421138332 instance=ExtResource("58_lceq2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 52.09297, -2.7943919, -3.8984845)
+
+[node name="GeneratorRunning" type="AudioStreamPlayer3D" parent="PowerGenerator" unique_id=808250747]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, -0.36432457, 0.12615281, 0.041161418)
+stream = ExtResource("43_l3vuc")
+unit_size = 5.0
+autoplay = true
+max_distance = 20.0
+
+[node name="GeneratorDead" type="AudioStreamPlayer3D" parent="PowerGenerator" unique_id=993367212]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, -0.36432457, 0.12615281, 0.041161418)
+stream = ExtResource("44_lceq2")
