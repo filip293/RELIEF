@@ -47,6 +47,8 @@
 [ext_resource type="PackedScene" uid="uid://bibca0ayc2xwc" path="res://MapAssets/Lights/BunkerLight.tscn" id="36_qgp6i"]
 [ext_resource type="PackedScene" uid="uid://cik3b8tqvmnr2" path="res://MapAssets/Lights/GLB/NewControlPanel.glb" id="39_qgp6i"]
 [ext_resource type="AudioStream" uid="uid://bpa4gkbigllvk" path="res://Sounds/Ambient/BrokenComputerLoop.wav" id="41_qgp6i"]
+[ext_resource type="AudioStream" uid="uid://m0qviwbokuox" path="res://Sounds/GeneratorRoom/Generator.wav" id="43_l3vuc"]
+[ext_resource type="AudioStream" uid="uid://vqfdwnbldl7o" path="res://Sounds/GeneratorRoom/CutPower.wav" id="44_lceq2"]
 [ext_resource type="PackedScene" uid="uid://ceseqqp5ncc1x" path="res://MapAssets/Entrance/wall_computer.glb" id="45_txgul"]
 [ext_resource type="PackedScene" uid="uid://c0oo87po8b7jl" path="res://MapAssets/Entrance/oldschool_control_panel.glb" id="46_xypr8"]
 [ext_resource type="PackedScene" uid="uid://dytv0coxayhbc" path="res://MapAssets/Doors/lockdown_bunker_door_v1.glb" id="47_6jpu7"]
@@ -17136,6 +17138,17 @@ mesh = SubResource("ArrayMesh_armvm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00/StaticBody3D" unique_id=390738492]
 shape = SubResource("ConcavePolygonShape3D_o6u4c")
+
+[node name="GeneratorRunning" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00" unique_id=808250747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6840665, 0)
+stream = ExtResource("43_l3vuc")
+unit_size = 5.0
+autoplay = true
+max_distance = 20.0
+
+[node name="GeneratorDead" type="AudioStreamPlayer3D" parent="Scene Collection/ShelterNine/L1/L1_R05_Floor_00" unique_id=993367212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6840665, 0)
+stream = ExtResource("44_lceq2")
 
 [node name="L1_R05_Floor_01" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L1" unique_id=1055675978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, -4.1, -8.725)

@@ -9,6 +9,8 @@ func _ready() -> void:
 	trigger_blackout_sequence()
 
 func trigger_blackout_sequence() -> void:
+	$"../Scene Collection/ShelterNine/L1/L1_R05_Floor_00/GeneratorRunning".stop()
+	$"../Scene Collection/ShelterNine/L1/L1_R05_Floor_00/GeneratorDead".play()
 	for child in get_children():
 		var anim_player = _find_animation_player(child)
 		if anim_player and anim_player.has_animation("TurnOff"):
