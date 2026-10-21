@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgklhqcddl8cn" path="res://MapAssets/Doors/UniversalDoor/Frame.glb" id="2_oxesu"]
 [ext_resource type="PackedScene" uid="uid://dsaxgamfn3nsp" path="res://MapAssets/Doors/UniversalDoor/DoorWithoutSpinThing.glb" id="3_fecvw"]
 [ext_resource type="AudioStream" uid="uid://dm8jft7xltb3f" path="res://Sounds/Door/DoorOpen.mp3" id="4_fecvw"]
-[ext_resource type="AudioStream" uid="uid://bkxsr7x0fq78r" path="res://Sounds/Door/DoorClose.mp3" id="5_vos0a"]
+[ext_resource type="AudioStream" uid="uid://dbwkgxedckest" path="res://Sounds/Door/BunkerDoorClose.mp3" id="6_vos0a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ftei"]
 albedo_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
@@ -323,7 +323,7 @@ tracks/8/path = NodePath("DoorClose:playing")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-0.73333335),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -390,5 +390,5 @@ stream = ExtResource("4_fecvw")
 volume_db = -8.0
 
 [node name="DoorClose" type="AudioStreamPlayer3D" parent="." unique_id=289196785]
-stream = ExtResource("5_vos0a")
+stream = ExtResource("6_vos0a")
 volume_db = -8.0
