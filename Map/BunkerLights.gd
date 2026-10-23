@@ -11,6 +11,9 @@ func _ready() -> void:
 func trigger_blackout_sequence() -> void:
 	$"../PowerGenerator/GeneratorRunning".stop()
 	$"../PowerGenerator/GeneratorDead".play()
+	$"../PowerGenerator2/GeneratorRunning".stop()
+	$"../PowerGenerator3/GeneratorRunning".stop()
+
 	for child in get_children():
 		var anim_player = _find_animation_player(child)
 		if anim_player and anim_player.has_animation("TurnOff"):
