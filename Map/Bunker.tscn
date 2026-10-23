@@ -17126,7 +17126,7 @@ debug_color = Color(0.9555412, 1.732707e-06, 0.54522187, 0.41960785)
 
 [node name="BunkerDoor2" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1309734815 instance=ExtResource("54_simdw")]
 transform = Transform3D(6.794811e-08, 0, 1, 0, 1, 0, -0.9, 0, 7.54979e-08, 22.230862, -3.999388, -4.9988813)
-open_angle = 78.0
+open_angle = 70.0
 
 [node name="BunkerDoor3" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=412086641 instance=ExtResource("54_simdw")]
 transform = Transform3D(-0.9, 0, 1.509958e-07, 0, 1, 0, -1.3589622e-07, 0, -1, 36.022747, -3.999388, -9.104967)
@@ -17134,10 +17134,10 @@ open_angle = 78.0
 
 [node name="BunkerDoor4" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1490319750 instance=ExtResource("54_simdw")]
 transform = Transform3D(-3.934025e-08, 0, -1, 0, 1, 0, 0.9, 0, -4.371139e-08, 37.81873, -3.999388, -0.5927509)
-open_angle = 76.0
+open_angle = 70.0
 
 [node name="BunkerDoor5" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=26232873 instance=ExtResource("54_simdw")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.6899406, -3.999388, -0.70166725)
+transform = Transform3D(-4.436706e-08, 0, -1, 0, 1, 0, 1.015, 0, -4.371139e-08, -0.6899406, -3.999388, -0.6874237)
 open_angle = 78.0
 
 [node name="UniversalDoor5" parent="Scene Collection/ShelterNine/L1/Doors" unique_id=1807350102 instance=ExtResource("48_6jpu7")]
@@ -17230,7 +17230,7 @@ mesh = SubResource("ArrayMesh_kx8nb")
 shape = SubResource("ConcavePolygonShape3D_xpeox")
 
 [node name="L2_C02_WallN_Cold_01_0" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=1670709623]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5361, -7.4, -7.2)
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 25.616, -7.4, -7.2)
 mesh = SubResource("ArrayMesh_c40gr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L2/L2_C02_WallN_Cold_01_0" unique_id=2064602733]
@@ -17239,7 +17239,7 @@ mesh = SubResource("ArrayMesh_c40gr")
 shape = SubResource("ConcavePolygonShape3D_j340h")
 
 [node name="L2_C02_WallN_Cold_01_1" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=172720940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.542532, -6.35, -7.2)
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 25.616, -6.35, -7.2)
 mesh = SubResource("ArrayMesh_3ikb8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L2/L2_C02_WallN_Cold_01_1" unique_id=517619722]
@@ -18944,19 +18944,19 @@ transform = Transform3D(6.79481e-08, 0, -1, 0, 0.9, 0, 0.9, 0, 7.5497894e-08, 41
 transform = Transform3D(0.035426546, 0, 0.99922496, 0, 0.8999999, 0, -0.89930236, 0, 0.039362837, -5.9536314, -6.6938205, -7.020801)
 
 [node name="BunkerDoor6" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=1594536609 instance=ExtResource("54_simdw")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5556005, -7.9635825, -5.163416)
+transform = Transform3D(-3.9558806e-08, 0, -1, 0, 0.975, 0, 0.905, 0, -4.371139e-08, -0.5556005, -7.9635825, -5.2006807)
 open_angle = 78.0
 
 [node name="BunkerDoor7" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=1089035497 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1.0906391, 0, 8.742278e-08, 0, 1, 0, -9.53467e-08, 0, -1, 7.990861, -7.984211, -3.722915)
+transform = Transform3D(-1.0906391, 0, 1.509958e-07, 0, 1, 0, -1.6468192e-07, 0, -1, 7.990861, -7.984211, -3.722915)
 open_angle = 78.0
 
 [node name="BunkerDoor8" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=1592188610 instance=ExtResource("54_simdw")]
-transform = Transform3D(-1.0906391, 0, 8.742278e-08, 0, 1, 0, -9.53467e-08, 0, -1, 27.071896, -7.984211, -7.218358)
-open_angle = 78.0
+transform = Transform3D(-0.88, 0, 1.509958e-07, 0, 1, 0, -1.3287631e-07, 0, -1, 27.228107, -7.984211, -7.218358)
+open_angle = 70.0
 
 [node name="BunkerDoor9" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=165714244 instance=ExtResource("54_simdw")]
-transform = Transform3D(1.4302005e-07, 0, 1, 0, 1, 0, -1.0906391, 0, 1.3113416e-07, 37.7007, -7.984211, -6.2171063)
+transform = Transform3D(7.7385344e-08, 0, 1, 0, 1, 0, -1.025, 0, 7.54979e-08, 37.7007, -7.984211, -6.1979904)
 open_angle = 78.0
 
 [node name="WallComputer" parent="." unique_id=1627475911 instance=ExtResource("45_txgul")]
