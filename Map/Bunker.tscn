@@ -18344,7 +18344,7 @@ shape = SubResource("ConcavePolygonShape3D_qxvfq")
 transform = Transform3D(6.79481e-08, 0, -1, 0, 0.9, 0, 0.9, 0, 7.5497894e-08, 42.043823, -6.6938205, -5.214684)
 
 [node name="UniversalDoor7" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=930361386 instance=ExtResource("48_6jpu7")]
-transform = Transform3D(-3.9340243e-08, 0, 0.99999994, 0, 0.8999999, 0, -0.89999986, 0, -4.3711385e-08, -5.888233, -6.6938205, -7.020801)
+transform = Transform3D(1.1802072e-07, 0, -0.9999999, 0, 0.89999986, 0, 0.89999986, 0, 1.3113416e-07, -6.332214, -6.6938205, -7.020801)
 
 [node name="BunkerDoor6" parent="Scene Collection/ShelterNine/L2/Doors" unique_id=1594536609 instance=ExtResource("54_simdw")]
 transform = Transform3D(-3.9558806e-08, 0, -1, 0, 0.975, 0, 0.905, 0, -4.371139e-08, -0.9709457, -7.9635825, -5.2006807)
