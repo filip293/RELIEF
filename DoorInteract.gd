@@ -12,9 +12,7 @@ func interact() -> void:
 
 	if is_open:
 		anim_player.play("Close")
-		door_close_sound.play()
 		is_open = false
 	else:
 		anim_player.play("Open")
-		door_open_sound.play()
 		is_open = true

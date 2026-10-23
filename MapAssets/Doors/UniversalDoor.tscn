@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgklhqcddl8cn" path="res://MapAssets/Doors/UniversalDoor/Frame.glb" id="2_oxesu"]
 [ext_resource type="PackedScene" uid="uid://dsaxgamfn3nsp" path="res://MapAssets/Doors/UniversalDoor/DoorWithoutSpinThing.glb" id="3_fecvw"]
 [ext_resource type="AudioStream" uid="uid://dm8jft7xltb3f" path="res://Sounds/Door/DoorOpen.mp3" id="4_fecvw"]
-[ext_resource type="AudioStream" uid="uid://dbwkgxedckest" path="res://Sounds/Door/BunkerDoorClose.mp3" id="6_vos0a"]
+[ext_resource type="AudioStream" uid="uid://bkxsr7x0fq78r" path="res://Sounds/Door/DoorClose.mp3" id="6_vos0a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ftei"]
 albedo_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
@@ -28,7 +28,7 @@ tracks/0/path = NodePath("DoorHinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0.352477, 0), Vector3(0, -0.9708798, 0)]
@@ -40,7 +40,7 @@ tracks/1/path = NodePath("DoorHinge/DoorWithoutSpinThing/MeshInstance3D:position
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1.42, 3.4),
+"times": PackedFloat32Array(2.02, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(58.725937, 16.966236, 24.732834), Vector3(66.62466, 16.966236, 13.185242)]
@@ -52,7 +52,7 @@ tracks/2/path = NodePath("DoorHinge/DoorWithoutSpinThing/MeshInstance3D2:positio
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.42, 3.4),
+"times": PackedFloat32Array(2.02, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(58.548965, -76.1945, 24.991554), Vector3(66.906624, -76.1945, 12.773018)]
@@ -64,7 +64,7 @@ tracks/3/path = NodePath("DoorHinge/DoorWithoutSpinThing/MeshInstance3D4:positio
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.42, 3.4),
+"times": PackedFloat32Array(2.02, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(9.176768, 16.966236, 95.02986), Vector3(0.20213127, 16.966236, 108.15042)]
@@ -76,7 +76,7 @@ tracks/4/path = NodePath("DoorHinge/DoorWithoutSpinThing/MeshInstance3D3:positio
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1.42, 3.4),
+"times": PackedFloat32Array(2.02, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(9.14491, -76.1945, 95.176895), Vector3(-0.4102459, -76.1945, 109.14614)]
@@ -88,7 +88,7 @@ tracks/5/path = NodePath("DoorHinge/SpinThingMarker:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.4333333, 3.4),
+"times": PackedFloat32Array(2.0333333, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0.9075712, 3.1415927), Vector3(0, 0.9075712, 0)]
@@ -100,7 +100,7 @@ tracks/6/path = NodePath("DoorHinge/SpinThingMarker2:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(1.4333333, 3.4),
+"times": PackedFloat32Array(2.0333333, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(3.1415927, 0.9075712, 3.1415927), Vector3(3.1415927, 0.9075712, 0)]
@@ -112,7 +112,7 @@ tracks/7/path = NodePath("DoorClose:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.53333336),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -323,7 +323,7 @@ tracks/8/path = NodePath("DoorClose:playing")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(-0.73333335),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
