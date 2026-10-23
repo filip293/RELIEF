@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0dvwp75amqbt"
-path.s3tc="res://.godot/imported/metal_door_1.png-4d483d33551f7bd9a6259361935cf922.s3tc.ctex"
+uid="uid://hsb8jgxfkgpw"
+path.s3tc="res://.godot/imported/oxidized_faucet_0.png-167b280bff0d71e27a8db2fe08352aeb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "bfcea3e635148f2c4bd325d39f94cbbe"
+"md5": "b87c541c4a68c9e1754cf6ea25faa7d0"
 }
 
 [deps]
 
-source_file="res://MapAssets/Doors/metal_door_1.png"
-dest_files=["res://.godot/imported/metal_door_1.png-4d483d33551f7bd9a6259361935cf922.s3tc.ctex"]
+source_file="res://MapAssets/Hygiene/oxidized_faucet_0.png"
+dest_files=["res://.godot/imported/oxidized_faucet_0.png-167b280bff0d71e27a8db2fe08352aeb.s3tc.ctex"]
 
 [params]
 
@@ -29,8 +29,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=8
-roughness/src_normal="res://MapAssets/Doors/metal_door_2.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

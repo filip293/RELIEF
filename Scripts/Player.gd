@@ -179,6 +179,20 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+# --- PUSH RIGIDBODIES ON COLLISION ---
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is RigidBody3D:
+			var push_dir = -collision.get_normal()
+			var push_force = 3.0
+			
+			# Use apply_impulse with a position offset at the center of mass 
+			# to prevent flipping torque
+			var contact_point = collision.get_position()
+			collider.apply_impulse(push_dir * push_force, contact_point - collider.global_position)
+	# -------------------------------------
+	
 	# 4. Human Body Sway & Step Detection
 	_apply_head_bob(delta, horizontal_vel, is_sprinting)
 	_apply_camera_roll(delta, input_dir.x)

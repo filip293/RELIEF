@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1seqjtjbhuql"]
 
-[ext_resource type="PackedScene" uid="uid://bwmiro4y4dkxd" path="res://MapAssets/Doors/metal_door.glb" id="1_ukgsh"]
+[ext_resource type="PackedScene" uid="uid://bwmiro4y4dkxd" path="res://MapAssets/Doors/OtherDoors/metal_door.glb" id="1_ukgsh"]
 [ext_resource type="Script" uid="uid://yun1msu4ksft" path="res://metal_door.gd" id="2_bnj3o"]
 [ext_resource type="AudioStream" uid="uid://deqpomyl6amy1" path="res://Sounds/Door/MetalDoorOpen.mp3" id="3_0v5tg"]
 [ext_resource type="AudioStream" uid="uid://k07htjqnhbf1" path="res://Sounds/Door/MetalDoorClose.mp3" id="4_od8tf"]

@@ -61,7 +61,7 @@ func _on_step_taken(is_running: bool) -> void:
 		return
 		
 	# Heavy boot strikes make the incandescent bulb filament micro-flicker
-	var chance = flicker_on_step_chance * (2.5 if is_running else 1.0)
+	var chance = flicker_on_step_chance * 1.0
 	if randf() < chance:
 		_filament_flicker()
 

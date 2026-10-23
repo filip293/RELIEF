@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dytv0coxayhbc"
-path="res://.godot/imported/lockdown_bunker_door_v1.glb-a9f53c183e3ebde119dc1527543f2b5a.scn"
+uid="uid://bftpgjyeip3ni"
+path="res://.godot/imported/oxidized_faucet.glb-41ce6abac5480d16b59dc7e92b822db5.scn"
 
 [deps]
 
-source_file="res://MapAssets/Doors/lockdown_bunker_door_v1.glb"
-dest_files=["res://.godot/imported/lockdown_bunker_door_v1.glb-a9f53c183e3ebde119dc1527543f2b5a.scn"]
+source_file="res://MapAssets/Hygiene/oxidized_faucet.glb"
+dest_files=["res://.godot/imported/oxidized_faucet.glb-41ce6abac5480d16b59dc7e92b822db5.scn"]
 
 [params]
 

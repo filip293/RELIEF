@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwmiro4y4dkxd"
-path="res://.godot/imported/metal_door.glb-73c2b4ca372f8d68ae9715c712533070.scn"
+uid="uid://dsyu5s5putg4r"
+path="res://.godot/imported/DirtySink.glb-623fc13e1133d969d2fd936abae90c68.scn"
 
 [deps]
 
-source_file="res://MapAssets/Doors/metal_door.glb"
-dest_files=["res://.godot/imported/metal_door.glb-73c2b4ca372f8d68ae9715c712533070.scn"]
+source_file="res://MapAssets/Hygiene/DirtySink.glb"
+dest_files=["res://.godot/imported/DirtySink.glb-623fc13e1133d969d2fd936abae90c68.scn"]
 
 [params]
 

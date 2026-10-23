@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjqmf6a57qj2t"]
+
+[ext_resource type="PackedScene" uid="uid://c0oo87po8b7jl" path="res://MapAssets/Entrance/oldschool_control_panel.glb" id="1_7w8iy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7w8iy"]
+size = Vector3(2.503819, 4.985934, 5.231174)
+
+[node name="Old Computer" unique_id=1884535205 instance=ExtResource("1_7w8iy")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/682a538021ad4b7fbcecfbfeb42fbf77_obj_cleaner_materialmerger_gles/Object_2" parent_id_path=PackedInt32Array(552791765) index="0" unique_id=1366042073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5421785, 0, 2.603972)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/682a538021ad4b7fbcecfbfeb42fbf77_obj_cleaner_materialmerger_gles/Object_2/StaticBody3D" index="0" unique_id=165663897]
+shape = SubResource("BoxShape3D_7w8iy")

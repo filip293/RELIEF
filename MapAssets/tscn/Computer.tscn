@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://biplgsc2krs2g"]
+
+[ext_resource type="PackedScene" uid="uid://ceseqqp5ncc1x" path="res://MapAssets/Entrance/wall_computer.glb" id="1_rbwc6"]
+[ext_resource type="AudioStream" uid="uid://d0gpsgy5py3pl" path="res://Sounds/Ambient/ComputerLoop.wav" id="2_20jgp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_20jgp"]
+size = Vector3(2.0243502, 2, 2)
+
+[node name="Computer" unique_id=162577435 instance=ExtResource("1_rbwc6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/WallComputer_fbx/Object_2/RootNode/BaseStructure/Base/Base_Base_0" parent_id_path=PackedInt32Array(1738377512) index="0" unique_id=1167746800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012175083, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/WallComputer_fbx/Object_2/RootNode/BaseStructure/Base/Base_Base_0/StaticBody3D" index="0" unique_id=1896469927]
+shape = SubResource("BoxShape3D_20jgp")
+
+[node name="Computer" type="AudioStreamPlayer3D" parent="." index="2" unique_id=574524824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3203138, 0)
+stream = ExtResource("2_20jgp")
+volume_db = -10.0
+unit_size = 5.0
+autoplay = true
+max_distance = 7.0
+bus = &"World_SFX"

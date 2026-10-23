@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2vw1lfv10114"
-path.s3tc="res://.godot/imported/metal_door_2.png-caa303fc24291a88e5f4b4c4246efddf.s3tc.ctex"
+uid="uid://b0dvwp75amqbt"
+path.s3tc="res://.godot/imported/metal_door_1.png-ae016baa66f12b1084bcf23d6a557451.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1435ca188795a106ee8c4aca16166e99"
+"md5": "bfcea3e635148f2c4bd325d39f94cbbe"
 }
 
 [deps]
 
-source_file="res://MapAssets/Doors/metal_door_2.png"
-dest_files=["res://.godot/imported/metal_door_2.png-caa303fc24291a88e5f4b4c4246efddf.s3tc.ctex"]
+source_file="res://MapAssets/Doors/OtherDoors/metal_door_1.png"
+dest_files=["res://.godot/imported/metal_door_1.png-ae016baa66f12b1084bcf23d6a557451.s3tc.ctex"]
 
 [params]
 
@@ -25,11 +25,11 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
+roughness/mode=8
 roughness/src_normal="res://MapAssets/Doors/metal_door_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
