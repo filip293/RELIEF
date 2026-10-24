@@ -4,7 +4,7 @@ extends RigidBody3D
 
 @export var min_speed_threshold: float = 0.05
 @export var max_speed: float = 4.0
-@export var min_pitch: float = 0.4
+@export var min_pitch: float = 0.6
 @export var max_pitch: float = 1.0
 
 func _physics_process(delta: float) -> void:
