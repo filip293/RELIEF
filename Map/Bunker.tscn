@@ -70,6 +70,7 @@
 [ext_resource type="PackedScene" uid="uid://biplgsc2krs2g" path="res://MapAssets/tscn/Computer.tscn" id="68_tnysu"]
 [ext_resource type="PackedScene" uid="uid://cimo5wamkok1n" path="res://MapAssets/Chairs/office_chair.glb" id="69_e1lju"]
 [ext_resource type="Script" uid="uid://cg46fgbbik4rd" path="res://Map/RigidRollSound.gd" id="69_tacq0"]
+[ext_resource type="AudioStream" uid="uid://byv0nqfxm1dvy" path="res://Sounds/Chair/LoopOfficeChair.wav" id="71_tacq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -14585,8 +14586,6 @@ friction = 0.1
 [sub_resource type="BoxShape3D" id="BoxShape3D_tacq0"]
 size = Vector3(85.92415, 134.4961, 88.644165)
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_1p4ks"]
-
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
@@ -18770,4 +18769,5 @@ transform = Transform3D(0.010869565, -2.0679515e-25, -9.313226e-10, 0, 0.0108695
 shape = SubResource("BoxShape3D_tacq0")
 
 [node name="ProceduralRoller" type="AudioStreamPlayer3D" parent="Office Chair" unique_id=2153949]
-stream = SubResource("AudioStreamGenerator_1p4ks")
+stream = ExtResource("71_tacq0")
+volume_db = 10.0
