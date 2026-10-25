@@ -27,9 +27,9 @@ func interact() -> void:
 	var target_angle := closed_angle + (open_angle if is_open else 0.0)
 
 	if is_open:
-		open_sound.play()
+		open_sound.play(0.5)
 	else:
-		close_sound.play(0.5)
+		close_sound.play(0.7)
 
 	var tween = create_tween()
 	tween.tween_property(

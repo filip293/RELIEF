@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhnhk7eknr4du"
+path="res://.godot/imported/New metal door open.mp3-932b48023c3d5e4a59ec9b2b5d179b97.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Door/New metal door open.mp3"
+dest_files=["res://.godot/imported/New metal door open.mp3-932b48023c3d5e4a59ec9b2b5d179b97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
