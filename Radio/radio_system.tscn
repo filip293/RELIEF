@@ -10,7 +10,6 @@ content_margin_right = 14.0
 content_margin_bottom = 12.0
 bg_color = Color(0.09019608, 0.14509805, 0.16470589, 0.07450981)
 draw_center = false
-border_width_left = 1
 border_color = Color(0.17762119, 0.4510209, 0.19810095, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
