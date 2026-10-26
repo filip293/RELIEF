@@ -18,7 +18,7 @@ func _ready() -> void:
 	RadioSystem.play_transmission(
 		"VOSS",
 		"Ellis, this is Voss. Report back to Control when you're finished.",
-		preload("res://Radio/Sound Effects/radio_transmission.mp3")
+		preload("res://Radio/Sound Effects/TalkieWalkieMessage.wav")
 )
 
 

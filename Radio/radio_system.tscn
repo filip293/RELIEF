@@ -59,7 +59,6 @@ text = "● RX"
 
 [node name="Speaker" type="Label" parent="HUD/VBoxContainer" unique_id=1799145299]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.527498, 0.881006, 0.42677444, 1)
 theme_override_fonts/font = ExtResource("2_ibu7m")
 theme_override_font_sizes/font_size = 16
 text = "VOSS"

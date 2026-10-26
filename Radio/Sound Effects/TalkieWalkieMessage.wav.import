@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7jvx6k1kaqa6"
+path="res://.godot/imported/TalkieWalkieMessage.wav-89ba7e57644fa001eb88a88fbdded6a2.sample"
+
+[deps]
+
+source_file="res://Radio/Sound Effects/TalkieWalkieMessage.wav"
+dest_files=["res://.godot/imported/TalkieWalkieMessage.wav-89ba7e57644fa001eb88a88fbdded6a2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

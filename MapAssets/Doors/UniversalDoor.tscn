@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rl0wfyegy8mf"]
 
 [ext_resource type="PackedScene" uid="uid://dolkkrepofchk" path="res://MapAssets/Doors/UniversalDoor/SpinThing.glb" id="1_78uss"]
-[ext_resource type="Script" uid="uid://b0ml3nqqk7r5n" path="res://DoorInteract.gd" id="1_vos0a"]
+[ext_resource type="Script" uid="uid://b0ml3nqqk7r5n" path="res://Scripts/DoorInteract.gd" id="1_vos0a"]
 [ext_resource type="PackedScene" uid="uid://cgklhqcddl8cn" path="res://MapAssets/Doors/UniversalDoor/Frame.glb" id="2_oxesu"]
 [ext_resource type="PackedScene" uid="uid://dsaxgamfn3nsp" path="res://MapAssets/Doors/UniversalDoor/DoorWithoutSpinThing.glb" id="3_fecvw"]
 [ext_resource type="AudioStream" uid="uid://dm8jft7xltb3f" path="res://Sounds/Door/DoorOpen.mp3" id="4_fecvw"]
