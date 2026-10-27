@@ -18301,10 +18301,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.3
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.226372, 2.7999997, -9.6442175)
 
 [node name="BunkerLight92" parent="AllFloorLights" unique_id=1441686908 instance=ExtResource("36_qgp6i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.293344, 3.2074935, -6.25709)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.193626, 3.2074935, -6.25709)
 
 [node name="BunkerLight93" parent="AllFloorLights" unique_id=1152539152 instance=ExtResource("36_qgp6i")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.293344, 3.2074935, -2.0534396)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.193626, 3.2074935, -2.0534396)
 
 [node name="BunkerLight94" parent="AllFloorLights" unique_id=107828594 instance=ExtResource("36_qgp6i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.944841, 3.2074935, -6.25709)
