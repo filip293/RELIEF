@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://ccwwtku77xrvt" path="res://Map/MapFiles/shelter_nine_full_rock_face_04_ao_2k-rock_face_04_rough_2k.png" id="32_fml5w"]
 [ext_resource type="AudioStream" uid="uid://yjrk0rwbjrqe" path="res://Sounds/Ambient/LoopingVent.wav" id="33_em2ti"]
 [ext_resource type="PackedScene" uid="uid://bibca0ayc2xwc" path="res://MapAssets/tscn/BunkerLight.tscn" id="36_qgp6i"]
+[ext_resource type="Shader" uid="uid://bhse6osplixav" path="res://Shaders/Bunker_Glass.gdshader" id="39_jebyu"]
 [ext_resource type="PackedScene" uid="uid://cik3b8tqvmnr2" path="res://MapAssets/Lights/GLB/NewControlPanel.glb" id="39_qgp6i"]
 [ext_resource type="AudioStream" uid="uid://bpa4gkbigllvk" path="res://Sounds/Ambient/BrokenComputerLoop.wav" id="41_qgp6i"]
 [ext_resource type="AudioStream" uid="uid://m0qviwbokuox" path="res://Sounds/GeneratorRoom/Generator.wav" id="43_l3vuc"]
@@ -2925,14 +2926,12 @@ shadow_mesh = SubResource("ArrayMesh_jtnow")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qln1f"]
 data = PackedVector3Array(-0.5, -1, 4, 0.5, -1, -4, -0.5, -1, -4, -0.5, -1, 4, 0.5, -1, 4, 0.5, -1, -4, -0.5, 1, 4, 0.5, 1, -4, 0.5, 1, 4, -0.5, 1, 4, -0.5, 1, -4, 0.5, 1, -4, -0.5, -1, 4, 0.5, 1, 4, 0.5, -1, 4, -0.5, -1, 4, -0.5, 1, 4, 0.5, 1, 4, 0.5, -1, 4, 0.5, 1, -4, 0.5, -1, -4, 0.5, -1, 4, 0.5, 1, 4, 0.5, 1, -4, 0.5, -1, -4, -0.5, 1, -4, -0.5, -1, -4, 0.5, -1, -4, 0.5, 1, -4, -0.5, 1, -4, -0.5, -1, -4, -0.5, 1, 4, -0.5, -1, 4, -0.5, -1, -4, -0.5, 1, -4, -0.5, 1, 4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52hoy"]
-resource_name = "MAT_Glass"
-transparency = 1
-albedo_color = Color(0.84705883, 0.8901961, 0.8901961, 0.24705882)
-metadata/extras = {
-"textured": false,
-"uv_metres": 2.0
-}
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ibu7m"]
+render_priority = 0
+shader = ExtResource("39_jebyu")
+shader_parameter/glass_tint = Color(0.8, 0.88, 0.78, 0.2)
+shader_parameter/roughness_clean = 0.04
+shader_parameter/grime_intensity = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qjqrs"]
 _surfaces = [{
@@ -2956,7 +2955,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_52hoy"),
+"material": SubResource("ShaderMaterial_ibu7m"),
 "name": "MAT_Glass",
 "primitive": 3,
 "uv_scale": Vector4(17.2, 6.24, 0, 0),

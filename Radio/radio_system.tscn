@@ -21,14 +21,14 @@ script = ExtResource("1_i4v4i")
 
 [node name="HUD" type="PanelContainer" parent="." unique_id=842188451]
 anchors_preset = -1
-anchor_left = 0.5
+anchor_left = 0.36
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -350.0
-offset_top = -150.0
-offset_right = 350.0
-offset_bottom = -35.0
+offset_left = -350.2
+offset_top = -132.0
+offset_right = 649.80005
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wp5uw")
@@ -59,23 +59,18 @@ text = "● RX"
 
 [node name="Speaker" type="Label" parent="HUD/VBoxContainer" unique_id=1799145299]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.8474744, 0.84747446, 0.84747446, 0.83137256)
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
 theme_override_fonts/font = ExtResource("2_ibu7m")
 theme_override_font_sizes/font_size = 16
 text = "VOSS"
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="HUD/VBoxContainer" unique_id=579458119]
-custom_maximum_size = Vector2(700, -1)
+[node name="Subtitle" type="Label" parent="HUD/VBoxContainer" unique_id=1495599808]
+custom_maximum_size = Vector2(2000, 250)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.8474744, 0.84747446, 0.84747446, 0.83137256)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0.7019608)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 2
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
 theme_override_fonts/font = ExtResource("2_ibu7m")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "Ellis, report back to Control."
 horizontal_alignment = 1
 autowrap_mode = 3
