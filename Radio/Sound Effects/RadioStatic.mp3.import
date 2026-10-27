@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://07uad84ydq3i"
+path="res://.godot/imported/RadioStatic.mp3-0c83826171f12b54abfdb3b7221de3a7.mp3str"
+
+[deps]
+
+source_file="res://Radio/Sound Effects/RadioStatic.mp3"
+dest_files=["res://.godot/imported/RadioStatic.mp3-0c83826171f12b54abfdb3b7221de3a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

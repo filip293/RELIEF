@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b7jvx6k1kaqa6"
-path="res://.godot/imported/TalkieWalkieMessage.wav-89ba7e57644fa001eb88a88fbdded6a2.sample"
+path="res://.godot/imported/RadioEnd.wav-a9543337b2630b45073f1f7ab1fd84fb.sample"
 
 [deps]
 
-source_file="res://Radio/Sound Effects/TalkieWalkieMessage.wav"
-dest_files=["res://.godot/imported/TalkieWalkieMessage.wav-89ba7e57644fa001eb88a88fbdded6a2.sample"]
+source_file="res://Radio/Sound Effects/RadioEnd.wav"
+dest_files=["res://.godot/imported/RadioEnd.wav-a9543337b2630b45073f1f7ab1fd84fb.sample"]
 
 [params]
 
