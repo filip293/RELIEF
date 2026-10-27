@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ca26wrhvepck2" path="res://Radio/radio_system.gd" id="1_i4v4i"]
 [ext_resource type="FontFile" uid="uid://c12p0rjif01he" path="res://UIAssets/Fonts/DejaVu Serif/DejaVuSerif-Bold.ttf" id="2_ibu7m"]
-[ext_resource type="AudioStream" uid="uid://dexocbip88eoy" path="res://Radio/Voice Lines/First Voice line.mp3" id="3_xcpk5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp5uw"]
 content_margin_left = 14.0
@@ -17,10 +16,10 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="RadioSystem" type="CanvasLayer" unique_id=247861138]
+[node name="RadioSystem" type="CanvasLayer" unique_id=1418632801]
 script = ExtResource("1_i4v4i")
 
-[node name="HUD" type="PanelContainer" parent="." unique_id=842188451]
+[node name="HUD" type="PanelContainer" parent="." unique_id=1936367081]
 anchors_preset = -1
 anchor_left = 0.36
 anchor_top = 1.0
@@ -34,31 +33,31 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wp5uw")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HUD" unique_id=823420396]
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD" unique_id=415987248]
 layout_mode = 2
 theme_override_constants/separation = 7
 
-[node name="Header" type="HBoxContainer" parent="HUD/VBoxContainer" unique_id=884373238]
+[node name="Header" type="HBoxContainer" parent="HUD/VBoxContainer" unique_id=1923051867]
 visible = false
 custom_minimum_size = Vector2(360, 40)
 layout_mode = 2
 theme_override_constants/separation = 7
 
-[node name="Channel" type="Label" parent="HUD/VBoxContainer/Header" unique_id=902516498]
+[node name="Channel" type="Label" parent="HUD/VBoxContainer/Header" unique_id=1398061690]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5764706, 0.6627451, 0.6156863, 1)
 text = "CREW RADIO · CH 01"
 
-[node name="Spacer" type="Control" parent="HUD/VBoxContainer/Header" unique_id=1122991926]
+[node name="Spacer" type="Control" parent="HUD/VBoxContainer/Header" unique_id=825814173]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Status" type="Label" parent="HUD/VBoxContainer/Header" unique_id=686572659]
+[node name="Status" type="Label" parent="HUD/VBoxContainer/Header" unique_id=1854164544]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6392157, 0.7882353, 0.6509804, 1)
 text = "● RX"
 
-[node name="Speaker" type="Label" parent="HUD/VBoxContainer" unique_id=1799145299]
+[node name="Speaker" type="Label" parent="HUD/VBoxContainer" unique_id=1619464544]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
 theme_override_fonts/font = ExtResource("2_ibu7m")
@@ -66,7 +65,7 @@ theme_override_font_sizes/font_size = 16
 text = "VOSS"
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="HUD/VBoxContainer" unique_id=1495599808]
+[node name="Subtitle" type="Label" parent="HUD/VBoxContainer" unique_id=1186593613]
 custom_maximum_size = Vector2(2000, 250)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
@@ -76,6 +75,4 @@ text = "Ellis, report back to Control."
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1001978223]
-stream = ExtResource("3_xcpk5")
-bus = &"RadioVoice"
+[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1530059123]
