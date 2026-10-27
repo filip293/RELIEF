@@ -2,8 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bkgvsbpxyeh4l" path="res://Player/Player.tscn" id="1_bklh2"]
 [ext_resource type="Script" uid="uid://rfss2f8rcq4h" path="res://Scripts/UGIE.gd" id="1_vqcc7"]
-[ext_resource type="Script" uid="uid://dbt6o2eu1gk30" path="res://Player/ReliefStamina.gd" id="2_elny8"]
+[ext_resource type="Script" uid="uid://dbt6o2eu1gk30" path="res://Scripts/ReliefStamina.gd" id="2_elny8"]
 [ext_resource type="PackedScene" uid="uid://d1ssvf7df23lj" path="res://Map/Bunker.tscn" id="2_vqcc7"]
+[ext_resource type="AudioStream" uid="uid://dijkwcwtncsaa" path="res://Sounds/Breathing/BreathingHard.wav" id="4_2jxjv"]
 [ext_resource type="Script" uid="uid://dcnlel7767ud6" path="res://addons/post_processing/node/post_process.gd" id="4_r8nko"]
 [ext_resource type="Script" uid="uid://bvqhrfw0ecawf" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="5_0hbek"]
 [ext_resource type="Script" uid="uid://cw8ni4hq1ufg0" path="res://Scripts/ReliefBreathMeter.gd" id="6_0hbek"]
@@ -55,6 +56,7 @@ hud_update_interval = 1.0
 
 [node name="ReliefStamina" type="Node" parent="." unique_id=400036730]
 script = ExtResource("2_elny8")
+breath_heavy = ExtResource("4_2jxjv")
 
 [node name="Bunker" parent="." unique_id=1229566191 instance=ExtResource("2_vqcc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)

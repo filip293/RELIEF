@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bkgvsbpxyeh4l"]
 
 [ext_resource type="Script" uid="uid://wtjhsbvbjmts" path="res://Scripts/Player.gd" id="1_3qydi"]
-[ext_resource type="Script" uid="uid://bsxk7qpmyhn0a" path="res://Player/Flashlight.gd" id="5_6ysni"]
+[ext_resource type="Script" uid="uid://bsxk7qpmyhn0a" path="res://Scripts/Flashlight.gd" id="5_6ysni"]
 [ext_resource type="AudioStream" uid="uid://d3ubncqqh5qef" path="res://Sounds/Footsteps/concrete.wav" id="5_8g4oa"]
-[ext_resource type="Script" uid="uid://dwea480bphk72" path="res://Player/ReliefFootstepAudio.gd" id="7_s1rgi"]
+[ext_resource type="Script" uid="uid://dwea480bphk72" path="res://Scripts/ReliefFootstepAudio.gd" id="7_s1rgi"]
 [ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
 [ext_resource type="AudioStream" uid="uid://b56s431hsohw" path="res://Sounds/Footsteps/Tile_Mono_02 (mp3cut.net).wav" id="8_j23h2"]
 [ext_resource type="Texture2D" uid="uid://dgjgdyjuiulu1" path="res://UIAssets/Distressed White Hand Icon.png" id="9_j23h2"]
 [ext_resource type="AudioStream" uid="uid://b67wpmm10kw07" path="res://Sounds/Footsteps/lino.wav" id="9_v0k0e"]
-[ext_resource type="AudioStream" uid="uid://f5rf4ppvatq1" path="res://Sounds/Flashlight/lesiakower-torch-turned-on-flashlight-click-457506.mp3" id="10_0j2ni"]
+[ext_resource type="AudioStream" uid="uid://f5rf4ppvatq1" path="res://Sounds/Flashlight/Flashlight.mp3" id="10_0j2ni"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
@@ -124,9 +124,5 @@ lifetime = 8.0
 visibility_aabb = AABB(-16.21, -9.67, -15.89, 31.06, 12.05, 32.46)
 process_material = SubResource("ParticleProcessMaterial_6ysni")
 draw_pass_1 = SubResource("QuadMesh_s1rgi")
-
-[node name="Breathing" type="AudioStreamPlayer3D" parent="." unique_id=1425603710]
-max_distance = 8.0
-bus = &"Player_SFX"
 
 [connection signal="step_taken" from="." to="." method="_on_player_step_taken"]

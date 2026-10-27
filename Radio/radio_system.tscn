@@ -59,6 +59,7 @@ text = "● RX"
 
 [node name="Speaker" type="Label" parent="HUD/VBoxContainer" unique_id=1799145299]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8474744, 0.84747446, 0.84747446, 0.83137256)
 theme_override_fonts/font = ExtResource("2_ibu7m")
 theme_override_font_sizes/font_size = 16
 text = "VOSS"
@@ -67,7 +68,7 @@ horizontal_alignment = 1
 [node name="Subtitle" type="Label" parent="HUD/VBoxContainer" unique_id=579458119]
 custom_maximum_size = Vector2(700, -1)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.95686275, 0.95686275, 0.9411765, 1)
+theme_override_colors/font_color = Color(0.8474744, 0.84747446, 0.84747446, 0.83137256)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.7019608)
 theme_override_constants/shadow_offset_x = 1
