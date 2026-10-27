@@ -22,7 +22,6 @@ buses/default_bus_layout="uid://cpu07w20qc56u"
 [autoload]
 
 ReliefHaptics="*uid://c4hdvtqu55oyp"
-RadioSystem="*uid://bgcb780hnyjmm"
 
 [display]
 
