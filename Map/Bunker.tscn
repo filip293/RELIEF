@@ -3511,6 +3511,9 @@ size = Vector3(66.56641, 26.000854, 22.190918)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ys4vk"]
 size = Vector3(2, 0.940146, 1.038034)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3d8s"]
+size = Vector3(3.1990347, 3.2382722, 5.917062)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_y1ydy"]
 _surfaces = [{
 "aabb": AABB(-1.5, -0.125, -1.5, 3, 0.25, 3),
@@ -15437,6 +15440,12 @@ shape = SubResource("BoxShape3D_ys4vk")
 
 [node name="SmallDesk" parent="Scene Collection/ShelterNine/L0" unique_id=1438680109 instance=ExtResource("45_r3d8s")]
 transform = Transform3D(0.0076801404, 0, 0.29990163, 0, 0.29999995, 0, -0.29990163, 0, 0.0076801404, 19.02185, 0.8102859, -4.249378)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Scene Collection/ShelterNine/L0/SmallDesk" unique_id=1813408441]
+transform = Transform3D(1, 0, -1.8626451e-09, 0, 0.99999994, 0, 1.8626451e-09, 0, 1, 0, -1.530993, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L0/SmallDesk/StaticBody3D" unique_id=2137354227]
+shape = SubResource("BoxShape3D_r3d8s")
 
 [node name="Projector" parent="Scene Collection/ShelterNine/L0" unique_id=1722894547 instance=ExtResource("46_bwfur")]
 transform = Transform3D(-0.4, 0, 6.039832e-08, 0, 0.4, 0, -6.039832e-08, 0, -0.4, 19.070206, 1.2142926, -4.2582207)
