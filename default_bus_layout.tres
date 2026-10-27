@@ -10,6 +10,23 @@ wet = 0.3
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_g28q7"]
 resource_name = "Reverb"
 
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
+resource_name = "HighPassFilter"
+cutoff_hz = 300.0
+db = 1
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+cutoff_hz = 3500.0
+db = 1
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_j3pel"]
+resource_name = "Compressor"
+threshold = -18.0
+ratio = 3.0
+attack_us = 200.0
+release_ms = 150.0
+
 [resource]
 bus/0/volume_db = -0.030508041
 bus/1/name = &"Bunker_Reverb"
@@ -34,3 +51,15 @@ bus/3/volume_db = -5.045384
 bus/3/send = &"Bunker_Reverb"
 bus/3/effect/0/effect = SubResource("AudioEffectReverb_g28q7")
 bus/3/effect/0/enabled = false
+bus/4/name = &"RadioVoice"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/4/effect/1/enabled = true
+bus/4/effect/2/effect = SubResource("AudioEffectCompressor_j3pel")
+bus/4/effect/2/enabled = true

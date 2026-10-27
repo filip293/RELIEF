@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca26wrhvepck2" path="res://Radio/radio_system.gd" id="1_i4v4i"]
 [ext_resource type="FontFile" uid="uid://c12p0rjif01he" path="res://UIAssets/Fonts/DejaVu Serif/DejaVuSerif-Bold.ttf" id="2_ibu7m"]
+[ext_resource type="AudioStream" uid="uid://dexocbip88eoy" path="res://Radio/Voice Lines/First Voice line.mp3" id="3_xcpk5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp5uw"]
 content_margin_left = 14.0
@@ -76,3 +77,5 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1001978223]
+stream = ExtResource("3_xcpk5")
+bus = &"RadioVoice"

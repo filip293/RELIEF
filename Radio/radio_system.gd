@@ -11,15 +11,23 @@ var is_transmitting: bool = false
 
 
 func _ready() -> void:
+	# Save the recording assigned in the Voice Inspector.
+	var test_recording: AudioStream = voice.stream
+
 	hud.hide()
 	voice.finished.connect(_on_voice_finished)
+
 	await get_tree().create_timer(3.0).timeout
 
-	RadioSystem.play_transmission(
+	if test_recording == null:
+		push_error("No recording assigned to the Voice node!")
+		return
+
+	play_transmission(
 		"VOSS",
 		"Ellis, this is Voss. Report back to Control when you're finished.",
-		preload("res://Radio/Sound Effects/TalkieWalkieMessage.wav")
-)
+		test_recording
+	)
 
 
 func play_transmission(
