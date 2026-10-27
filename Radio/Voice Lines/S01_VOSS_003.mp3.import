@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sxmky8hjf01f"
+path="res://.godot/imported/S01_VOSS_003.mp3-672172a633af0247928fa7e6a7fa92fb.mp3str"
+
+[deps]
+
+source_file="res://Radio/Voice Lines/S01_VOSS_003.mp3"
+dest_files=["res://.godot/imported/S01_VOSS_003.mp3-672172a633af0247928fa7e6a7fa92fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

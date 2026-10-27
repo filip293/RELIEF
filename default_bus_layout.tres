@@ -12,12 +12,12 @@ resource_name = "Reverb"
 
 [sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
 resource_name = "HighPassFilter"
-cutoff_hz = 300.0
+cutoff_hz = 250.0
 db = 1
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
 resource_name = "LowPassFilter"
-cutoff_hz = 3500.0
+cutoff_hz = 4300.0
 db = 1
 
 [sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_j3pel"]
@@ -55,7 +55,7 @@ bus/4/name = &"RadioVoice"
 bus/4/solo = false
 bus/4/mute = false
 bus/4/bypass_fx = false
-bus/4/volume_db = 0.0694828
+bus/4/volume_db = 6.0199986
 bus/4/send = &"Master"
 bus/4/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
 bus/4/effect/0/enabled = true

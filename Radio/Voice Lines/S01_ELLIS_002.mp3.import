@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coowda2tcbxj3"
+path="res://.godot/imported/S01_ELLIS_002.mp3-f8ee8b0a6470f6859fa3fa68c3ec6714.mp3str"
+
+[deps]
+
+source_file="res://Radio/Voice Lines/S01_ELLIS_002.mp3"
+dest_files=["res://.godot/imported/S01_ELLIS_002.mp3-f8ee8b0a6470f6859fa3fa68c3ec6714.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,153 +1,173 @@
 extends CanvasLayer
 
+# RELIEF radio system: CSV-driven dialogue, radio SFX and chest-mounted 3D audio.
+# Required nodes:
+# RadioSystem (CanvasLayer)
+# |- HUD (PanelContainer)
+# |  `- VBoxContainer
+# |     |- Header
+# |     |- Speaker (Label)
+# |     `- Subtitle (Label)
+# |- Voice (AudioStreamPlayer)             # Ellis, unfiltered and non-positional
+# `- HandheldSpeaker (Node3D)
+#    |- IncomingVoice (AudioStreamPlayer3D)
+#    |- RadioStart (AudioStreamPlayer3D)
+#    |- RadioStatic (AudioStreamPlayer3D)
+#    `- RadioEnd (AudioStreamPlayer3D)
 
-# ==========================================
-# RADIO UI
-# ==========================================
+const DIALOGUE_CSV: String = "res://Radio/radio_dialogue.csv"
+const VOICE_DIRECTORY: String = "res://Radio/Voice Lines"
+
+# Used for development only. Disable when story triggers are implemented.
+@export var play_test_on_start: bool = true
+@export var test_line_id: String = "S01_VOSS_000"
 
 @onready var hud: PanelContainer = $HUD
 @onready var speaker_label: Label = $HUD/VBoxContainer/Speaker
 @onready var subtitle_label: Label = $HUD/VBoxContainer/Subtitle
 
-
-# ==========================================
-# AUDIO PLAYERS
-# ==========================================
-
-# Ellis's own voice (non-positional).
-@onready var voice: AudioStreamPlayer = $Voice
-
-# Physical walkie-talkie speaker.
+@onready var ellis_voice: AudioStreamPlayer = $Voice
 @onready var handheld_speaker: Node3D = $HandheldSpeaker
+@onready var incoming_voice: AudioStreamPlayer3D = $HandheldSpeaker/IncomingVoice
+@onready var radio_start: AudioStreamPlayer3D = $HandheldSpeaker/RadioStart
+@onready var radio_static: AudioStreamPlayer3D = $HandheldSpeaker/RadioStatic
+@onready var radio_end: AudioStreamPlayer3D = $HandheldSpeaker/RadioEnd
 
-# Incoming radio transmissions.
-@onready var incoming_voice: AudioStreamPlayer3D = \
-	$HandheldSpeaker/IncomingVoice
+# Godot units are assumed to be metres in this project.
+# The radio sits below the eyes, forward of the chest, and near the centre.
+const CHEST_BELOW_CAMERA: float = 0.48
+const CHEST_FORWARD: float = 0.18
 
-# Radio sound effects.
-@onready var radio_start: AudioStreamPlayer3D = \
-	$HandheldSpeaker/RadioStart
-
-@onready var radio_static: AudioStreamPlayer3D = \
-	$HandheldSpeaker/RadioStatic
-
-@onready var radio_end: AudioStreamPlayer3D = \
-	$HandheldSpeaker/RadioEnd
-
-
-# ==========================================
-# RADIO SETTINGS
-# ==========================================
-
-# Temporary test for Voss's first transmission.
-@export var play_test_on_start: bool = true
-
-# Assumes approximately 1 Godot unit = 1 metre.
-const RADIO_CHEST_OFFSET: Vector3 = Vector3(
-	0.0,
-	-0.55,
-	0.0
-)
-
-const RADIO_FORWARD_DISTANCE: float = 0.18
-
-
-# ==========================================
-# MESSAGE QUEUE
-# ==========================================
-
+var dialogue: Dictionary = {}
 var message_queue: Array[Dictionary] = []
-
 var is_transmitting: bool = false
 
 
-# ==========================================
-# INITIALIZATION
-# ==========================================
-
 func _ready() -> void:
-
 	hud.hide()
-
-	# Both kinds of voice playback use the same
-	# transmission completion function.
-	voice.finished.connect(_on_voice_finished)
+	ellis_voice.finished.connect(_on_voice_finished)
 	incoming_voice.finished.connect(_on_voice_finished)
+	_load_dialogue_csv()
 
-	# Capture Voss's recording from the Inspector.
-	var test_recording: AudioStream = incoming_voice.stream
-
-	# Temporary test.
 	if play_test_on_start:
-
 		await get_tree().create_timer(3.0).timeout
 
-		if test_recording != null:
+		play_sequence([
+		"S01_VOSS_001",
+		"S01_ELLIS_001",
+		"S01_VOSS_002",
+		"S01_VOSS_003",
+		"S01_ELLIS_002"
+	])
 
-			play_transmission(
-				"VOSS",
-				"Ellis, this is Voss. Report back to Control when you're finished.",
-				test_recording,
-				true
-			)
-
-		else:
-
-			push_warning(
-				"No Voss recording assigned to IncomingVoice!"
-			)
-
-
-# ==========================================
-# POSITION THE RADIO ON ELLIS'S CHEST
-# ==========================================
 
 func _process(_delta: float) -> void:
-
 	var camera: Camera3D = get_viewport().get_camera_3d()
-
 	if camera == null:
 		return
 
-	# Obtain the direction the camera is facing.
+	# Use horizontal facing only; the chest radio does not tilt with the head.
 	var forward: Vector3 = -camera.global_transform.basis.z
-
-	# Ignore vertical camera rotation.
-	# The radio stays at chest height even when
-	# Ellis looks up or down.
 	forward.y = 0.0
-
 	if forward.length_squared() > 0.0001:
 		forward = forward.normalized()
 	else:
 		forward = Vector3.FORWARD
 
-	# Position the radio below the camera and
-	# slightly forward from Ellis's chest.
 	handheld_speaker.global_position = (
 		camera.global_position
-		+ RADIO_CHEST_OFFSET
-		+ forward * RADIO_FORWARD_DISTANCE
+		+ Vector3(0.0, -CHEST_BELOW_CAMERA, 0.0)
+		+ forward * CHEST_FORWARD
 	)
 
 
-# ==========================================
-# ADD RADIO TRANSMISSION
-# ==========================================
+func _load_dialogue_csv() -> void:
+	dialogue.clear()
+	var file: FileAccess = FileAccess.open(DIALOGUE_CSV, FileAccess.READ)
+	if file == null:
+		push_error("Radio dialogue CSV cannot be opened: " + DIALOGUE_CSV)
+		return
 
+	# Columns: id,speaker,subtitle,audio_path,incoming
+	var header: PackedStringArray = file.get_csv_line()
+	if header.size() != 5 or header[0].strip_edges() != "id":
+		push_error("Invalid radio dialogue CSV header. Expected: id,speaker,subtitle,audio_path,incoming")
+		return
+
+	while not file.eof_reached():
+		var row: PackedStringArray = file.get_csv_line()
+		if row.size() == 1 and row[0].strip_edges().is_empty():
+			continue
+		if row.size() != 5:
+			push_warning("Skipping malformed radio CSV row (needs 5 columns).")
+			continue
+
+		var line_id: String = row[0].strip_edges()
+		if line_id.is_empty():
+			continue
+		if dialogue.has(line_id):
+			push_warning("Duplicate radio line ID: " + line_id)
+			continue
+
+		var incoming_text: String = row[4].strip_edges().to_lower()
+		if incoming_text != "true" and incoming_text != "false":
+			push_warning("Radio CSV needs true/false for line: " + line_id)
+			continue
+
+		dialogue[line_id] = {
+			"speaker": row[1].strip_edges(),
+			"subtitle": row[2],
+			"audio_path": row[3].strip_edges(),
+			"incoming": incoming_text == "true"
+		}
+
+
+# Call from any gameplay/story trigger: RadioSystem.play_line("S02_BRANDT_001")
+func play_line(line_id: String) -> void:
+	if not dialogue.has(line_id):
+		push_warning("Unknown radio line ID: " + line_id)
+		return
+
+	var entry: Dictionary = dialogue[line_id]
+	var audio_path: String = str(entry["audio_path"])
+
+	# Most recordings only need to be named after their dialogue IDs.
+	# Custom filenames may be supplied in the CSV's audio_path column.
+	if audio_path.is_empty():
+		audio_path = VOICE_DIRECTORY + "/" + line_id + ".mp3"
+
+	if not ResourceLoader.exists(audio_path):
+		push_warning("Recording not found for " + line_id + ": " + audio_path)
+		return
+
+	var recording: AudioStream = load(audio_path) as AudioStream
+	if recording == null:
+		push_warning("Not a usable audio stream for " + line_id + ": " + audio_path)
+		return
+
+	play_transmission(
+		str(entry["speaker"]),
+		str(entry["subtitle"]),
+		recording,
+		bool(entry["incoming"])
+	)
+
+
+# A sequence is queued in order. Missing recordings are skipped with a warning.
+func play_sequence(line_ids: Array) -> void:
+	for line_id in line_ids:
+		play_line(str(line_id))
+
+
+# Existing API remains available for any manually supplied AudioStream.
 func play_transmission(
 	speaker: String,
 	subtitle: String,
 	recording: AudioStream,
 	incoming: bool = true
 ) -> void:
-
 	if recording == null:
-
-		push_warning(
-			"Radio transmission has no recording."
-		)
-
+		push_warning("Radio transmission has no recording.")
 		return
 
 	message_queue.append({
@@ -161,108 +181,58 @@ func play_transmission(
 		_play_next()
 
 
-# ==========================================
-# PLAY NEXT TRANSMISSION
-# ==========================================
-
 func _play_next() -> void:
-
 	if message_queue.is_empty():
-
 		is_transmitting = false
 		hud.hide()
-
 		return
 
 	is_transmitting = true
-
 	var message: Dictionary = message_queue.pop_front()
 
-	# Update subtitles.
 	speaker_label.text = str(message["speaker"])
 	subtitle_label.text = str(message["subtitle"])
 
-	var recording: AudioStream = \
-		message["recording"] as AudioStream
+	var recording: AudioStream = message["recording"] as AudioStream
+	var is_incoming: bool = str(message["speaker"]).to_upper() != "ELLIS"
 
-	var is_incoming: bool = bool(message["incoming"])
-
-	# Assign the recording to the correct player.
 	if is_incoming:
-
 		incoming_voice.stream = recording
-
 	else:
+		ellis_voice.stream = recording
 
-		voice.stream = recording
-
-	# Fade in the subtitle UI.
 	if not hud.visible:
-
 		hud.modulate.a = 0.0
 		hud.show()
+		var tween: Tween = create_tween()
+		tween.tween_property(hud, "modulate:a", 1.0, 0.15)
 
-		var tween = create_tween()
-
-		tween.tween_property(
-			hud,
-			"modulate:a",
-			1.0,
-			0.15
-		)
-
-	# Start the transmission sequence.
 	_start_radio_audio(is_incoming)
 
 
-# ==========================================
-# START TRANSMISSION AUDIO
-# ==========================================
-
 func _start_radio_audio(is_incoming: bool) -> void:
-
-	# 1. Opening radio click.
+	# Radio click. This MUST be a non-looping audio stream.
 	if radio_start.stream != null:
-
 		radio_start.play()
-
 		await radio_start.finished
 
-	# 2. Start quiet radio interference.
+	# Quiet interference. This SHOULD loop until the voice finishes.
 	if radio_static.stream != null:
-
 		radio_static.play()
 
-	# 3. Play the appropriate voice.
 	if is_incoming:
-
-		# Voss, Brandt, Nair, etc.
 		incoming_voice.play()
-
 	else:
+		ellis_voice.play()
 
-		# Ellis replying.
-		voice.play()
-
-
-# ==========================================
-# END TRANSMISSION
-# ==========================================
 
 func _on_voice_finished() -> void:
-
-	# Stop radio interference.
 	radio_static.stop()
 
-	# Play the closing radio click.
+	# Closing click must also be non-looping.
 	if radio_end.stream != null:
-
 		radio_end.play()
-
 		await radio_end.finished
 
-	# Short pause between transmissions.
 	await get_tree().create_timer(0.8).timeout
-
-	# Continue with the next message.
 	_play_next()

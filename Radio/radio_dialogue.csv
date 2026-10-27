@@ -1,0 +1,18 @@
+id,speaker,subtitle,audio_path,incoming
+S01_VOSS_001,VOSS,Marek. How's the lower-level feed?,,TRUE
+S01_ELLIS_001,ELLIS,Found a loose connection behind the status panel. It keeps dropping out.,,FALSE
+S01_VOSS_002,VOSS,Reseat it. Kit needs a stable reading before his next run.,,TRUE
+S01_VOSS_003,VOSS,Then check the corridor repeater and the lower-level status board. Log anything that still flickers.,,TRUE
+S01_ELLIS_002,ELLIS,Copy. I'll finish this and make the rounds.,,FALSE
+S01_VOSS_004,VOSS,"And leave my office alone. If you need something, ask.",,TRUE
+S01_ELLIS_003,ELLIS,She's guarded that door harder than the bunker entrance.,,FALSE
+S02_BRANDT_001,BRANDT,"If the west panel shows a fault, tap the reset once. Once, Ellis.",,TRUE
+S02_ELLIS_002,ELLIS,You say that like I've broken it before.,,FALSE
+S02_BRANDT_002,BRANDT,You've met yourself.,,TRUE
+S01_VOSS_000,VOSS,"Ellis, this is Voss. Report back to Control when you're finished.",res://Radio/Voice Lines/First Voice line.mp3,TRUE
+S02_ELLIS_004,ELLIS,Somebody's walking around the upper hall. Thought everybody was below.,,FALSE
+S03_KIT_001,KIT,"Control, the bore's opened into something. Readings just dropped straight off.",,TRUE
+S03_VOSS_001,VOSS,How wide?,,TRUE
+S03_KIT_002,KIT,Can't tell. Wider than the plans say. It's hollow past the face.,,TRUE
+S03_VOSS_002,VOSS,Stop drilling. Stay there till I clear it.,,TRUE
+S03_KIT_003,KIT,Copy.,,TRUE

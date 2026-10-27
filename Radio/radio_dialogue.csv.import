@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dhxl7unojbnp7"
+
+[deps]
+
+files=["res://Radio/radio_dialogue.speaker.translation", "res://Radio/radio_dialogue.subtitle.translation", "res://Radio/radio_dialogue.audio.translation", "res://Radio/radio_dialogue.incoming.translation"]
+
+source_file="res://Radio/radio_dialogue.csv"
+dest_files=["res://Radio/radio_dialogue.speaker.translation", "res://Radio/radio_dialogue.subtitle.translation", "res://Radio/radio_dialogue.audio.translation", "res://Radio/radio_dialogue.incoming.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -213,8 +213,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45221725, -0.15270078, -0.4
 
 [node name="IncomingVoice" type="AudioStreamPlayer3D" parent="RadioSystem/HandheldSpeaker" unique_id=508194790]
 stream = ExtResource("12_7v5gs")
-unit_size = 1.0
+volume_db = 80.0
 bus = &"RadioVoice"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="RadioStart" type="AudioStreamPlayer3D" parent="RadioSystem/HandheldSpeaker" unique_id=506981139]
 stream = ExtResource("13_8sa4y")
@@ -223,7 +224,7 @@ unit_size = 1.0
 
 [node name="RadioStatic" type="AudioStreamPlayer3D" parent="RadioSystem/HandheldSpeaker" unique_id=585837036]
 stream = SubResource("AudioStreamMP3_7rkie")
-volume_db = -10.0
+volume_db = -15.0
 unit_size = 1.0
 
 [node name="RadioEnd" type="AudioStreamPlayer3D" parent="RadioSystem/HandheldSpeaker" unique_id=939114410]
