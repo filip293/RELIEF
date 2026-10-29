@@ -83,6 +83,8 @@
 [ext_resource type="PackedScene" uid="uid://dnghwbfa8lf5" path="res://MapAssets/tscn/filing_cabinet.tscn" id="82_bwfur"]
 [ext_resource type="PackedScene" uid="uid://lrotrypmf6le" path="res://MapAssets/tscn/Vent.tscn" id="82_vf3y8"]
 [ext_resource type="PackedScene" uid="uid://grepuysuku5i" path="res://MapAssets/Monitor/Monitor.glb" id="83_vf3y8"]
+[ext_resource type="VideoStream" uid="uid://bf0wm2x20mj4u" path="res://MapAssets/Monitor/OldCartoon.ogv" id="84_05nmn"]
+[ext_resource type="AudioStream" uid="uid://cv63r3djpy3x3" path="res://MapAssets/Monitor/OldCartoon.mp3" id="85_evcpx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -14570,6 +14572,9 @@ size = Vector3(85.92415, 134.4961, 88.644165)
 [sub_resource type="BoxShape3D" id="BoxShape3D_74nx7"]
 size = Vector3(3.2694683, 4.8317266, 4.551216)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_1p4ks"]
+viewport_path = NodePath("Monitor/SubViewport")
+
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
@@ -18894,6 +18899,29 @@ transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-
 
 [node name="Monitor" parent="." unique_id=98216958 instance=ExtResource("83_vf3y8")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 10.3841915, 1.0131354, -6.186923)
+
+[node name="Sprite3D" type="Sprite3D" parent="Monitor" unique_id=988392638]
+transform = Transform3D(-4.5459845e-09, 0, -0.163, 0, 0.133, 0, 0.104, 0, -7.124956e-09, 0.08395958, 0.23626018, -0.00048017502)
+texture = SubResource("ViewportTexture_1p4ks")
+
+[node name="SubViewport" type="SubViewport" parent="Monitor" unique_id=1033442285]
+size = Vector2i(320, 206)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Monitor/SubViewport" unique_id=1716666449]
+offset_right = 1918.0
+offset_bottom = 1077.0
+stream = ExtResource("84_05nmn")
+volume_db = -80.0
+autoplay = true
+loop = true
+
+[node name="Cartoon" type="AudioStreamPlayer3D" parent="Monitor" unique_id=1816910619]
+transform = Transform3D(-1.1920929e-07, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -1.1920929e-07, -0.08612919, 0.24526107, 0.069971085)
+stream = ExtResource("85_evcpx")
+volume_db = -20.0
+autoplay = true
+emission_angle_enabled = true
+emission_angle_filter_attenuation_db = -80.0
 
 [editable path="Paintings"]
 [editable path="Papers"]
