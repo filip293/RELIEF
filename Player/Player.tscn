@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://dexocbip88eoy" path="res://Radio/Voice Lines/First Voice line.mp3" id="12_7v5gs"]
 [ext_resource type="AudioStream" uid="uid://dqpuflm30pb4t" path="res://Radio/Sound Effects/RadioStart.mp3" id="13_8sa4y"]
 [ext_resource type="AudioStream" uid="uid://b7jvx6k1kaqa6" path="res://Radio/Sound Effects/RadioEnd.wav" id="14_3nb2p"]
+[ext_resource type="Script" uid="uid://df0sc340uahct" path="res://Player/starting_sequence.gd" id="15_3mea3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
@@ -231,5 +232,8 @@ unit_size = 1.0
 stream = ExtResource("14_3nb2p")
 volume_db = -10.0
 unit_size = 1.0
+
+[node name="StartingSequence" type="Node3D" parent="." unique_id=1757969097]
+script = ExtResource("15_3mea3")
 
 [connection signal="step_taken" from="." to="." method="_on_player_step_taken"]

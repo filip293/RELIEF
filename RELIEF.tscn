@@ -62,7 +62,7 @@ breath_heavy = ExtResource("4_2jxjv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 [node name="Player" parent="." unique_id=889148075 instance=ExtResource("1_bklh2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.936439, 1.0265477, 0.51596355)
+transform = Transform3D(0.8928116, 0, -0.4504303, 0, 1, 0, 0.4504303, 0, 0.8928116, 8.251731, 1.0265477, -4.066901)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=397694592]
 environment = SubResource("Environment_sq8w8")

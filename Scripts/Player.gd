@@ -53,6 +53,7 @@ var _step_phase: float = 0.0
 var _camera_initial_pos: Vector3
 var _target_roll: float = 0.0
 var _is_pushing_jog: bool = false
+var controls_locked: bool = false
 
 
 func _ready() -> void:
@@ -65,6 +66,8 @@ func _ready() -> void:
 # ==============================================================================
 
 func _input(event: InputEvent) -> void:
+	if controls_locked:
+		return
 	if event is InputEventMouseMotion:
 		if event.relative.length_squared() > 1.5:
 			current_device = DeviceType.KEYBOARD_MOUSE
@@ -81,6 +84,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if controls_locked:
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -120,6 +125,9 @@ func _process_gamepad_look(delta: float) -> void:
 # ==============================================================================
 
 func _physics_process(delta: float) -> void:
+	if controls_locked:
+		velocity = Vector3.ZERO
+		return
 	if current_device == DeviceType.GAMEPAD:
 		_process_gamepad_look(delta)
 	
