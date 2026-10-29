@@ -75,10 +75,10 @@ loop = true
 script = ExtResource("1_3qydi")
 
 [node name="Neck" type="Node3D" parent="." unique_id=958374183]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5474876, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1222489446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4646607, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13797909, 0)
 fov = 65.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D" unique_id=1813723862]
