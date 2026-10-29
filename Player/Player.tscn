@@ -149,7 +149,6 @@ draw_pass_1 = SubResource("QuadMesh_s1rgi")
 
 [node name="RadioSystem" type="CanvasLayer" parent="." unique_id=1418632801]
 script = ExtResource("10_dm7nj")
-play_test_on_start = false
 
 [node name="HUD" type="PanelContainer" parent="RadioSystem" unique_id=1936367081]
 anchors_preset = -1
