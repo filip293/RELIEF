@@ -18,7 +18,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
-height = 1.6323242
+height = 1.8640137
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6ysni"]
 emission_shape_offset = Vector3(0.115, 0, 0)
@@ -78,7 +78,7 @@ script = ExtResource("1_3qydi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2696684, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1222489446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17203185, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4646607, 0)
 fov = 65.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D" unique_id=1813723862]
@@ -122,7 +122,7 @@ spot_range = 13.0
 spot_angle_attenuation = 3.0314326
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532963966]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18383789, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.067993164, 0)
 shape = SubResource("CapsuleShape3D_1p4ks")
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=726685856]
