@@ -82,6 +82,7 @@
 [ext_resource type="PackedScene" uid="uid://bhpyypb6p6drh" path="res://MapAssets/Projector/projector.glb" id="81_05nmn"]
 [ext_resource type="PackedScene" uid="uid://dnghwbfa8lf5" path="res://MapAssets/tscn/filing_cabinet.tscn" id="82_bwfur"]
 [ext_resource type="PackedScene" uid="uid://lrotrypmf6le" path="res://MapAssets/tscn/Vent.tscn" id="82_vf3y8"]
+[ext_resource type="PackedScene" uid="uid://grepuysuku5i" path="res://MapAssets/Monitor/Monitor.glb" id="83_vf3y8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uoj"]
 resource_name = "MAT_Concrete_Board"
@@ -18745,7 +18746,7 @@ transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.185569
 transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, 14.646192, 4.6073264e-08, -0.7680037)
 
 [node name="Office Chair" type="RigidBody3D" parent="." unique_id=1564489899]
-transform = Transform3D(-0.6928203, 0, 0.40000007, 0, 0.8, 0, -0.40000007, 0, -0.6928203, 8.868098, 0.50350565, -5.735006)
+transform = Transform3D(-0.56568533, 0, 0.5656855, 0, 0.8, 0, -0.5656855, 0, -0.56568533, 9.522527, 0.50350565, -5.2191086)
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_tnysu")
 linear_damp = 2.0
@@ -18890,6 +18891,9 @@ transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-
 
 [node name="Vent9" parent="." unique_id=639769897 instance=ExtResource("82_vf3y8")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 36.41382, 1.9377304, -10.979737)
+
+[node name="Monitor" parent="." unique_id=98216958 instance=ExtResource("83_vf3y8")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 10.3841915, 1.0131354, -6.186923)
 
 [editable path="Paintings"]
 [editable path="Papers"]
