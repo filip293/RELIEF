@@ -167,7 +167,18 @@ func stand_up() -> void:
 
 	await pan.finished
 
-	# STEP 2: Stand up while turning 70 degrees left.
+# Play the chair creak as Ellis begins standing.
+	var chair_creak: AudioStreamPlayer3D = (
+		get_tree().get_first_node_in_group("opening_chair_creak")
+		as AudioStreamPlayer3D
+)
+
+	if chair_creak != null and chair_creak.stream != null:
+		chair_creak.play()
+			# Stop after 2 seconds.
+		get_tree().create_timer(2.0).timeout.connect(chair_creak.stop)
+
+# STEP 2: Slowly stand up.
 	var stand: Tween = create_tween()
 
 	stand.set_parallel(true)

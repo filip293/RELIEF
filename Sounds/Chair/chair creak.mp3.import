@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6n78t2qybts2"
+path="res://.godot/imported/chair creak.mp3-15be07840ebf0e73e21aea498b08bc05.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Chair/chair creak.mp3"
+dest_files=["res://.godot/imported/chair creak.mp3-15be07840ebf0e73e21aea498b08bc05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

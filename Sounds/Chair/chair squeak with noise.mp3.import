@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk56l8cxm71gv"
+path="res://.godot/imported/chair squeak with noise.mp3-c00c059877a2eeeacdffdeb1e993cd96.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Chair/chair squeak with noise.mp3"
+dest_files=["res://.godot/imported/chair squeak with noise.mp3-c00c059877a2eeeacdffdeb1e993cd96.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

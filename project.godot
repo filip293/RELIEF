@@ -54,6 +54,10 @@ folder_colors={
 "res://addons/": "gray"
 }
 
+[global_group]
+
+opening_chair_creak=""
+
 [input]
 
 move_forward={
