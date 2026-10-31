@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d28yginx8k0uq"
+path.s3tc="res://.godot/imported/CleanElectricalBigBox_1.png-90c77465dce83f829f5e3e16ca93da46.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "fa1ac931a037e80c3b63d9bb3c6f8ea4"
+}
+
+[deps]
+
+source_file="res://MapAssets/ElectricalBoxes/CleanElectricalBigBox_1.png"
+dest_files=["res://.godot/imported/CleanElectricalBigBox_1.png-90c77465dce83f829f5e3e16ca93da46.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://MapAssets/ElectricalBoxes/CleanElectricalBigBox_2.jpg"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
