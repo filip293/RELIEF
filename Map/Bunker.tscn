@@ -7804,38 +7804,6 @@ shadow_mesh = SubResource("ArrayMesh_nbk47")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dput1"]
 data = PackedVector3Array(-19, -0.125, 1.5, 19, -0.125, -1.5, -19, -0.125, -1.5, -19, -0.125, 1.5, 19, -0.125, 1.5, 19, -0.125, -1.5, -19, 0.125, 1.5, 19, 0.125, -1.5, 19, 0.125, 1.5, -19, 0.125, 1.5, -19, 0.125, -1.5, 19, 0.125, -1.5, -19, -0.125, 1.5, 19, 0.125, 1.5, 19, -0.125, 1.5, -19, -0.125, 1.5, -19, 0.125, 1.5, 19, 0.125, 1.5, 19, -0.125, 1.5, 19, 0.125, -1.5, 19, -0.125, -1.5, 19, -0.125, 1.5, 19, 0.125, 1.5, 19, 0.125, -1.5, 19, -0.125, -1.5, -19, 0.125, -1.5, -19, -0.125, -1.5, 19, -0.125, -1.5, 19, 0.125, -1.5, -19, 0.125, -1.5, -19, -0.125, -1.5, -19, 0.125, 1.5, -19, -0.125, 1.5, -19, -0.125, -1.5, -19, 0.125, -1.5, -19, 0.125, 1.5)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_fmpi4"]
-_surfaces = [{
-"aabb": AABB(-18.5, -0.2, -0.3, 37, 0.4, 0.6),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_8jws1"]
-resource_name = "ShelterNine_L2_C02_Duct"
-_surfaces = [{
-"aabb": AABB(-18.5, -0.2, -0.3, 37, 0.4, 0.6),
-"attribute_data": PackedByteArray("XYFsHP//0hBdgdIQ//9sHF2BbBz//9IQ//9sHF2B0hBdgf////9D+P////9dgUP4C5X//xmXQ/gZl///C5VD+P////9dgUP4XYH/////Q/gZl///C5VD+AuV//8Zl0P4"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_pjmem"),
-"name": "MAT_Steel_Bare",
-"primitive": 3,
-"uv_scale": Vector4(74.8, 13.24, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/vwAAAAD//wCA////////AID//wAA//8AgAAA/////wCA//8AAP///7//////AAD/v///AAAAAP+//////////7///wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAAAA//8AAAAAAAD/fwAA/38AAP9/AAD/f////3////9/////f////3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP///3////9/////f////3//P/9//z//f/8//3//P/9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_fmpi4")
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_dose8"]
 _surfaces = [{
 "aabb": AABB(-19, -0.1, -1.5, 38, 0.2, 3),
@@ -15392,6 +15360,9 @@ size = Vector3(3.653912, 6.2191334, 29.737429)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dj2pv"]
 size = Vector3(0.64259636, 1.9633818, 1.7389749)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynu3d"]
+size = Vector3(621.4101, 100.76931, 536.3188)
+
 [node name="ShelterNine2" type="Node3D" unique_id=1229566191]
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=199649333]
@@ -17140,7 +17111,7 @@ open_angle = 78.0
 transform = Transform3D(6.794811e-08, 0, -1, 0, 0.9, 0, 0.9, 0, 7.54979e-08, 41.961796, -2.6395829, -1.0675439)
 
 [node name="GeneratorControlPanel" parent="Scene Collection/ShelterNine/L1" unique_id=594896864 instance=ExtResource("46_0jftc")]
-transform = Transform3D(-0.015, 0, 2.264937e-09, 0, 0.015, 0, -2.264937e-09, 0, -0.015, 51.320652, -3.9999924, -0.19455779)
+transform = Transform3D(-0.015, 0, 2.264937e-09, 0, 0.015, 0, -2.264937e-09, 0, -0.015, 50.82153, -3.9999924, -0.19455779)
 
 [node name="Electrical panel" type="Node3D" parent="Scene Collection/ShelterNine/L1" unique_id=1982842234]
 transform = Transform3D(2.6226832e-10, 0, -0.002, 0, 0.002, 0, 0.002, 0, 2.6226832e-10, 54.34802, -3.0566978, -8.355139)
@@ -17312,10 +17283,6 @@ mesh = SubResource("ArrayMesh_u3uqd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Collection/ShelterNine/L2/L2_C02_Ceiling/StaticBody3D" unique_id=1956978394]
 shape = SubResource("ConcavePolygonShape3D_dput1")
-
-[node name="L2_C02_Duct" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=989326120]
-transform = Transform3D(1.024, 0, 0, 0, 0.91, 0, 0, 0, 0.91, 18.822422, -5.42, -6.45)
-mesh = SubResource("ArrayMesh_8jws1")
 
 [node name="L2_C02_Floor" type="MeshInstance3D" parent="Scene Collection/ShelterNine/L2" unique_id=292509117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -8.1, -5.5)
@@ -19770,6 +19737,24 @@ transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6
 [node name="Vent4" parent="." unique_id=1002800110 instance=ExtResource("82_vf3y8")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 40.46135, 2.1321907, -0.050000664)
 
+[node name="Vent10" parent="." unique_id=517882935 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 36.068916, -1.9955328, -0.050000664)
+
+[node name="Vent15" parent="." unique_id=1906180514 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 46.170544, -1.2334914, -0.050000664)
+
+[node name="Vent11" parent="." unique_id=1431328215 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 25.641186, -1.9955328, -0.050000664)
+
+[node name="Vent12" parent="." unique_id=1099137348 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 19.41051, -1.9955328, -0.050000664)
+
+[node name="Vent13" parent="." unique_id=4069008 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 6.733961, -1.9955328, -0.050000664)
+
+[node name="Vent14" parent="." unique_id=1996366847 instance=ExtResource("82_vf3y8")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -3.5861826, -1.9955328, -0.050000664)
+
 [node name="Vent5" parent="." unique_id=625370459 instance=ExtResource("82_vf3y8")]
 transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, -1.0588851, 2.1336265, -1.0419984)
 
@@ -20058,6 +20043,45 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.011295676, 2.7999315, -8.92
 [node name="Wires16" parent="." unique_id=186559870 instance=ExtResource("108_qy4dw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.9902148, 2.7999315, -8.924408)
 
+[node name="Wires18" parent="." unique_id=1254030177 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 37.94716, -5.215, -6.379278)
+
+[node name="Wires19" parent="." unique_id=825390382 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.949738, -5.215, -6.379278)
+
+[node name="Wires20" parent="." unique_id=1417743651 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.951063, -5.215, -6.379278)
+
+[node name="Wires21" parent="." unique_id=2070723514 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.951729, -5.215, -6.379278)
+
+[node name="Wires22" parent="." unique_id=570206172 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 25.950218, -5.215, -6.379278)
+
+[node name="Wires23" parent="." unique_id=1303430441 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 22.951546, -5.215, -6.379278)
+
+[node name="Wires24" parent="." unique_id=424057330 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 19.954124, -5.215, -6.379278)
+
+[node name="Wires25" parent="." unique_id=946896401 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 16.955452, -5.215, -6.379278)
+
+[node name="Wires26" parent="." unique_id=1876898181 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.95612, -5.215, -6.379278)
+
+[node name="Wires27" parent="." unique_id=659091217 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.957123, -5.215, -6.379278)
+
+[node name="Wires28" parent="." unique_id=666405454 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.9584503, -5.215, -6.379278)
+
+[node name="Wires29" parent="." unique_id=1996830299 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.9610295, -5.215, -6.379278)
+
+[node name="Wires30" parent="." unique_id=609794125 instance=ExtResource("108_qy4dw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.962357, -5.215, -6.379278)
+
 [node name="Servers" parent="." unique_id=528282893 instance=ExtResource("110_ibll1")]
 transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 1.5150976, 0.011137843, -0.84933555)
 
@@ -20086,8 +20110,23 @@ transform = Transform3D(0.7692308, 0, 0, 0, 0.7692308, 0, 0, 0, 0.7692308, 0, 0.
 stream = ExtResource("48_a1tkp")
 autoplay = true
 
-[node name="Sketchfab_Scene" parent="." unique_id=817418269 instance=ExtResource("111_ibll1")]
+[node name="Rug" parent="." unique_id=817418269 instance=ExtResource("111_ibll1")]
 transform = Transform3D(0.009670553, 0, 0.0025456601, 0, 0.009999999, 0, -0.0025456601, 0, 0.009670553, 19.067389, 0.010941982, -3.9574935)
+
+[node name="VentRight3" parent="." unique_id=613841179 instance=ExtResource("96_20i0m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 49.488834, -1.266444, -3.8524973)
+
+[node name="UndergroundVent3" parent="." unique_id=1397209270 instance=ExtResource("98_20i0m")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 53.170433, -3.1110907, -0.9061899)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="UndergroundVent3" unique_id=247710049]
+transform = Transform3D(0.009999999, 0, 0, 0, 0.009999999, -2.2204458e-18, 0, 2.2204458e-18, 0.009999999, 0, -2.8470545, 0.08990693)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UndergroundVent3/StaticBody3D" unique_id=1959900082]
+shape = SubResource("BoxShape3D_ynu3d")
+
+[node name="VentSmall" parent="." unique_id=1382980237 instance=ExtResource("99_sr24j")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, 53.111885, -0.7201807, -9.012744)
 
 [editable path="Paintings"]
 [editable path="Papers"]
