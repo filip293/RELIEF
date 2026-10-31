@@ -54,6 +54,7 @@ var _camera_initial_pos: Vector3
 var _target_roll: float = 0.0
 var _is_pushing_jog: bool = false
 var controls_locked: bool = false
+var is_hidden: bool = false
 
 
 func _ready() -> void:

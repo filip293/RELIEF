@@ -1,0 +1,90 @@
+[gd_scene format=4 uid="uid://diebvlxqjaf2i"]
+
+[ext_resource type="PackedScene" uid="uid://c8e450tfb1g7u" path="res://MapAssets/Locker/metal_locker_-_game_ready_pbr.glb" id="1_m5dj4"]
+[ext_resource type="Script" uid="uid://dvvvrcldpqk13" path="res://MapAssets/Locker/locker.gd" id="2_2ayhh"]
+[ext_resource type="AudioStream" uid="uid://dif6y76wbk4xv" path="res://Sounds/Locker/locker_open.wav" id="3_tttrb"]
+[ext_resource type="Texture2D" uid="uid://h7fpi65yytjx" path="res://MapAssets/Locker/metal_locker_-_game_ready_pbr_0.png" id="3_v1gxi"]
+[ext_resource type="Texture2D" uid="uid://dnqy34tr0if4u" path="res://MapAssets/Locker/metal_locker_-_game_ready_pbr_1.png" id="4_4boml"]
+[ext_resource type="AudioStream" uid="uid://dthwavha68pf4" path="res://Sounds/Locker/locker_close.wav" id="4_buh1u"]
+[ext_resource type="Texture2D" uid="uid://cf8mbeq64tve4" path="res://MapAssets/Locker/metal_locker_-_game_ready_pbr_2.png" id="5_qgsuw"]
+[ext_resource type="AudioStream" uid="uid://c432sa8xd23ar" path="res://Sounds/Locker/Locker.wav" id="6_4boml"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uqja2"]
+points = PackedVector3Array(0.25, 0.2, 1.9059998, -0.25, 0.2, 1.9059998, 0.25, -0.2, 1.9059998, 0.25, 0.2, 0.10600003, -0.25, -0.2, 1.9059998, -0.25, 0.2, 0.10600003, 0.25, -0.2, 0.10600003, -0.25, -0.2, 0.10600003)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tttrb"]
+resource_name = "M_Locker_Metal"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("3_v1gxi")
+metallic = 1.0
+metallic_texture = ExtResource("4_4boml")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("4_4boml")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("5_qgsuw")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gr66f"]
+_surfaces = [{
+"aabb": AABB(-0.2345342, -0.18758185, -0.011948943, 0.4690684, 0.3751637, 0.023898005),
+"format": 34896654337,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQABQADAAAAAgAEAAYABQAGAAQABQAHAAMABQAEAAcA"),
+"name": "M_Locker_Metal",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAA//8AAP///////wAA//8AAAAAAAAAAAAA//8AAAAA//8AAAAAAAD/////AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_buh1u"]
+resource_name = "Sketchfab_Scene_Locker_Shelf_M_Locker_Metal_0"
+_surfaces = [{
+"aabb": AABB(-0.2345342, -0.18758185, -0.011948943, 0.4690684, 0.3751637, 0.023898005),
+"attribute_data": PackedByteArray("U+GZbVPhmW13VGE/gDPbPorfmFGK35hR0ItfP/kxoz6K35ltit+ZbdCLXz+AM9s+U+GYUVPhmFF3VGE/+TGjPl/itnRf4rZ002BiP2Zt6T5g/rNRYP6zUaBhfj8WZ6M+X+KzUV/is1HTYGI/FmejPmD+tnRg/rZ0nmF+P2Zt6T7w4ZNQ8OGTUF3xYT9sJ6E+8f2QLfH9kC0k8n0/JEI2PvDhkC3w4ZAtX/FhPyRCNj7x/ZNQ8f2TUCTyfT9sJ6E+QOLqdUDi6nWFQWI/LNbrPkH+s3dB/rN3SUJ+P3hn7z5B/up1Qf7qdUlCfj8s1us+QOKzd0Dis3eFQWI/eGfvPg=="),
+"format": 34896654455,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_tttrb"),
+"name": "M_Locker_Metal",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////wAA/7///wAA////v/////////+///8AAAAA/78AAP//AAD/////AAAAAP///////wAA//8AAAAAAAD///////////+/AAAAAP///78AAP//////v///AAD///+/AAD//wAAVNUAAAAA//9U1QAAAAAAAFTVAAD/////VNX/fwAA/38AAP9/AAD/fwAA/z//v/8//7//P/+//z//v/9//3//f/9//3//f/9//39UVaqqVFWqqlRVqqpUVaqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_gr66f")
+
+[node name="Sketchfab_Scene" unique_id=570453354 instance=ExtResource("1_m5dj4")]
+script = ExtResource("2_2ayhh")
+door_animation_duration = 0.65
+hiding_position = Vector3(0, 1.7, 0)
+hiding_rotation = Vector3(0, -90, 0)
+entering_duration = 0.65
+exiting_duration = 0.65
+opening_sound = ExtResource("3_tttrb")
+closing_sound = ExtResource("4_buh1u")
+
+[node name="Locker_Body" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode" parent_id_path=PackedInt32Array(1401794022) index="0" unique_id=615385251]
+transform = Transform3D(1, 0, 0, 0, -1.8527375e-07, 1, 0, -1.5541887, -1.192093e-07, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Body_M_Locker_Metal_0" parent_id_path=PackedInt32Array(73821428) index="0" unique_id=1201723533]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Body_M_Locker_Metal_0/StaticBody3D" index="0" unique_id=1028289701]
+shape = SubResource("ConvexPolygonShape3D_uqja2")
+
+[node name="Locker_Door" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body" index="1" unique_id=1884116327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2514389, 0.16957453, 1.0055394)
+
+[node name="Locker_Shelf_M_Locker_Metal_0" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Shelf" parent_id_path=PackedInt32Array(1553336012) index="0" unique_id=1197172558]
+mesh = SubResource("ArrayMesh_buh1u")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1244044161]
+active = false
+
+[node name="LockerSFX" type="AudioStreamPlayer3D" parent="." index="2" unique_id=1534151852]
+stream = ExtResource("6_4boml")

@@ -5,7 +5,7 @@ extends Node
 
 # --- SETTINGS ---
 @export_group("Opening Sequence")
-@export var wait_before_standing: float = 15.0
+@export var wait_before_standing: float = 1.0
 
 @export_group("Sitting Position")
 @export var sitting_offset: Vector3 = Vector3(0.7, -0.35, 0)
