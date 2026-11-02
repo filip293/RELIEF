@@ -12,6 +12,9 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uqja2"]
 points = PackedVector3Array(0.25, 0.2, 1.9059998, -0.25, 0.2, 1.9059998, 0.25, -0.2, 1.9059998, 0.25, 0.2, 0.10600003, -0.25, -0.2, 1.9059998, -0.25, 0.2, 0.10600003, 0.25, -0.2, 0.10600003, -0.25, -0.2, 0.10600003)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tttrb"]
+points = PackedVector3Array(-0.010000788, -0.34, -0.87, -0.010000788, 0, -0.87, -9.313226e-10, -0.34, -0.87, -0.010273308, -0.34, -0.10832417, -9.313226e-10, 0, -0.87, -0.010273308, -0.17948511, -0.10832417, -0.010000788, 0, 0.8700001, -9.313226e-10, -0.34, 0.8700001, -0.010273308, -0.34, 0.10815394, -9.313226e-10, 0, 0.8700001, -0.010273308, -0.17948511, 0.10815394, -0.010000788, -0.34, 0.8700001)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tttrb"]
 resource_name = "M_Locker_Metal"
 transparency = 1
@@ -79,6 +82,11 @@ shape = SubResource("ConvexPolygonShape3D_uqja2")
 
 [node name="Locker_Door" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body" index="1" unique_id=1884116327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2514389, 0.16957453, 1.0055394)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Door/Locker_Door_M_Locker_Metal_0" parent_id_path=PackedInt32Array(281664359) index="0" unique_id=426377832]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Door/Locker_Door_M_Locker_Metal_0/StaticBody3D" index="0" unique_id=1229268898]
+shape = SubResource("ConvexPolygonShape3D_tttrb")
 
 [node name="Locker_Shelf_M_Locker_Metal_0" parent="Sketchfab_model/Metal_Locker_fbx/Object_2/RootNode/Locker_Body/Locker_Shelf" parent_id_path=PackedInt32Array(1553336012) index="0" unique_id=1197172558]
 mesh = SubResource("ArrayMesh_buh1u")
