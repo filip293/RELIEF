@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://wtjhsbvbjmts" path="res://Scripts/Player.gd" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://bsxk7qpmyhn0a" path="res://Scripts/Flashlight.gd" id="5_6ysni"]
 [ext_resource type="AudioStream" uid="uid://d3ubncqqh5qef" path="res://Sounds/Footsteps/concrete.wav" id="5_8g4oa"]
+[ext_resource type="Script" uid="uid://dk4ahyl13bmlw" path="res://Player/inventoryUi.gd" id="6_7v5gs"]
+[ext_resource type="Shader" uid="uid://bd2w5ew4c0tgp" path="res://Player/Vignette.gdshader" id="7_8sa4y"]
 [ext_resource type="Script" uid="uid://dwea480bphk72" path="res://Scripts/ReliefFootstepAudio.gd" id="7_s1rgi"]
 [ext_resource type="Script" uid="uid://jgg3mope1464" path="res://Scripts/RayCast.gd" id="7_vlldt"]
+[ext_resource type="Shader" uid="uid://bdtcd3m8ues0e" path="res://Player/CenterFade.gdshader" id="8_3nb2p"]
 [ext_resource type="AudioStream" uid="uid://b56s431hsohw" path="res://Sounds/Footsteps/Tile_Mono_02 (mp3cut.net).wav" id="8_j23h2"]
 [ext_resource type="Texture2D" uid="uid://dgjgdyjuiulu1" path="res://UIAssets/Distressed White Hand Icon.png" id="9_j23h2"]
 [ext_resource type="AudioStream" uid="uid://b67wpmm10kw07" path="res://Sounds/Footsteps/lino.wav" id="9_v0k0e"]
@@ -15,6 +18,20 @@
 [ext_resource type="AudioStream" uid="uid://dqpuflm30pb4t" path="res://Radio/Sound Effects/RadioStart.mp3" id="13_8sa4y"]
 [ext_resource type="AudioStream" uid="uid://b7jvx6k1kaqa6" path="res://Radio/Sound Effects/RadioEnd.wav" id="14_3nb2p"]
 [ext_resource type="Script" uid="uid://df0sc340uahct" path="res://Player/starting_sequence.gd" id="15_3mea3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wp5uw"]
+shader = ExtResource("7_8sa4y")
+shader_parameter/edge_opacity = 0.858000040755
+shader_parameter/clear_radius = 0.186000008835
+shader_parameter/fade_radius = 0.42700001376273
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thx5m"]
+shader = ExtResource("8_3nb2p")
+shader_parameter/center_opacity = 0.75
+shader_parameter/fade_start = 0.2
+shader_parameter/fade_end = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tymvx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1p4ks"]
 radius = 0.328125
@@ -120,6 +137,69 @@ bus = &"Player_SFX"
 [node name="SpotLight3D" type="SpotLight3D" parent="Neck/Camera3D/FlashlightRig" unique_id=824343903]
 spot_range = 13.0
 spot_angle_attenuation = 3.0314326
+
+[node name="InventoryUI" type="CanvasLayer" parent="Neck" unique_id=2077945343]
+script = ExtResource("6_7v5gs")
+
+[node name="Vignette" type="ColorRect" parent="Neck/InventoryUI" unique_id=676410690]
+material = SubResource("ShaderMaterial_wp5uw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterFade" type="ColorRect" parent="Neck/InventoryUI" unique_id=811142492]
+material = SubResource("ShaderMaterial_thx5m")
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -376.0
+offset_right = 320.0
+offset_bottom = 373.0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Neck/InventoryUI" unique_id=600648760]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -125.0
+offset_right = 210.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tymvx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Neck/InventoryUI/Panel" unique_id=1677256632]
+layout_mode = 2
+
+[node name="InventoryList" type="Label" parent="Neck/InventoryUI/Panel/MarginContainer" unique_id=1316110204]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83137256, 0.84705883, 0.84705883, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="PickupMessage" type="Label" parent="Neck/InventoryUI" unique_id=277135833]
+offset_left = 774.0
+offset_top = 678.0
+offset_right = 1159.0
+offset_bottom = 706.0
+theme_override_colors/font_color = Color(0.34509805, 0.34509805, 0.34509805, 0.8666667)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("11_3mea3")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532963966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.067993164, 0)
