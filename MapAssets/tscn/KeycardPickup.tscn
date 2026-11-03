@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ckov8hl0qpyih"]
+
+[ext_resource type="PackedScene" uid="uid://die2vi2scvnp4" path="res://MapAssets/Keycards/digital_door_lock_access_panel.glb" id="1_0l0as"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u0fto"]
+points = PackedVector3Array(0.4548266, 0, 0.6127496, 0.44591898, 0, 0.6570723, 0.4548266, -0.01, 0.6127496, 0.4548266, 0, -0.75530046, 0.42076236, 0, 0.69481695, 0.44591898, -0.01, 0.6570723, 0.4548266, -0.01, -0.75530046, 0.44591898, 0, -0.79962313, 0.42076236, -0.01, 0.69481695, 0.3831743, 0, 0.7198757, 0.44591898, -0.01, -0.79962313, 0.42076236, 0, -0.83736783, 0.3831743, -0.01, 0.7198757, 0.3387342, 0, 0.7288029, 0.42076236, -0.01, -0.83736783, 0.3831743, 0, -0.8624265, 0.3387342, -0.01, 0.7288029, -0.4291789, 0, 0.7288029, 0.3831743, -0.01, -0.8624265, 0.3387342, 0, -0.8711971, -0.4291789, -0.01, 0.7288029, -0.47361898, 0, 0.7198757, 0.3387342, -0.01, -0.8711971, -0.4291789, 0, -0.8711971, -0.47361898, -0.01, 0.7198757, -0.5112071, 0, 0.69481695, -0.4291789, -0.01, -0.8711971, -0.47361898, 0, -0.8624265, -0.5112071, -0.01, 0.69481695, -0.5363637, 0, 0.6570723, -0.47361898, -0.01, -0.8624265, -0.5112071, 0, -0.83736783, -0.5363637, -0.01, 0.6570723, -0.5451734, 0, 0.6127496, -0.5112071, -0.01, -0.83736783, -0.5363637, 0, -0.79962313, -0.5451734, -0.01, 0.6127496, -0.5451734, 0, -0.75530046, -0.5363637, -0.01, -0.79962313, -0.5451734, -0.01, -0.75530046)
+
+[node name="Sketchfab_Scene" unique_id=1167632688 instance=ExtResource("1_0l0as")]
+
+[node name="Plane_0" parent="Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(738795395) index="0" unique_id=335926624]
+visible = false
+
+[node name="Object_7" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_001_1" parent_id_path=PackedInt32Array(1644206270) index="0" unique_id=1128010293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_001_1/Object_7" index="0" unique_id=1130451157]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_001_1/Object_7/StaticBody3D" index="0" unique_id=1441098449]
+shape = SubResource("ConvexPolygonShape3D_u0fto")
