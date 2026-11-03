@@ -392,3 +392,8 @@ volume_db = -8.0
 [node name="DoorClose" type="AudioStreamPlayer3D" parent="." unique_id=289196785]
 stream = ExtResource("6_vos0a")
 volume_db = -8.0
+
+[node name="AutoCloseTimer" type="Timer" parent="." unique_id=759411169]
+
+[node name="InsideMarker" type="Marker3D" parent="." unique_id=508266612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45553672)
